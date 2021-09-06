@@ -1,6 +1,7 @@
 * {
     outline: none;
     list-style-type: none;
+    font-family: sans-serif;
 }
 
 body {
@@ -95,17 +96,18 @@ header {
 /*----------ASIDE-bears+------------*/
 
 .bearsplus-container {
-    background: violet;         /*bg img*/
+    background: url("../backend/JWDP5-master/images/teddy_bg.png");
+    object-fit: cover;        
     height: 300px;
 }
 
 .bearsplus {
     position: absolute;
     top: 200px;
-    left: 150px;
+    left: 200px;
     background: rgb(243, 149, 25);
     width: 270px;
-    height: 130px;
+    height: 150px;
     text-align: center;
     border-radius: 20px;
     box-shadow: gray 1px 1px 4px;
@@ -113,6 +115,8 @@ header {
 
 .bearsplus-title {
     font-size: 1.1rem;
+    width: 85%;
+    margin: 15px auto;
 }
 
 .bearsplus-btn {
@@ -127,7 +131,7 @@ header {
 }
 
 .bearsplus-btn:hover {
-    background: rgb(209, 112, 209);
+    background: rgb(171, 139, 248);
     color: white;
 }
 
@@ -208,7 +212,7 @@ header {
     align-items: center;
     width: 300px;
     height: 270px;
-    background: violet;     /*bg img*/
+    background: violet;     /*bg img ?*/
     border-radius: 20px;
     box-shadow: rgb(99, 98, 98) 4px 3px 10px;
 }
@@ -218,9 +222,9 @@ header {
     margin-bottom: 0;       /*font family ?*/
 }
 
-.other-shop-description {
-
-}
+/* .other-shop-description {
+    
+} */
 
 .other-shop-btn {
     margin-bottom: 30px;
@@ -242,5 +246,131 @@ header {
 /*-------SECTION-boutiques---------*/
 /*------------FOOTER---------------*/
 footer {
-    background: darkkhaki;
+}
+
+.faq {
+    width: 90%;
+    height: 75px;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to left, rgb(152, 45, 252), rgb(238, 142, 17));
+}
+
+.faq-title {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    text-decoration: underline;
+}
+
+.faq-text {
+    font-size: 1.1rem;
+    margin-left: -40px;
+}
+
+.faq-btn {
+    width: 100px;
+    height: 35px;
+    margin-left: -20px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.faq-btn:hover {
+    transform: scale(1.1);
+    filter: brightness(95%);
+}
+
+.social-newletter {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background: rgb(171, 139, 248);
+    padding-bottom: 20px;
+}
+
+.social-media {
+   width: 35%;
+   margin-left: 50px;
+}
+
+.social-media-title {
+    font-size: 1.5rem;
+}
+
+.social-media-text {
+    font-size: .9rem;
+}
+
+.social-media-list {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.6rem;
+    padding: 0;
+}
+
+.fab {
+    transition: .3s;
+}
+
+.fab:hover {
+    color: white;
+}
+
+.newletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    border-left: black solid 1.5px;
+}
+
+.newletter-title {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.newletter-text {
+    font-size: .9rem;
+    width: 80%;
+    margin: 20px 0;
+}
+
+.newletter-email-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.newletter-email {
+    width: 40%;
+    height: 22px;
+    font-size: 1.2rem;
+    padding-left: 5px;
+}
+
+.newletter-btn {
+    height: 28px;
+    margin-left: -5px;
+}
+
+.footer-footer-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(171, 139, 248);
+    height: 45px;
+    padding: 0;
+    margin: 0;
+    border-top: black solid 1.5px;
+}
+
+.footer-footer-list li:hover {
+    text-decoration: underline;
 }
