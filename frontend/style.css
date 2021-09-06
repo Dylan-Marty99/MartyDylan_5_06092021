@@ -1,3 +1,246 @@
+* {
+    outline: none;
+    list-style-type: none;
+}
+
 body {
     margin: 0;
+    background: rgb(238, 193, 199);
+}
+
+a {
+    color: initial;
+    text-decoration: none;
+}
+
+/*-------------HEADER---------------*/
+
+header {
+    background: linear-gradient(to left, rgb(152, 45, 252), rgb(238, 142, 17));
+}
+
+.header-header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo {
+    font-size: 2.3rem;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.search-input {
+    width: 400px;
+    height: 30px;
+    font-size: 1.1rem;
+}
+
+.search-icon {
+    height: 34px;
+    margin-left: -5px;
+    font-size: 1.2rem;
+    background: white;
+    border: none;
+    border-left: black solid 1px;
+    cursor: pointer;
+    transition: .3s
+}
+
+.search-icon:hover {
+    filter: brightness(85%);
+}
+
+.comptes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-heart, .fa-user, .fa-shopping-cart {
+    color: rgb(255, 255, 255);
+    padding-bottom: 5px;
+}
+
+.comptes-container {
+    text-align: center;
+    margin: 13px;
+    font-size: 1.1rem;
+}
+
+.compte-text a {
+    color: white;
+}
+
+.header-products-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    font-size: 1.2rem;
+    background: rgb(238, 193, 199);
+    margin: 0;
+    padding: 5px 0;
+}
+
+.header-products-list li:hover {
+    text-decoration: underline;
+}
+/*-------------HEADER---------------*/
+/*----------ASIDE-bears+------------*/
+
+.bearsplus-container {
+    background: violet;         /*bg img*/
+    height: 300px;
+}
+
+.bearsplus {
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    background: rgb(243, 149, 25);
+    width: 270px;
+    height: 130px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: gray 1px 1px 4px;
+}
+
+.bearsplus-title {
+    font-size: 1.1rem;
+}
+
+.bearsplus-btn {
+    margin-top: 10px;
+    font-size: 1rem;
+    border: rgb(134, 134, 134) solid 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    background:white;
+    transition: .3s;
+}
+
+.bearsplus-btn:hover {
+    background: rgb(209, 112, 209);
+    color: white;
+}
+
+/*----------ASIDE-bears+------------*/
+/*---------SECTION-produits---------*/
+
+.products {
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.bears {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*---------SECTION-produits---------*/
+/*----------ASIDE-promos-----------*/
+
+.promotions {
+    background: linear-gradient(to left, rgb(152, 45, 252), rgb(238, 142, 17));
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: grey 2px 2px 7px;
+}
+
+.promotions-title {
+    font-size: 1.7rem;
+    color: rgb(245, 241, 241);
+}
+
+.promotions-btn {
+    margin-left: -70px;
+    width: 200px;
+    height: 35px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+.promotions-btn:hover {
+    transform: scale(1.1);
+    filter: brightness(95%);
+
+}
+
+/*----------ASIDE-promos-----------*/
+/*-------SECTION-boutiques---------*/
+
+.shop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    height: 400px;
+}
+
+.other-shop {
+    width: 100%;
+    height: 40px;
+    font-size: 1.7rem;
+    margin-bottom: 0;
+}
+
+.other-shop-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 270px;
+    background: violet;     /*bg img*/
+    border-radius: 20px;
+    box-shadow: rgb(99, 98, 98) 4px 3px 10px;
+}
+
+.other-shop-title {
+    font-size: 1.6rem;
+    margin-bottom: 0;       /*font family ?*/
+}
+
+.other-shop-description {
+
+}
+
+.other-shop-btn {
+    margin-bottom: 30px;
+    width: 40%;
+    height: 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 15px;
+    background: white;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.other-shop-btn:hover {
+    transform: translateX(5px);
+    filter: brightness(95%);
+}
+
+/*-------SECTION-boutiques---------*/
+/*------------FOOTER---------------*/
+footer {
+    background: darkkhaki;
 }

@@ -5,39 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orinoco</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./frontend/style.css">
 </head>
 <body>
 
 <!--==========HEADER===============-->
     <header>
         <div class="header-header">
-            <h1 class="logo">Oribears</h1>
+            <h1 class="logo">Oribears</h1>      <!--Ajouter style-->
             <div class="search">
-                <input type="text" placeholder="Rechercher un produit">
-                <input type="button" placeholder="icon search">
+                <input type="text" placeholder="Rechercher un produit" class="search-input">
+                <button class="search-icon"><i class="fas fa-search"></i></button>
             </div>
-            <nav class="comptes-container">
-                <div class="comptes">
-                    <div id="compte-wishlist">heart icon</div>
-                    <span class="compte-text">Liste d'envie</span>
+            <nav class="comptes">
+                <div class="comptes-container">
+                    <div id="compte-wishlist"><a href="#"><i class="fas fa-heart"></i></a></div>
+                    <span class="compte-text"><a href="#">Liste d'envie</a></span>
                 </div>
-                <div class="comptes">
-                    <div id="compte-compte">user icon</div>
-                    <span class="compte-text">Créer un compte</span>
+                <div class="comptes-container">
+                    <div id="compte-compte"><a href="./frontend/user-account.html"><i class="fas fa-user"></i></a></div>
+                    <span class="compte-text"><a href="./frontend/user-account.html">Créer un compte</a></span>
                 </div>
-                <div class="comptes">
-                    <div id="compte-panier">panier icon</div>
-                    <span class="compte-text">Panier</span>
+                <div class="comptes-container">
+                    <div id="compte-panier"><a href="./frontend/panier.html"><i class="fas fa-shopping-cart"></i></a></div>
+                    <span class="compte-text"><a href="./frontend/panier.html">Panier</a></span>
                 </div>
             </nav>
         </div>
         <nav class="header-products">
             <ul class="header-products-list">
-                <li><a href="">Promotions</a></li>
-                <li><a href="">Tout nos produits</a></li>
-                <li><a href="">Avantages Bears +</a></li>
-                <li><a href="">Notre Newletter</a></li>
+                <li><a href="#">Promotions</a></li>
+                <li><a href="#products">Tout nos produits</a></li>
+                <li><a href="#">Avantages Bears +</a></li>
+                <li><a href="#newletter">Notre Newletter</a></li>
             </ul>
         </nav>
     </header>
@@ -50,28 +50,28 @@
         <aside class="bearsplus-container">
             <div class="bearsplus">
                 <h3 class="bearsplus-title">Retrouvez tout les avantages de notre abonnement bears +</h3>
-                <button class="bearsplus-btn">N'attendez plus</button>
+                <button class="bearsplus-btn">N'attendez plus !!</button>
             </div>
         </aside>
 
 <!--==========ASIDE-bears+===============-->
 <!--==========SECTION-produits===============-->
         <section>
-            <h2 class="products">Tout nos produits</h2>
-            <div class="bear"></div>
+            <h2 class="products" id="products">Tout nos produits</h2>
+            <div class="bears"></div>
         </section>
 
 <!--==========SECTION-produits===============-->
 <!--==========ASIDE-promos===============-->
 
         <aside class="promotions">
-            <h3 class="promotions-title">Nos promotions</h3>
+            <h3 class="promotions-title">Nos promotions du moment</h3>
             <button class="promotions-btn">N'attendez plus</button>
         </aside>
 
 <!--==========ASIDE-promos===============-->
 <!--==========SECTION-boutiques===============-->
-        <section>
+        <section class="shop">
             <h2 class="other-shop">Découvrez nos autres boutiques</h2>
             <div class="other-shop-container">
                 <h4 class="other-shop-title">Oribook</h4>
@@ -84,7 +84,7 @@
                 <button class="other-shop-btn">Découvir</button>
             </div>
             <div class="other-shop-container">
-                <h4 class="other-shop-title">Oritv</h4>
+                <h4 class="other-shop-title">OriTV</h4>
                 <p class="other-shop-description">télévision blabla</p>
                 <button class="other-shop-btn">Découvir</button>
             </div>
@@ -103,13 +103,13 @@
             <h3 class="social-media-title">Réseaux sociaux</h3>
             <p class="social-media-text">Nos réseaux...</p>
             <ul class="social-media-list">
-                <li><a href="facebook-oribears.com">fb icon</a></li>
-                <li><a href="twitter-oribears.com">tw icon</a></li>
-                <li><a href="youtube-oribears.com">yt icon</a></li>
-                <li><a href="instagram-oribears.com">insta icon</a></li>
+                <li><a href="facebook-oribears.com"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="twitter-oribears.com"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="youtube-oribears.com"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="instagram-oribears.com"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </div>
-        <div class="newletter">
+        <div class="newletter" id="newletter">
             <h3 class="newletter-title">Newletter</h3>
             <p class="newletter-text">Newletter...</p>
             <div class="newletter-email-container">
@@ -134,6 +134,7 @@
 
 <!--==========FOOTER===============-->
 
-    <script src="./index.js"></script>
+    <script src="https://kit.fontawesome.com/41cef5f271.js" crossorigin="anonymous"></script>
+    <script src="./frontend/JS/index.js"></script>
 </body>
 </html>
