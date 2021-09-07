@@ -34,13 +34,11 @@ header {
   align-items: center;
   margin-left: 30px;
 }
-
 .search-input {
   width: 400px;
   height: 30px;
   font-size: 1.1rem;
 }
-
 .search-icon {
   height: 34px;
   margin-left: -5px;
@@ -51,7 +49,6 @@ header {
   cursor: pointer;
   transition: 0.3s;
 }
-
 .search-icon:hover {
   filter: brightness(85%);
 }
@@ -61,23 +58,22 @@ header {
   justify-content: center;
   align-items: center;
 }
+.comptes-container {
+  text-align: center;
+  margin: 13px;
+  font-size: 1.1rem;
+  transition: 0.2s;
+}
+.comptes-container:hover {
+  filter: brightness(85%);
+  cursor: pointer;
+}
 
 .fa-heart, .fa-user, .fa-shopping-cart {
   color: white;
   padding-bottom: 5px;
 }
 
-.comptes-container {
-  text-align: center;
-  margin: 13px;
-  font-size: 1.1rem;
-}
-
-/* .comptes-container:hover {
-    filter: brightness(80%);
-    text-decoration: underline;         hover en JS ?
-    cursor: pointer;
-} */
 .compte-text a {
   color: white;
 }
@@ -92,7 +88,6 @@ header {
   margin: 0;
   padding: 5px 0;
 }
-
 .header-products-list li:hover {
   text-decoration: underline;
 }
@@ -107,18 +102,15 @@ header {
   align-items: center;
   background: linear-gradient(to left, #982dfc, #ee8e11);
 }
-
 .faq-title {
   font-size: 2.2rem;
   letter-spacing: 3px;
   text-decoration: underline;
 }
-
 .faq-text {
   font-size: 1.1rem;
   margin-left: -40px;
 }
-
 .faq-btn {
   width: 100px;
   height: 35px;
@@ -129,7 +121,6 @@ header {
   cursor: pointer;
   transition: 0.4s;
 }
-
 .faq-btn:hover {
   transform: scale(1.1);
   filter: brightness(95%);
@@ -142,20 +133,16 @@ header {
   background: #ab8bf8;
   padding-bottom: 20px;
 }
-
 .social-media {
   width: 35%;
   margin-left: 50px;
 }
-
 .social-media-title {
   font-size: 1.5rem;
 }
-
 .social-media-text {
   font-size: 0.9rem;
 }
-
 .social-media-list {
   display: flex;
   justify-content: space-around;
@@ -166,7 +153,6 @@ header {
 .fab {
   transition: 0.3s;
 }
-
 .fab:hover {
   color: white;
 }
@@ -178,18 +164,15 @@ header {
   width: 45%;
   border-left: black solid 1.5px;
 }
-
 .newletter-title {
   font-size: 1.5rem;
   margin-bottom: 0;
 }
-
 .newletter-text {
   font-size: 0.9rem;
   width: 80%;
   margin: 20px 0;
 }
-
 .newletter-email-container {
   width: 80%;
   display: flex;
@@ -197,14 +180,12 @@ header {
   align-items: center;
   margin-bottom: 15px;
 }
-
 .newletter-email {
   width: 40%;
   height: 22px;
   font-size: 1.2rem;
   padding-left: 5px;
 }
-
 .newletter-btn {
   height: 28px;
   margin-left: -5px;
@@ -220,7 +201,6 @@ header {
   margin: 0;
   border-top: black solid 1.5px;
 }
-
 .footer-footer-list li:hover {
   text-decoration: underline;
 }
@@ -244,13 +224,11 @@ header {
   border-radius: 20px;
   box-shadow: gray 1px 1px 4px;
 }
-
 .bearsplus-title {
   font-size: 1.1rem;
   width: 85%;
   margin: 15px auto;
 }
-
 .bearsplus-btn {
   margin-top: 10px;
   font-size: 1rem;
@@ -261,7 +239,6 @@ header {
   background: white;
   transition: 0.3s;
 }
-
 .bearsplus-btn:hover {
   background: #ab8bf8;
   color: white;
@@ -291,28 +268,19 @@ header {
   box-shadow: #636262 4px 3px 10px;
   margin-bottom: 40px;
 }
-
 .bear-image-container {
   width: 50%;
   height: 40%;
 }
-
-.bear-image {
+.bear-image-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   margin-top: 6px;
 }
-
 .bear-description {
   margin-bottom: 5px;
 }
-
-.fa-star {
-  color: yellow;
-  margin-bottom: 25px;
-}
-
 .bear-panier-btn {
   width: 45%;
   height: 30px;
@@ -323,10 +291,14 @@ header {
   background: white;
   transition: 0.3s;
 }
-
 .bear-panier-btn:hover {
   background: #ab8bf8;
   color: white;
+}
+
+.fa-star {
+  color: yellow;
+  margin-bottom: 25px;
 }
 
 /*---------SECTION-produits---------*/
@@ -342,12 +314,10 @@ header {
   border-radius: 10px;
   box-shadow: grey 2px 2px 7px;
 }
-
 .promotions-title {
   font-size: 1.7rem;
   color: #f5f1f1;
 }
-
 .promotions-btn {
   margin-left: -70px;
   width: 200px;
@@ -359,7 +329,6 @@ header {
   border-radius: 10px;
   transition: 0.4s;
 }
-
 .promotions-btn:hover {
   transform: scale(1.1);
   filter: brightness(95%);
@@ -382,7 +351,6 @@ header {
   font-size: 1.7rem;
   margin-bottom: 0;
 }
-
 .other-shop-container {
   display: flex;
   flex-direction: column;
@@ -395,16 +363,11 @@ header {
   border-radius: 20px;
   box-shadow: #636262 4px 3px 10px;
 }
-
 .other-shop-title {
   font-size: 1.6rem;
   margin-bottom: 0;
   /*font family ?*/
 }
-
-/* .other-shop-description {
-
-} */
 .other-shop-btn {
   margin-bottom: 30px;
   width: 40%;
@@ -416,7 +379,6 @@ header {
   cursor: pointer;
   transition: 0.2s;
 }
-
 .other-shop-btn:hover {
   transform: translateX(5px);
   filter: brightness(95%);
@@ -429,7 +391,6 @@ header {
   display: flex;
   justify-content: space-around;
 }
-
 .product-bear-image {
   margin: 30px 20px 20px;
   width: 25%;

@@ -19,28 +19,25 @@
     text-align: center;
     border-radius: 20px;
     box-shadow: gray 1px 1px 4px;
-}
-
-.bearsplus-title {
-    font-size: 1.1rem;
-    width: 85%;
-    margin: 15px auto;
-}
-
-.bearsplus-btn {
-    margin-top: 10px;
-    font-size: 1rem;
-    border: rgb(134, 134, 134) solid 1px;
-    border-radius: 10px;
-    cursor: pointer;
-    padding: 5px 10px;
-    background:white;
-    transition: .3s;
-}
-
-.bearsplus-btn:hover {
-    background: rgb(171, 139, 248);
-    color: white;
+    &-title {
+        font-size: 1.1rem;
+        width: 85%;
+        margin: 15px auto;
+    }
+    &-btn {
+        margin-top: 10px;
+        font-size: 1rem;
+        border: rgb(134, 134, 134) solid 1px;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 5px 10px;
+        background:white;
+        transition: .3s;
+        &:hover {
+            background: $bg-footer ;
+            color: white;
+        }
+    }
 }
 
 /*----------ASIDE-bears+------------*/
@@ -67,22 +64,35 @@
     border-radius: 20px;
     box-shadow: rgb(99, 98, 98) 4px 3px 10px;
     margin-bottom: 40px;
-}
-
-.bear-image-container {
-    width: 50%;
-    height: 40%;
-}
-
-.bear-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-top: 6px;
-}
-
-.bear-description {
-    margin-bottom: 5px;
+    &-image {
+        &-container {
+            width: 50%;
+            height: 40%;
+        }
+        &-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin-top: 6px;
+        }
+    }
+    &-description {
+        margin-bottom: 5px;
+    }
+    &-panier-btn {
+        width: 45%;
+        height: 30px;
+        font-size: 1rem;
+        border: rgb(134, 134, 134) solid 1px;
+        border-radius: 10px;
+        cursor: pointer;
+        background:white;
+        transition: .3s;
+        &:hover {
+            background: $bg-footer ;
+            color: white;
+        }
+    }
 }
 
 .fa-star {
@@ -90,27 +100,11 @@
     margin-bottom: 25px;
 }
 
-.bear-panier-btn {
-    width: 45%;
-    height: 30px;
-    font-size: 1rem;
-    border: rgb(134, 134, 134) solid 1px;
-    border-radius: 10px;
-    cursor: pointer;
-    background:white;
-    transition: .3s;
-}
-
-.bear-panier-btn:hover {
-    background: rgb(171, 139, 248);
-    color: white;
-}
-
 /*---------SECTION-produits---------*/
 /*----------ASIDE-promos-----------*/
 
 .promotions {
-    background: linear-gradient(to left, rgb(152, 45, 252), rgb(238, 142, 17));
+    background: $bg-gradient;
     width: 80%;
     height: 80px;
     display: flex;
@@ -119,29 +113,25 @@
     margin: 30px auto;
     border-radius: 10px;
     box-shadow: grey 2px 2px 7px;
-}
-
-.promotions-title {
-    font-size: 1.7rem;
-    color: rgb(245, 241, 241);
-}
-
-.promotions-btn {
-    margin-left: -70px;
-    width: 200px;
-    height: 35px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    background: white;
-    border: none;
-    border-radius: 10px;
-    transition: .4s;
-}
-
-.promotions-btn:hover {
-    transform: scale(1.1);
-    filter: brightness(95%);
-
+    &-title {
+        font-size: 1.7rem;
+        color: rgb(245, 241, 241);
+    }
+    &-btn {
+        margin-left: -70px;
+        width: 200px;
+        height: 35px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        background: white;
+        border: none;
+        border-radius: 10px;
+        transition: .4s;
+        &:hover {
+            transform: scale(1.1);
+            filter: brightness(95%);
+        }
+    }
 }
 
 /*----------ASIDE-promos-----------*/
@@ -161,65 +151,56 @@
     height: 40px;
     font-size: 1.7rem;
     margin-bottom: 0;
-}
-
-.other-shop-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
-    height: 270px;
-    background: violet;     /*bg img ?*/
-    border-radius: 20px;
-    box-shadow: rgb(99, 98, 98) 4px 3px 10px;
-}
-
-.other-shop-title {
-    font-size: 1.6rem;
-    margin-bottom: 0;       /*font family ?*/
-}
-
-/* .other-shop-description {
-    
-} */
-
-.other-shop-btn {
-    margin-bottom: 30px;
-    width: 40%;
-    height: 30px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 15px;
-    background: white;
-    cursor: pointer;
-    transition: .2s;
-}
-
-.other-shop-btn:hover {
-    transform: translateX(5px);
-    filter: brightness(95%);
+    &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 300px;
+        height: 270px;
+        background: violet;     /*bg img ?*/
+        border-radius: 20px;
+        box-shadow: rgb(99, 98, 98) 4px 3px 10px;
+    }
+    &-title {
+        font-size: 1.6rem;
+        margin-bottom: 0;       /*font family ?*/
+    }
+    &-btn {
+        margin-bottom: 30px;
+        width: 40%;
+        height: 30px;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 15px;
+        background: white;
+        cursor: pointer;
+        transition: .2s;
+        &:hover {
+            transform: translateX(5px);
+            filter: brightness(95%);
+        }
+    }
 }
 
 /*-------SECTION-boutiques---------*/
-
-
-
 /*-------------INDEX----------------*/
 
 /*-------------PRODUCT-PAGE----------------*/
 
-.product-bear-container {
-    display: flex;
-    justify-content: space-around;
+.product-bear {
+    &-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    &-image {
+        margin: 30px 20px 20px;
+        width: 25%;
+        height: 350px;
+        object-fit: cover;
+    }
 }
 
-.product-bear-image {
-    margin: 30px 20px 20px;
-    width: 25%;
-    height: 350px;
-    object-fit: cover;
-}
 
 .product-description-content {
     width: 65%;
