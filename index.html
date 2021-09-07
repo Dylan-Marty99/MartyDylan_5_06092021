@@ -10,11 +10,12 @@
 <body>
 
 <!--==========HEADER===============-->
+
     <header>
         <div class="header-header">
             <h1 class="logo">Oribears</h1>      <!--Ajouter style-->
             <div class="search">
-                <input type="text" placeholder="Rechercher un produit" class="search-input">
+                <input type="text" name="search-input" placeholder="Rechercher un produit" class="search-input">
                 <button class="search-icon"><i class="fas fa-search"></i></button>
             </div>
             <nav class="comptes">
@@ -41,6 +42,7 @@
             </ul>
         </nav>
     </header>
+
 <!--==========HEADER===============-->
 
 <!--==========MAIN===============-->
@@ -48,7 +50,7 @@
 
     <main>
         <aside class="bearsplus-container">
-            <div class="bearsplus">
+            <div class="bearsplus">     <!--Bulle ours qui parle-->
                 <h3 class="bearsplus-title">Retrouvez tout les avantages de notre abonnement Bears +</h3>
                 <button class="bearsplus-btn">N'attendez plus !!</button>
             </div>
@@ -56,9 +58,24 @@
 
 <!--==========ASIDE-bears+===============-->
 <!--==========SECTION-produits===============-->
+
         <section>
             <h2 class="products" id="products">Tout nos produits</h2>
-            <div class="bears"></div>
+            <div class="all-bears">
+                <!-- <div class="bear">
+                    <a href="#" class="bear-image-container"><img src="./backend/JWDP5-master/images/teddy_1.jpg" alt="" class="bear-image"></a>
+                    <a href=""><h3 class="bear-title">NOM teddy</h3></a>
+                    <p class="bear-description">hdhddjdijj</p>
+                    <div class="baer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <button class="bear-panier-btn">Ajouter au panier</button>
+                </div> -->
+            </div>
         </section>
 
 <!--==========SECTION-produits===============-->
@@ -71,6 +88,7 @@
 
 <!--==========ASIDE-promos===============-->
 <!--==========SECTION-boutiques===============-->
+
         <section class="shop">
             <h2 class="other-shop">Découvrez nos autres boutiques</h2>
             <div class="other-shop-container">
@@ -90,7 +108,10 @@
             </div>
         </section>
     </main>
+
 <!--==========SECTION-boutiques===============-->
+<!--==========MAIN===============-->
+
 <!--==========FOOTER===============-->
 
     <footer>
@@ -114,11 +135,11 @@
                 <h3 class="newletter-title">Newletter</h3>
                 <p class="newletter-text">Inscrivez vous à notre newletter 100% gratuite pour pouvoir choisir en avant première les couleurs de nos prochains teddys. En plus de ça vous recevrez chaque semaines des conseils de nettoyage pour vos teddys.</p>
                 <div class="newletter-email-container">
-                    <input type="text" class="newletter-email" placeholder="email">
+                    <input type="text" name="newletter-email" class="newletter-email" placeholder="email">
                     <button class="newletter-btn">OK</button>
                 </div>
-                <label for="accept-email"><input type="checkbox" id="accept-email">J'accepte de recevoir des emails de la part de Oribears</label>
-                <label for="confidential"><input type="checkbox" id="confidential">J'accepte les règles d'utilisations et de confidentialitées </label>
+                <label for="accept-email"><input type="checkbox" name="accept-email" id="accept-email">J'accepte de recevoir des emails de la part de Oribears</label>
+                <label for="confidential"><input type="checkbox" name="confidential" id="confidential">J'accepte les règles d'utilisations et de confidentialitées </label>
             </div>
         </div>
         <div class="footer-footer">

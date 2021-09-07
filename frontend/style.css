@@ -14,6 +14,7 @@ a {
     text-decoration: none;
 }
 
+/*-------------INDEX----------------*/
 /*-------------HEADER---------------*/
 
 header {
@@ -73,6 +74,12 @@ header {
     margin: 13px;
     font-size: 1.1rem;
 }
+
+/* .comptes-container:hover {
+    filter: brightness(80%);
+    text-decoration: underline;         hover en JS ?
+    cursor: pointer;
+} */ 
 
 .compte-text a {
     color: white;
@@ -143,9 +150,59 @@ header {
     font-size: 1.7rem;
 }
 
-.bears {
+.all-bears {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.bear {
+    background: violet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: rgb(99, 98, 98) 4px 3px 10px;
+    margin-bottom: 40px;
+}
+
+.bear-image-container {
+    width: 50%;
+    height: 40%;
+}
+
+.bear-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 6px;
+}
+
+.bear-description {
+    margin-bottom: 5px;
+}
+
+.fa-star {
+    color: yellow;
+    margin-bottom: 25px;
+}
+
+.bear-panier-btn {
+    width: 45%;
+    height: 30px;
+    font-size: 1rem;
+    border: rgb(134, 134, 134) solid 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    background:white;
+    transition: .3s;
+}
+
+.bear-panier-btn:hover {
+    background: rgb(171, 139, 248);
+    color: white;
 }
 
 /*---------SECTION-produits---------*/
@@ -245,8 +302,6 @@ header {
 
 /*-------SECTION-boutiques---------*/
 /*------------FOOTER---------------*/
-footer {
-}
 
 .faq {
     width: 90%;
@@ -374,3 +429,40 @@ footer {
 .footer-footer-list li:hover {
     text-decoration: underline;
 }
+
+/*-------------INDEX----------------*/
+
+/*-------------PRODUCT-PAGE----------------*/
+
+.product-bear-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product-bear-image {
+    margin: 30px 20px 20px;
+    width: 25%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.product-description-content {
+    width: 65%;
+    padding-top: 20px;
+}
+
+
+.product-sub-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-sub-content {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*-------------PRODUCT-PAGE----------------*/
