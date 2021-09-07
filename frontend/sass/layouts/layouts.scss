@@ -30,7 +30,7 @@ header {
         font-size: 1.2rem;
         background: white;
         border: none;
-        border-left: black solid 1px;
+        border-left: $border;
         cursor: pointer;
         transition: .3s;
         &:hover {
@@ -102,24 +102,16 @@ header {
         height: 35px;
         margin-left: -20px;
         font-size: 1.3rem;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: .4s;
-        &:hover {
-            transform: scale(1.1);
-            filter: brightness(95%);
-        }
+        @include all-btn;
     }
 }
-
 
 .social {
     &-newletter {
         display: flex;
         justify-content: space-around;
         text-align: center;
-        background: $bg-footer ;
+        background: $bg-secondary;
         padding-bottom: 20px;
     }
     &-media {
@@ -152,7 +144,7 @@ header {
     flex-direction: column;
     align-items: center;
     width: 45%;
-    border-left: black solid 1.5px;
+    border-left: $border;
     &-title {
         font-size: 1.5rem;
         margin-bottom: 0;
@@ -178,6 +170,7 @@ header {
     &-btn {
         height: 28px;
         margin-left: -5px;
+        cursor: pointer;
     }
 }
 
@@ -185,11 +178,11 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: $bg-footer ;
+    background: $bg-secondary ;
     height: 45px;
     padding: 0;
     margin: 0;
-    border-top: black solid 1.5px;
+    border-top: $border;
     & li:hover {
         text-decoration: underline;
     }

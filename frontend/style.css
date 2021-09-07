@@ -14,6 +14,8 @@ a {
   text-decoration: none;
 }
 
+/*----------Variables-------------*/
+/*----------Mixins----------------*/
 /*-----------HEADER-------------*/
 header {
   background: linear-gradient(to left, #982dfc, #ee8e11);
@@ -45,7 +47,7 @@ header {
   font-size: 1.2rem;
   background: white;
   border: none;
-  border-left: black solid 1px;
+  border-left: black solid 1.5px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -116,14 +118,15 @@ header {
   height: 35px;
   margin-left: -20px;
   font-size: 1.3rem;
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
+  background: #e5bfff;
+  border: none;
+  border-radius: 10px;
   transition: 0.4s;
 }
 .faq-btn:hover {
   transform: scale(1.1);
-  filter: brightness(95%);
+  filter: brightness(90%);
 }
 
 .social-newletter {
@@ -189,6 +192,7 @@ header {
 .newletter-btn {
   height: 28px;
   margin-left: -5px;
+  cursor: pointer;
 }
 
 .footer-footer-list {
@@ -285,15 +289,15 @@ header {
   width: 45%;
   height: 30px;
   font-size: 1rem;
-  border: #868686 solid 1px;
-  border-radius: 10px;
   cursor: pointer;
-  background: white;
-  transition: 0.3s;
+  background: #e5bfff;
+  border: none;
+  border-radius: 10px;
+  transition: 0.4s;
 }
 .bear-panier-btn:hover {
-  background: #ab8bf8;
-  color: white;
+  transform: scale(1.1);
+  filter: brightness(90%);
 }
 
 .fa-star {
@@ -322,16 +326,16 @@ header {
   margin-left: -70px;
   width: 200px;
   height: 35px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   cursor: pointer;
-  background: white;
+  background: #e5bfff;
   border: none;
   border-radius: 10px;
   transition: 0.4s;
 }
 .promotions-btn:hover {
   transform: scale(1.1);
-  filter: brightness(95%);
+  filter: brightness(90%);
 }
 
 /*----------ASIDE-promos-----------*/
@@ -373,15 +377,15 @@ header {
   width: 40%;
   height: 30px;
   font-size: 1.1rem;
-  border: none;
-  border-radius: 15px;
-  background: white;
   cursor: pointer;
-  transition: 0.2s;
+  background: #e5bfff;
+  border: none;
+  border-radius: 10px;
+  transition: 0.4s;
 }
 .other-shop-btn:hover {
-  transform: translateX(5px);
-  filter: brightness(95%);
+  transform: scale(1.1);
+  filter: brightness(90%);
 }
 
 /*-------SECTION-boutiques---------*/
@@ -394,13 +398,85 @@ header {
 .product-bear-image {
   margin: 30px 20px 20px;
   width: 25%;
-  height: 350px;
+  height: 400px;
   object-fit: cover;
 }
-
 .product-description-content {
   width: 65%;
-  padding-top: 20px;
+  padding-top: 50px;
+}
+.product-description-title {
+  margin-top: 0;
+}
+.product-price {
+  display: flex;
+  background: #ab8bf8;
+  border: black solid 1.5px;
+  padding: 10px;
+  margin-top: 50px;
+  height: 150px;
+}
+.product-price-container {
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.product-price-number {
+  padding-left: 15px;
+  height: 20%;
+  width: 50%;
+}
+.product-price-color {
+  height: 20%;
+  width: 35%;
+}
+.product-price-price {
+  width: 100%;
+  margin: 0;
+  padding-left: 15px;
+}
+.product-price-btn {
+  margin: 0 auto;
+  height: 35px;
+  width: 40%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: #e5bfff;
+  border: none;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+.product-price-btn:hover {
+  transform: scale(1.1);
+  filter: brightness(90%);
+}
+.product-price-livraison {
+  border-left: black solid 1.5px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#product-number {
+  height: 80%;
+  width: 20%;
+  padding-left: 10px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+#product-color {
+  width: 80%;
+  height: 100%;
+  padding-left: 10px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
 }
 
 .product-sub-container {
@@ -408,12 +484,16 @@ header {
   justify-content: space-around;
   align-items: center;
 }
-
 .product-sub-content {
   width: 40%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.product-caracteristic {
+  text-align: center;
+  margin-top: 80px;
 }
 
 /*-------------PRODUCT-PAGE----------------*/

@@ -63,8 +63,8 @@
                     </div>
                     <div class="product-price">
                         <div class="product-price-container">
-                            <label for="product-number">Quantité : <input type="number" name="product-number" id="product-number"></label>
-                            <label for="product-color">
+                            <label for="product-number" class="product-price-number">Quantité : <input type="number" min="1" max="9" name="product-number" id="product-number"></label>
+                            <label for="product-color" class="product-price-color">
                                 <select name="product-color" id="product-color">
                                     <option value="Couleur">Couleur</option>
                                     <option value="Couleur">Couleur</option>
@@ -72,7 +72,7 @@
                                 </select>
                             </label>
                             <p class="product-price-price">Prix</p>
-                            <button class="product-panier">Ajouter au panier</button>
+                            <button class="product-price-btn">Ajouter au panier</button>
                         </div>
                         <div class="product-price-livraison">
                             <p>Livraison standart : 2,99€</p>
@@ -82,7 +82,7 @@
                 </div>
             </div>
             <div class="product-sub-container">
-                <button class="product-bearplus">Carte abonnement</button>
+                <button class="product-sub-bearplus">Retrouvez nos avantages Bears +</button>
                 <div class="product-sub-content">
                     <div class="product-icon-container">
                         <i>icon</i>
