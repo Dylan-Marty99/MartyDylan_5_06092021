@@ -29,7 +29,7 @@
             <span class="header-panier-separator">-</span>
             <div class="header-panier-content">
                 <i class="fas fa-truck"></i>
-                <span class="header-livraison-text">Panier</span>
+                <span class="header-livraison-text">Paiement / Livraison</span>
             </div>
         </div>
     </div>
@@ -38,38 +38,76 @@
 <!--==========HEADER===============-->
 <!--==========SECTION-panier===============-->
 
-    <section>
+    <section class="panier">
         <div class="panier-container">
             <div class="panier-title">
                 <h2 class="panier-title-title">Mon panier (x articles)</h2>
-                <span class="panier-title-suppr-all">Supprimer tout les articles <i class="fas fa-trash-alt"></i></span>
+                <span class="panier-title-suppr-all">Supprimer tout les articles<i class="fas fa-trash-alt"></i></span>
             </div>
             <div class="panier-content">
-                <!-- <img src="../backend/JWDP5-master/images/teddy_1.jpg" alt=""> -->
+                <img src="../backend/JWDP5-master/images/teddy_1.jpg" alt="" class="panier-content-image">
                 <div class="panier-content-product">
                     <h4 class="panier-content-product-title">Nom</h4>
                     <p class="panier-content-product-description">janjcnjd</p>
+                    <p class="panier-content-product-price">Prix</p>
                 </div>
                 <span class="panier-content-suppr"><i class="fas fa-times"></i></span>
             </div>
+            <!-- <div class="panier-content">
+                <img src="../backend/JWDP5-master/images/teddy_1.jpg" alt="" class="panier-content-image">
+                <div class="panier-content-product">
+                    <h4 class="panier-content-product-title">Nom</h4>
+                    <p class="panier-content-product-description">janjcnjd</p>
+                    <p class="panier-content-product-price">Prix</p>
+                </div>
+                <span class="panier-content-suppr"><i class="fas fa-times"></i></span>
+            </div> -->
             <div class="panier-total">
                 <p>Total : Prix</p>
             </div>
         </div>
 
+<!--==========SECTION-panier===============-->
+<!--==========ASIDE-validation===============-->
+
+        <aside class="recap">
+            <div class="validation">
+                <h2 class="validation-title">Récapitulatif</h2>
+                <div class="validation-container">
+                    <div class="validation-promos">
+                        <h4 class="validation-promos-title">Je possède un Code Promo</h4>
+                        <div class="validation-promos-promo">
+                            <input type="text" name="promo" id="promo" class="validation-promos-promo-input" placeholder="Code promo">
+                            <button class="validation-promos-promo-btn">OK</button>
+                        </div>
+                    </div>
+                    <div class="validation-recap">
+                        <p class="validation-recap-text">Total (hors livraison) : Prix</p>
+                    </div>
+                    <div class="validation-validation">
+                        <button class="validation-validation-btn">Valider mon panier</button>
+                    </div>
+                </div>
+                <div class="validation-infos">
+                    <span class="validation-infos-icons">icon icon icon</span>
+                    <p class="validation-infos-text">Moyen de paiement</p>
+                </div>
+            </div>
+        </aside>
     </section>
 
-<!--==========SECTION-panier===============-->
-<!--==========SECTION-validation===============-->
 
+<!--==========ASIDE-validation===============-->
+<!--==========ASIDE-bears+===============-->
 
+    <aside>
+        <div class="panier-bearsplus">
+            <p class="panier-bearsplus-text">Vous souhaitez avoir la livraison offerte sur tout vos achats ? Alors n'attendez plus et souscrivez à un abonnement Bears + !</p>
+            <button class="panier-bearsplus-btn">C'est par ici !!</button>
+        </div>
+    </aside>
 
-
-<!--==========SECTION-validation===============-->
-<!--==========ASIDE ?===============-->
-
-
-<!--==========ASIDE ?===============-->
+<!--==========ASIDE-bears+===============-->
 <!--==========SECTION-articles-similaires ?===============-->
 
 

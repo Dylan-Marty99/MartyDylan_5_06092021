@@ -271,7 +271,7 @@
             border-radius: 10px;
             cursor: pointer;
             padding: 5px 10px;
-            background: rgb(229, 191, 255);
+            background: $bg-btn;
             transition: .3s;
             box-shadow: gray 2px 2px 5px;
             &:hover {
@@ -312,7 +312,7 @@
         width: 60%;
         height: 25px;
         font-size: 1.2rem;
-        background: rgb(229, 191, 255);
+        background: $bg-btn;
         margin: 20px auto;
     }
 }
@@ -362,19 +362,184 @@
 /*-------------HEADER----------------*/
 /*-------------SECTION-panier----------------*/
 
-
+.panier {
+    display: flex;
+    justify-content: space-around;
+    &-container {
+        width: 55%;
+        margin: 73px 0 50px;
+    }
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $bg-secondary;
+        border: $border;
+        &-title {
+            font-size: 1.2rem;
+            margin-left: 20px;
+        }
+        &-suppr-all {
+            margin-right: 20px;
+            cursor: pointer;
+            transition: .2s;
+            & i {
+                margin-left: 5px;
+            }
+            &:hover {
+                text-decoration: underline;
+                color: white;
+            }
+        }
+    }
+    &-content {
+        border-left: $border;
+        border-right: $border;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 200px;
+        &-image {
+            width: 25%;
+            height: 80%;
+            object-fit: cover;
+            margin-left: 20px;
+        }
+        &-product {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            &-title {
+                margin: 0;
+                font-size: 1.2rem;
+            }
+            &-price {
+                font-size: 1.5rem;
+                margin-bottom: 0;
+                margin-right: 40px;
+                align-self: flex-end;
+            }
+        }
+        &-suppr {
+            align-self: flex-start;
+            margin: 10px 15px 0 0;
+            cursor: pointer;
+        }
+    }
+    &-total {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 30px;
+        font-size: 1.2rem;
+        border: $border;
+        background: $bg-secondary;
+    }
+}
 
 /*-------------SECTION-panier----------------*/
-/*-------------SECTION-validation----------------*/
+/*-------------ASIDE-validation----------------*/
 
+.recap {
+    width: 32%;
+    text-align: center;
+    margin-top: 20px;
+}
 
+.validation {
+    width: 100%;
+    height: 80%;
+    &-title {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    &-container {
+        background: $bg-secondary;
+    }
+    &-promos {
+        border: $border;
+        &-title {
+            margin: 15px 0 20px;
+        }
+        &-promo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 30px;
+            &-input {
+                width: 60%;
+                height: 25px;
+                font-size: 1.1rem;
+            }
+            &-btn {
+                height: 31px;
+                margin-left: -5px;
+                cursor: pointer;
+            }
+        }
+    }
+    &-recap {
+        border-left: $border;
+        border-right: $border;
+        &-text {
+            margin: 0;
+            padding: 50px 0;
+            font-size: 1.2rem;
+        }
+    }
+    &-validation {
+        border: $border;
+        padding: 20px 0;
+        &-btn {
+            width: 50%;
+            height: 40px;
+            font-size: 1.3rem;
+            @include all-btn;
+        }
+    }
+    &-infos {
+        & i {
+            margin: 10px;
+        }
+        &-text {
+            margin: 0;
+        }
+    }
+}
 
+/*-------------ASIDE-validation----------------*/
+/*-------------ASIDE-bears+----------------*/
 
-/*-------------SECTION-validation----------------*/
-/*-------------ASIDE ?----------------*/
+.panier-bearsplus {
+    width: 45%;
+    height: 120px;
+    margin-left: 8%;
+    text-align: center;
+    background: $bg-btn;
+    border-radius: 20px;
+    box-shadow: gray 2px 2px 6px;
+    &-text {
+        margin: 0;
+        padding: 15px 10px;
+        font-size: 1.05rem;
+    }
+    &-btn {
+        width: 45%;
+        height: 35px;
+        font-size: 1.35rem;
+        background: $bg-secondary;
+        border-radius: 10px;
+        cursor: pointer;
+        border: none;
+        box-shadow: gray 2px 2px 4px;
+        transition: .3s;
+        &:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+    }
+}
 
-
-/*-------------ASIDE ?----------------*/
+/*-------------ASIDE-bears+----------------*/
 /*----------SECTION-article-similaires ?-------------*/
 
 
