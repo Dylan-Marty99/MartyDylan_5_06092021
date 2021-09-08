@@ -13,7 +13,7 @@
 
     <header>
         <div class="header-header">
-            <h1 class="logo">Oribears</h1>      <!--Ajouter style-->
+            <h1 class="logo"><a href="../index.html">Oribears</a></h1>      <!--Ajouter style-->
             <div class="search">
                 <input type="text" name="search-input" placeholder="Rechercher un produit" class="search-input">
                 <button class="search-icon"><i class="fas fa-search"></i></button>
@@ -24,8 +24,8 @@
                     <span class="compte-text"><a href="#">Liste d'envie</a></span>
                 </div>
                 <div class="comptes-container">
-                    <div id="compte-compte"><a href="./frontend/user-account.html"><i class="fas fa-user"></i></a></div>
-                    <span class="compte-text"><a href="./frontend/user-account.html">Créer un compte</a></span>
+                    <div id="compte-compte"><a href="./user-account.html"><i class="fas fa-user"></i></a></div>
+                    <span class="compte-text"><a href="./user-account.html">Créer un compte</a></span>
                 </div>
                 <div class="comptes-container">
                     <div id="compte-panier"><a href="./frontend/panier.html"><i class="fas fa-shopping-cart"></i></a></div>
@@ -63,7 +63,19 @@
                     </div>
                     <div class="product-price">
                         <div class="product-price-container">
-                            <label for="product-number" class="product-price-number">Quantité : <input type="number" min="1" max="9" name="product-number" id="product-number"></label>
+                            <label for="product-number" class="product-price-number">Quantité : 
+                                <select name="product-number" id="product-number">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </label>
                             <label for="product-color" class="product-price-color">
                                 <select name="product-color" id="product-color">
                                     <option value="Couleur">Couleur</option>
@@ -86,19 +98,19 @@
                 <div class="product-sub-content">
                     <div class="product-icon-container">
                         <i>icon</i>
-                        <p class="product-icon-text"></p>
+                        <p class="product-icon-text">Paiement sécurise</p>
                     </div>
                     <div class="product-icon-container">
                         <i>icon</i>
-                        <p class="product-icon-text"></p>
+                        <p class="product-icon-text">Livraison</p>
                     </div>
                     <div class="product-icon-container">
                         <i>icon</i>
-                        <p class="product-icon-text"></p>
+                        <p class="product-icon-text">Retour/remboursement</p>
                     </div>
                     <div class="product-icon-container">
                         <i>icon</i>
-                        <p class="product-icon-text"></p>
+                        <p class="product-icon-text">Contact/PAypal/ ?</p>
                     </div>
                 </div>
             </div>

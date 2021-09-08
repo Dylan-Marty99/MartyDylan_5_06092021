@@ -73,6 +73,7 @@ header {
     background: rgb(238, 193, 199);
     margin: 0;
     padding: 5px 0;
+    border-bottom: $border;
     & li:hover {
         text-decoration: underline;
     }

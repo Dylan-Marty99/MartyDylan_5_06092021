@@ -89,6 +89,7 @@ header {
   background: #eec1c7;
   margin: 0;
   padding: 5px 0;
+  border-bottom: black solid 1.5px;
 }
 .header-products-list li:hover {
   text-decoration: underline;
@@ -304,6 +305,9 @@ header {
   color: yellow;
   margin-bottom: 25px;
 }
+.fa-star:nth-child(5) {
+  color: #b1afaf;
+}
 
 /*---------SECTION-produits---------*/
 /*----------ASIDE-promos-----------*/
@@ -463,7 +467,7 @@ header {
 #product-number {
   height: 80%;
   width: 20%;
-  padding-left: 10px;
+  padding-left: 5px;
   font-size: 1.1rem;
   border-radius: 10px;
   border: none;
@@ -484,16 +488,55 @@ header {
   justify-content: space-around;
   align-items: center;
 }
+.product-sub-bearplus {
+  width: 25%;
+  height: 40px;
+  margin: 10px 0 0 15px;
+  font-size: 1.2rem;
+  border: #868686 solid 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 10px;
+  background: #e5bfff;
+  transition: 0.3s;
+  box-shadow: gray 2px 2px 5px;
+}
+.product-sub-bearplus:hover {
+  background: #ab8bf8;
+  color: white;
+}
 .product-sub-content {
-  width: 40%;
+  width: 65%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+.product-icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.product-icon-text {
+  margin-bottom: 0;
+}
 
 .product-caracteristic {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 100px;
+}
+.product-caracteristic-title {
+  font-size: 1.7rem;
+}
+.product-caracteristic-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 25px;
+  font-size: 1.2rem;
+  background: #e5bfff;
+  margin: 20px auto;
 }
 
 /*-------------PRODUCT-PAGE----------------*/
