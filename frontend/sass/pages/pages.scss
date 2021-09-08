@@ -318,3 +318,70 @@
 }
 
 /*-------------PRODUCT-PAGE----------------*/
+
+/*-------------PANIER-PAGE----------------*/
+/*-------------HEADER----------------*/
+
+.header-panier {
+    &-container {
+        display: flex;
+        align-items: center;
+        width: 50%;
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+        & .fa-shopping-cart {
+            color: lightgray;
+        }
+    }
+    &-text {
+        color:lightgray;
+        font-size: 1.1rem;
+    }
+    &-separator {
+        margin: 0 7px;
+        font-size: 1.5rem;
+        color: white;
+    }
+}
+
+.header-livraison-text {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.fa-truck {
+    color: white;
+    padding-bottom: 5px;
+}
+
+/*-------------HEADER----------------*/
+/*-------------SECTION-panier----------------*/
+
+
+
+/*-------------SECTION-panier----------------*/
+/*-------------SECTION-validation----------------*/
+
+
+
+
+/*-------------SECTION-validation----------------*/
+/*-------------ASIDE ?----------------*/
+
+
+/*-------------ASIDE ?----------------*/
+/*----------SECTION-article-similaires ?-------------*/
+
+
+/*----------SECTION-article-similaires ?-------------*/
+/*-------------FOOTER----------------*/
+
+
+
+/*-------------FOOTER----------------*/
+/*-------------PANIER-PAGE----------------*/
