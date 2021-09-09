@@ -49,3 +49,14 @@ $border : black solid 1.5px;
         color: white;
     }
 }
+
+@mixin confirm-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-title {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+}

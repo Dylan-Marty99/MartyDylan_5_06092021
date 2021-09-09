@@ -1063,6 +1063,118 @@ header {
 }
 
 /*-------------HEADER----------------*/
+/*-------------ASIDE----------------*/
+.thank-container {
+  text-align: center;
+  margin-top: 50px;
+}
+.thank-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/*-------------ASIDE----------------*/
+/*-------------SECTION----------------*/
+.details-container {
+  margin: 60px 0 15px 5%;
+}
+.details-container-title {
+  margin-bottom: 10px;
+}
+.details-container-number {
+  margin: 0 0 0 1%;
+}
+.details-container-date {
+  margin: 5px 0 0 1%;
+  color: #555454;
+}
+.details-product {
+  display: flex;
+  width: 80%;
+  height: 150px;
+  margin: 20px 0 30px 7%;
+  padding: 10px 0 0 50px;
+  border-top: black solid 1.5px;
+}
+.details-product-image {
+  object-fit: cover;
+  width: 10%;
+}
+.details-product-product {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.details-product-product-title {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+.details-product-product-description {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+.details-product-product-price {
+  margin-top: 50%;
+}
+
+.recap-container {
+  display: flex;
+  background: #ab8bf8;
+}
+.recap-livraison {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  border-top: black solid 1.5px;
+  border-bottom: black solid 1.5px;
+}
+.recap-livraison-mode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.recap-livraison-mode-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.recap-livraison-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.recap-livraison-date-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.recap-livraison-price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  width: 50%;
+  border: black solid 1.5px;
+  border-right: none;
+}
+.recap-livraison-price-text {
+  width: 40%;
+  margin: 10px 0;
+  padding-top: 10px;
+}
+.recap-livraison-price-price {
+  width: 30%;
+  margin: 10px 0;
+  padding-top: 10px;
+}
+
+.text-border {
+  border-top: dotted black 2px;
+}
+
+/*-------------SECTION----------------*/
+/*-------------SECTION-similaires?----------------*/
+/*-------------SECTION-similaires?----------------*/
 /*-------------CONFIRMATION-PAGE----------------*/
 
 /*# sourceMappingURL=style.css.map */
