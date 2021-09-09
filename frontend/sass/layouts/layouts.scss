@@ -10,8 +10,9 @@ header {
     justify-content: space-around;
 }
 
-.logo {
-    font-size: 2.3rem;
+.logo, .logo a {
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
 }
 
 .search {
