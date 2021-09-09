@@ -207,7 +207,7 @@
         background: $bg-secondary;
         border: $border;
         padding: 10px;
-        margin-top: 50px;
+        margin-top: 70px;
         height: 150px;
         &-container {
             width: 65%;
@@ -306,8 +306,11 @@
             justify-content: center;
             align-items: center;
         }
+        &-icon {
+            font-size: 1.5rem;
+        }
         &-text {
-            margin-bottom: 0;
+            margin-top: 5px;
         }
     }
 }
@@ -511,11 +514,15 @@
         }
     }
     &-infos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         & i {
             margin: 10px;
+            font-size: 1.5rem;
         }
         &-text {
-            margin: 0;
+            margin: 0 0 0 10px;
         }
     }
 }
@@ -558,7 +565,6 @@
 
 
 /*----------SECTION-article-similaires ?-------------*/
-
 /*-------------PANIER-PAGE----------------*/
 
 /*-------------PAIEMENT-PAGE----------------*/
