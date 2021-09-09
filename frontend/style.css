@@ -1050,6 +1050,19 @@ header {
 }
 
 /*-------------SECTION-paiement----------------*/
-/*-------------Paiement-page----------------*/
+/*-------------PAIEMENT-PAGE----------------*/
+/*-------------CONFIRMATION-PAGE----------------*/
+/*-------------HEADER----------------*/
+.header-confirmation-container {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+.header-confirmation-title {
+  font-size: 1.8rem;
+}
+
+/*-------------HEADER----------------*/
+/*-------------CONFIRMATION-PAGE----------------*/
 
 /*# sourceMappingURL=style.css.map */
