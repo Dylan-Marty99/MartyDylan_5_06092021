@@ -593,6 +593,7 @@ header {
   align-items: center;
   background: #ab8bf8;
   border: black solid 1.5px;
+  border-bottom: none;
 }
 .panier-title-title {
   font-size: 1.2rem;
@@ -611,8 +612,8 @@ header {
   color: white;
 }
 .panier-content {
-  border-left: black solid 1.5px;
-  border-right: black solid 1.5px;
+  border: black solid 1.5px;
+  border-bottom: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -708,7 +709,7 @@ header {
   padding: 20px 0;
 }
 .validation-validation-btn {
-  width: 50%;
+  width: 55%;
   height: 40px;
   font-size: 1.3rem;
   cursor: pointer;
@@ -763,8 +764,292 @@ header {
 /*-------------ASIDE-bears+----------------*/
 /*----------SECTION-article-similaires ?-------------*/
 /*----------SECTION-article-similaires ?-------------*/
-/*-------------FOOTER----------------*/
-/*-------------FOOTER----------------*/
 /*-------------PANIER-PAGE----------------*/
+/*-------------PAIEMENT-PAGE----------------*/
+/*-------------HEADER----------------*/
+/*-------------HEADER----------------*/
+/*-------------MAIN----------------*/
+.paiement-page {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 500px;
+}
+
+/*-------------MAIN----------------*/
+/*-------------SECTION-livraison----------------*/
+.livraison {
+  width: 50%;
+  height: 300px;
+  margin-top: 20px;
+}
+.livraison-title {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.livraison-container {
+  background: #ab8bf8;
+}
+.livraison-container-standart {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0;
+  border: black solid 1.5px;
+}
+.livraison-container-standart-text {
+  font-size: 1.2rem;
+}
+.livraison-container-standart-address {
+  width: 30%;
+  height: 30px;
+  font-size: 1rem;
+  box-shadow: gray 1px 1px 4px;
+  cursor: pointer;
+  background: #e5bfff;
+  border: none;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+.livraison-container-standart-address:hover {
+  transform: scale(1.1);
+  filter: brightness(90%);
+}
+.livraison-container-standart-price {
+  font-size: 1.1rem;
+}
+.livraison-container-express {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0;
+  border-left: black solid 1.5px;
+  border-right: black solid 1.5px;
+}
+.livraison-container-express-text {
+  font-size: 1.2rem;
+}
+.livraison-container-express-address {
+  width: 30%;
+  height: 30px;
+  font-size: 1rem;
+  box-shadow: gray 1px 1px 4px;
+  cursor: pointer;
+  background: #e5bfff;
+  border: none;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+.livraison-container-express-address:hover {
+  transform: scale(1.1);
+  filter: brightness(90%);
+}
+.livraison-container-express-price {
+  font-size: 1.1rem;
+}
+.livraison-container-relais {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0;
+  border: black solid 1.5px;
+}
+.livraison-container-relais-text {
+  font-size: 1.2rem;
+}
+.livraison-container-relais-address {
+  width: 30%;
+  height: 30px;
+  font-size: 1rem;
+  box-shadow: gray 1px 1px 4px;
+  cursor: pointer;
+  background: #e5bfff;
+  border: none;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+.livraison-container-relais-address:hover {
+  transform: scale(1.1);
+  filter: brightness(90%);
+}
+.livraison-container-relais-price {
+  font-size: 1.1rem;
+}
+
+/*-------------SECTION-livraison----------------*/
+/*-------------SECTION-recap----------------*/
+.validation-recap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.validation-recap-text {
+  width: 50%;
+}
+.validation-recap-price {
+  width: 20%;
+  margin: 0;
+  padding: 50px 0;
+  font-size: 1.2rem;
+}
+
+/*-------------SECTION-recap----------------*/
+/*-------------SECTION-paiement----------------*/
+.paiement {
+  position: absolute;
+  top: 500px;
+  left: 60px;
+  width: 50%;
+}
+.paiement-title {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.paiement-card {
+  border: black solid 1.5px;
+  border-bottom: dotted black 2px;
+  background: #ab8bf8;
+  padding: 20px 15px;
+}
+.paiement-card-text {
+  font-size: 1.2rem;
+}
+.paiement-facturation {
+  border: black solid 1.5px;
+  border-bottom: dotted black 2px;
+  border-top: none;
+  background: #ab8bf8;
+  padding: 10px;
+}
+.paiement-facturation-text {
+  font-size: 0.9rem;
+}
+.paiement-facturation-btn {
+  margin-left: 20px;
+  width: 36%;
+  height: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: #e5bfff;
+  border: none;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+.paiement-facturation-btn:hover {
+  transform: scale(1.1);
+  filter: brightness(90%);
+}
+.paiement-infos {
+  border-right: black solid 1.5px;
+  border-left: black solid 1.5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.paiement-infos-title {
+  margin: 0;
+  padding-top: 20px;
+  font-size: 1.3rem;
+}
+.paiement-infos-dots {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.paiement-infos-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+  background: #ab8bf8;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  box-shadow: gray 3px 3px 8px;
+}
+.paiement-infos-card-title {
+  width: 100%;
+  font-size: 1.2rem;
+}
+.paiement-infos-card-numero {
+  width: 85%;
+  background: none;
+  border: none;
+  border-bottom: black solid 1.5px;
+  color: white;
+  font-size: 1rem;
+}
+.paiement-infos-card-numero::placeholder {
+  color: white;
+}
+.paiement-infos-card-date {
+  width: 32%;
+  margin: 15px 10px;
+  background: none;
+  border: none;
+  border-bottom: black solid 1.5px;
+  color: white;
+  font-size: 1rem;
+}
+.paiement-infos-card-date::placeholder {
+  color: white;
+}
+.paiement-infos-card-crypto {
+  width: 40%;
+  margin: 15px 10px;
+  background: none;
+  border: none;
+  border-bottom: black solid 1.5px;
+  color: white;
+  font-size: 1rem;
+}
+.paiement-infos-card-crypto::placeholder {
+  color: white;
+}
+.paiement-infos-card-nom {
+  width: 85%;
+  margin-bottom: 25px;
+  background: none;
+  border: none;
+  border-bottom: black solid 1.5px;
+  color: white;
+  font-size: 1rem;
+}
+.paiement-infos-card-nom::placeholder {
+  color: white;
+}
+.paiement-infos-futur-card {
+  font-size: 0.9rem;
+  margin: 10px 0 20px;
+}
+.paiement-infos-btn {
+  margin-bottom: 20px;
+  width: 40%;
+  height: 40px;
+  font-size: 1.3rem;
+  box-shadow: gray 1px 1px 4px;
+  cursor: pointer;
+  background: #e5bfff;
+  border: none;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+.paiement-infos-btn:hover {
+  transform: scale(1.1);
+  filter: brightness(90%);
+}
+.paiement-paypal {
+  border: black solid 1.5px;
+  background: #ab8bf8;
+  padding: 20px 15px;
+}
+.paiement-paypal-text {
+  font-size: 1.2rem;
+}
+
+/*-------------SECTION-paiement----------------*/
+/*-------------Paiement-page----------------*/
 
 /*# sourceMappingURL=style.css.map */

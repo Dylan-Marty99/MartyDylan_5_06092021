@@ -375,6 +375,7 @@
         align-items: center;
         background: $bg-secondary;
         border: $border;
+        border-bottom: none;
         &-title {
             font-size: 1.2rem;
             margin-left: 20px;
@@ -393,8 +394,8 @@
         }
     }
     &-content {
-        border-left: $border;
-        border-right: $border;
+        border: $border;
+        border-bottom: none;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -490,7 +491,7 @@
         border: $border;
         padding: 20px 0;
         &-btn {
-            width: 50%;
+            width: 55%;
             height: 40px;
             font-size: 1.3rem;
             @include all-btn;
@@ -544,9 +545,192 @@
 
 
 /*----------SECTION-article-similaires ?-------------*/
-/*-------------FOOTER----------------*/
 
-
-
-/*-------------FOOTER----------------*/
 /*-------------PANIER-PAGE----------------*/
+
+/*-------------PAIEMENT-PAGE----------------*/
+/*-------------HEADER----------------*/
+
+// .fa-shopping-cart, .header-panier-text {
+//     color: white;
+// }                                               --- color onload ---
+
+// .fa-truck, .header-livraison-text {
+//     color: lightgray;
+// }
+
+/*-------------HEADER----------------*/
+/*-------------MAIN----------------*/
+
+.paiement-page {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 500px;
+}
+
+/*-------------MAIN----------------*/
+/*-------------SECTION-livraison----------------*/
+
+.livraison {
+    width: 50%;
+    height: 300px;
+    margin-top: 20px;
+    &-title {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    &-container {
+        background: $bg-secondary;
+        &-standart {
+            @include livraison;
+            border: $border;
+        }
+        &-express {
+            @include livraison;
+            border-left: $border;
+            border-right: $border;
+        }
+        &-relais {
+            @include livraison;
+            border: $border;
+        }
+    }
+}
+
+/*-------------SECTION-livraison----------------*/
+/*-------------SECTION-recap----------------*/
+
+.validation-recap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &-text {
+        width: 50%;
+    }
+    &-price {
+        width: 20%;
+        margin: 0;
+        padding: 50px 0;
+        font-size: 1.2rem;
+    }
+}
+
+/*-------------SECTION-recap----------------*/
+/*-------------SECTION-paiement----------------*/
+
+.paiement {
+    position: absolute;
+    top: 500px;
+    left: 60px;
+    width: 50%;
+    &-title {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    &-container {
+    }
+    &-card {
+        border: $border;
+        border-bottom: dotted black 2px;
+        background: $bg-secondary;
+        padding: 20px 15px;
+        &-text {
+            font-size: 1.2rem;
+        }
+    }
+    &-facturation {
+        border: $border;
+        border-bottom: dotted black 2px;
+        border-top: none;
+        background: $bg-secondary;
+        padding: 10px;
+        &-text {
+            font-size: .9rem;
+        }
+        &-btn {
+            margin-left: 20px;
+            width: 36%;
+            height: 30px;
+            font-size: 1.1rem;
+            @include all-btn;
+        }
+    }
+    &-infos {
+        border-right: $border;
+        border-left: $border;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &-title {
+            margin: 0;
+            padding-top: 20px;
+            font-size: 1.3rem;
+        }
+        &-dots {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        &-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 60%;
+            background: $bg-secondary;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            box-shadow: gray 3px 3px 8px;
+            &-title {
+                width: 100%;
+                font-size: 1.2rem;
+            }
+            &-numero {
+                width: 85%;
+                @include card-infos;
+            }
+            &-date {
+                width: 32%;
+                margin: 15px 10px;
+                @include card-infos;
+            }
+            &-crypto {
+                width: 40%;
+                margin: 15px 10px;
+                @include card-infos;
+            }
+            &-nom {
+                width: 85%;
+                margin-bottom: 25px;
+                @include card-infos;
+            }
+        }
+        &-futur-card {
+            font-size: .9rem;
+            margin: 10px 0 20px;
+        }
+        &-btn {
+            margin-bottom: 20px;
+            width: 40%;
+            height: 40px;
+            font-size: 1.3rem;
+            box-shadow: gray 1px 1px 4px;
+            @include all-btn
+        }
+    }
+    &-paypal {
+        border: $border;
+        background: $bg-secondary;
+        padding: 20px 15px;
+        &-text {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+/*-------------SECTION-paiement----------------*/
+
+/*-------------Paiement-page----------------*/
