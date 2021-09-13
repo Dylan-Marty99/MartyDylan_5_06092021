@@ -77,6 +77,9 @@ header {
         @include large-smartphone {
             font-size: 1.2rem;
         }
+        @include smartphone {
+            font-size: 1rem;
+        }
         &:hover {
             filter: brightness(85%);      
             cursor: pointer;
@@ -106,6 +109,15 @@ header {
     @include large-smartphone {
         font-size: 1rem;
     }
+    @include smartphone {
+        text-align: center;
+        font-size: .9rem;
+    }
+    & li {
+        @include smartphone {
+            margin: 0 5px;
+        }
+    }
     & li:hover {
         text-decoration: underline;
     }
@@ -133,6 +145,9 @@ header {
         justify-content: center;
         align-items: center;
         margin: 0 10px;
+        @include smartphone {
+            font-size: .9rem;
+        }
         & .fa-shopping-cart {
             color: lightgray;
         }
@@ -140,17 +155,27 @@ header {
     &-text {
         color:lightgray;
         font-size: 1.1rem;
+        @include smartphone {
+            font-size: .9rem;
+        }
     }
     &-separator {
         margin: 0 7px;
         font-size: 1.5rem;
         color: white;
+        @include smartphone {
+            font-size: 1.1rem;
+        }
     }
 }
 
 .header-livraison-text {
     color: white;
     font-size: 1.1rem;
+    @include smartphone {
+        font-size: .9rem;
+        text-align: center;
+    }
 }
 
 .fa-truck {
@@ -169,12 +194,18 @@ header {
     justify-content: space-around;
     align-items: center;
     background: $bg-gradient;
+    @include smartphone {
+        width: 100%;
+    }
     &-title {
         font-size: 2.2rem;
         letter-spacing: 3px;
         text-decoration: underline;
         @include large-smartphone {
             font-size: 1.8rem;
+        }
+        @include smartphone {
+            display: none;
         }
     }
     &-text {
@@ -186,6 +217,9 @@ header {
             font-size: 1rem;
             margin-left: -20px;
         }
+        @include smartphone {
+            font-size: .9rem;
+        }
     }
     &-btn {
         width: 10%;
@@ -195,6 +229,9 @@ header {
         @include all-btn;
         @include large-smartphone {
             width: 15%;
+        }
+        @include smartphone {
+            width: 20%;
         }
     }
 }
@@ -280,11 +317,17 @@ header {
         height: 22px;
         font-size: 1.2rem;
         padding-left: 5px;
+        @include smartphone {
+            width: 60%;
+        }
     }
     &-btn {
         height: 28px;
         margin-left: -5px;
         cursor: pointer;
+    }
+    & label {
+        margin-top: 10px;
     }
 }
 
@@ -303,6 +346,9 @@ header {
     }
     @include large-smartphone {
         height: 55px;
+    }
+    @include smartphone {
+        font-size: .75rem;
     }
     & li {
         @include large-smartphone {

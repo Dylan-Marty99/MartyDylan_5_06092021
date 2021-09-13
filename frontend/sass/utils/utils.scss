@@ -5,7 +5,7 @@ $bg-secondary : rgb(171, 139, 248);
 $bg-btn : rgb(229, 191, 255);
 $border : black solid 1.5px;
 $breakpoints: (
-    little-smartphone: 350px,
+    litle-smartphone: 350px,
     smartphone: 500px,
     large-smartphone: 800px,
     tablet: 1024px,
@@ -29,9 +29,15 @@ $breakpoints: (
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 30px 0;                    /*---modifs relais margin btn---*/
+    padding: 30px 0;                    
+    @include smartphone {
+        flex-direction: column;
+    }
     &-text {
         font-size: 1rem;
+        @include smartphone {
+            margin: 0 5px;
+        }
     }
     &-address {
         width: 35%;
@@ -43,6 +49,10 @@ $breakpoints: (
             height: 40px;
             margin: 0 20px;
             font-size: .9rem;
+        }
+        @include smartphone {
+            margin: 20px 0;
+            width: 50%;
         }
     }
     &-price {
@@ -84,6 +94,11 @@ $breakpoints: (
 
 /*---------Mixins media queries-------------*/
 
+@mixin litle-smartphone {
+    @media screen and (max-width: map-get($breakpoints, litle-smartphone )) {
+        @content;
+    }
+}
 @mixin smartphone {
     @media screen and (max-width: map-get($breakpoints, smartphone )) {
         @content;

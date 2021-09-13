@@ -22,6 +22,13 @@
     @include large-smartphone {
         top: 370px;
     }
+    @include smartphone {
+        top: 410px;
+        left: 15%;
+    }
+    @include litle-smartphone {
+        left: 10%;
+    }
     &-title {
         font-size: 1.1rem;
         width: 85%;
@@ -68,6 +75,9 @@
     }
     @include large-smartphone {
         width: 38%;
+    }
+    @include smartphone {
+        width: 70%;
     }
 }
 
@@ -141,9 +151,13 @@
         color: white;
         @include tablet {
             font-size: 1.5rem;
-            @include large-smartphone {
-                font-size: 1.2rem;
-            }
+        }
+        @include large-smartphone {
+            font-size: 1.2rem;
+        }
+        @include smartphone {
+            text-align: center;
+            width: 55%;
         }
     }
     &-btn {
@@ -151,6 +165,10 @@
         height: 35px;
         font-size: 1.3rem;
         @include all-btn;
+        @include smartphone {
+            width: 30%;
+            font-size: 1.1rem;
+        }
     }
 }
 
@@ -170,6 +188,10 @@
     width: 100%;
     height: 40px;
     font-size: 1.7rem;
+    @include smartphone {
+        font-size: 1.4rem;
+        margin-bottom: 30px;
+    }
     &-container {
         display: flex;
         flex-direction: column;
@@ -186,6 +208,9 @@
         @include large-smartphone {
             width: 42%;
             margin-bottom: 30px;
+        }
+        @include smartphone {
+            width: 70%;
         }
     }
     &-title {
@@ -206,6 +231,10 @@
         @include all-btn;
         @include large-smartphone {
             font-size: 1rem;
+        }
+        @include smartphone {
+            width: 55%;
+            font-size: 1.1rem;
         }
     }
 }
@@ -238,6 +267,10 @@
                 height: 200px;
                 width: 28%;
             }
+            @include smartphone {
+                height: 170px;
+                width: 40%;
+            }
         }
     }
     &-description {
@@ -247,6 +280,10 @@
             font-size: 1.5rem;
             @include large-smartphone {
                 font-size: 1.2rem;
+            }
+            @include smartphone {
+                font-size: .9rem;
+                padding-top: 15%;
             }
         }
         &-title {
@@ -395,6 +432,10 @@
                 order: 2;
                 width: 50%;
                 margin-top: 25px;
+                margin-left: 0;
+            }
+            @include smartphone {
+                width: 70%;
             }
             &:hover {
                 background: $bg-secondary ;
@@ -418,13 +459,23 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            @include smartphone {
+                margin: 0 10px;
+            }
         }
         &-icon {
             font-size: 1.2rem;
+            @include smartphone {
+                font-size: 1rem;
+            }
         }
         &-text {
             margin-top: 5px;
             font-size: .9rem;
+            @include smartphone {
+                font-size: .7rem;
+                text-align: center;
+            }
         }
     }
 }
@@ -479,11 +530,20 @@
         &-title {
             font-size: 1.2rem;
             margin-left: 20px;
+            @include smartphone {
+                font-size: 1rem;
+                margin-right: 20px;
+                text-align: center;
+            }
         }
         &-suppr-all {
             margin-right: 20px;
             cursor: pointer;
             transition: .2s;
+            @include smartphone {
+                font-size: .9rem;
+                text-align: center;
+            }
             & i {
                 margin-left: 5px;
             }
@@ -505,11 +565,19 @@
             height: 80%;
             object-fit: cover;
             margin-left: 20px;
+            @include smartphone {
+                height: 60%;
+                width: 30%;
+                margin-left: 10px;
+            }
         }
         &-product {
             display: flex;
             flex-direction: column;
             width: 50%;
+            @include smartphone {
+                margin-left: 10px;
+            }
             &-title {
                 margin: 0;
                 font-size: 1.2rem;
@@ -519,6 +587,9 @@
                 margin-bottom: 0;
                 margin-right: 40px;
                 align-self: flex-end;
+                @include smartphone {
+                    font-size: 1.2rem;
+                }
             }
         }
         &-suppr {
@@ -565,6 +636,9 @@
             margin: 15px 0 20px;
             @include large-smartphone {
                 font-size: 1.3rem;
+            }
+            @include smartphone {
+                font-size: 1rem;
             }
         }
         &-promo {
@@ -641,6 +715,9 @@
             flex-direction: row;
             margin-bottom: 20px;
         }
+        @include smartphone {
+            flex-direction: column;
+        }
         & i {
             margin: 10px;
             font-size: 1.1rem;
@@ -666,10 +743,17 @@
         width: 70%;
         margin: 0 auto;
     }
+    @include smartphone {
+        width: 75%;
+
+    }
     &-text {
         margin: 0;
         padding: 15px 10px;
         font-size: 1.05rem;
+        @include smartphone {
+            font-size: .85rem;
+        }
     }
     &-btn {
         width: 45%;
@@ -681,6 +765,10 @@
         border: none;
         box-shadow: gray 2px 2px 4px;
         transition: .3s;
+        @include smartphone {
+            font-size: 1.1rem;
+            width: 55%;
+        }
         &:hover {
             transform: scale(1.1);
             color: white;
@@ -727,7 +815,6 @@
 /*-------------SECTION-livraison----------------*/
 
 .livraison {
-    height: 300px;
     margin-top: 40px;
     &-title {
         font-size: 1.3rem;
@@ -758,9 +845,6 @@
 
 .paiement {
     margin-top: 40px;
-    @include tablet {
-        margin-top: 70px;
-    }
     &-title {
         font-size: 1.3rem;
         margin-bottom: 10px;
@@ -782,6 +866,11 @@
         background: $bg-secondary;
         text-align: center;
         padding: 10px;
+        @include smartphone {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
         &-text {
             font-size: .9rem;
         }
@@ -793,6 +882,10 @@
             @include all-btn;
             @include tablet {
                 width: 55%;
+            }
+            @include smartphone {
+                width: 65%;
+                height: 45px;
             }
         }
     }
@@ -840,11 +933,19 @@
                 width: 33%;
                 margin: 15px 10px;
                 @include card-infos;
+                @include smartphone {
+                    width: 85%;
+                    margin: 15px 0;
+                }
             }
             &-crypto {
                 width: 43%;
                 margin: 15px 10px;
                 @include card-infos;
+                @include smartphone {
+                    width: 85%;
+                    margin: 0 0 15px;
+                }
             }
             &-nom {
                 width: 85%;
@@ -865,6 +966,10 @@
             @include all-btn;
             @include tablet {
                 width: 55%;
+            }
+            @include smartphone {
+                font-size: 1.1rem;
+                height: 45px;
             }
         }
     }
@@ -893,6 +998,7 @@
         font-size: 1.8rem;
         @include large-smartphone {
             width: 100%;
+            text-align: center;
         }
     }
 }
@@ -903,6 +1009,10 @@
     &-container {
         text-align: center;
         margin-top: 50px;
+        @include smartphone {
+            width: 90%;
+            margin: 50px auto auto;
+        }
     }
     &-title {
         font-size: 1.5rem;
@@ -937,6 +1047,9 @@
         @include large-smartphone {
             padding-left: 30px;
         }
+        @include smartphone {
+            margin-bottom: 10px;
+        }
         &-image {
             object-fit: cover;
             width: 15%;
@@ -946,11 +1059,18 @@
             @include large-smartphone {
                 width: 30%;
             }
+            @include smartphone {
+                height: 80%;
+                width: 37%;
+            }
         }
         &-product {
             margin-left: 40px;
             display: flex;
             flex-direction: column;
+            @include smartphone {
+                margin-left: 20px;
+            }
             &-title {
                 margin: 10px 0;
                 font-size: 1.1rem;
@@ -961,6 +1081,9 @@
             }
             &-price {
                 margin-top: 50%;
+                @include smartphone {
+                    margin-top: 20%;
+                }
             }
         }
     }
@@ -970,6 +1093,9 @@
     &-container {
         display: flex;
         background: $bg-secondary;
+        @include smartphone {
+            flex-direction: column;
+        }
     }
     &-livraison {
         display: flex;
@@ -977,6 +1103,9 @@
         width: 50%;
         border-top: $border;
         border-bottom: $border;
+        @include smartphone {
+            width: 100%;
+        }
         &-mode {
             @include confirm-details;
         }
@@ -991,6 +1120,11 @@
             width: 50%;
             border: $border;
             border-right: none;
+            @include smartphone {
+                width: 100%;
+                border-top: none;
+                border-left: none;
+            }
             &-text {
                 width: 40%;
                 margin: 10px 0;

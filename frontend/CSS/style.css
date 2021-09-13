@@ -110,6 +110,11 @@ header {
     font-size: 1.2rem;
   }
 }
+@media screen and (max-width: 500px) {
+  .comptes-container {
+    font-size: 1rem;
+  }
+}
 .comptes-container:hover {
   filter: brightness(85%);
   cursor: pointer;
@@ -138,6 +143,17 @@ header {
 @media screen and (max-width: 800px) {
   .header-products-list {
     font-size: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header-products-list {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header-products-list li {
+    margin: 0 5px;
   }
 }
 .header-products-list li:hover {
@@ -169,6 +185,11 @@ header {
   align-items: center;
   margin: 0 10px;
 }
+@media screen and (max-width: 500px) {
+  .header-panier-content {
+    font-size: 0.9rem;
+  }
+}
 .header-panier-content .fa-shopping-cart {
   color: lightgray;
 }
@@ -176,15 +197,31 @@ header {
   color: lightgray;
   font-size: 1.1rem;
 }
+@media screen and (max-width: 500px) {
+  .header-panier-text {
+    font-size: 0.9rem;
+  }
+}
 .header-panier-separator {
   margin: 0 7px;
   font-size: 1.5rem;
   color: white;
 }
+@media screen and (max-width: 500px) {
+  .header-panier-separator {
+    font-size: 1.1rem;
+  }
+}
 
 .header-livraison-text {
   color: white;
   font-size: 1.1rem;
+}
+@media screen and (max-width: 500px) {
+  .header-livraison-text {
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }
 
 .fa-truck {
@@ -203,6 +240,11 @@ header {
   align-items: center;
   background: linear-gradient(to left, #982dfc, #ee8e11);
 }
+@media screen and (max-width: 500px) {
+  .faq {
+    width: 100%;
+  }
+}
 .faq-title {
   font-size: 2.2rem;
   letter-spacing: 3px;
@@ -211,6 +253,11 @@ header {
 @media screen and (max-width: 800px) {
   .faq-title {
     font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .faq-title {
+    display: none;
   }
 }
 .faq-text {
@@ -223,6 +270,11 @@ header {
   .faq-text {
     font-size: 1rem;
     margin-left: -20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .faq-text {
+    font-size: 0.9rem;
   }
 }
 .faq-btn {
@@ -243,6 +295,11 @@ header {
 @media screen and (max-width: 800px) {
   .faq-btn {
     width: 15%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .faq-btn {
+    width: 20%;
   }
 }
 
@@ -339,10 +396,18 @@ header {
   font-size: 1.2rem;
   padding-left: 5px;
 }
+@media screen and (max-width: 500px) {
+  .newletter-email {
+    width: 60%;
+  }
+}
 .newletter-btn {
   height: 28px;
   margin-left: -5px;
   cursor: pointer;
+}
+.newletter label {
+  margin-top: 10px;
 }
 
 .footer-footer-list {
@@ -364,6 +429,11 @@ header {
 @media screen and (max-width: 800px) {
   .footer-footer-list {
     height: 55px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer-footer-list {
+    font-size: 0.75rem;
   }
 }
 @media screen and (max-width: 800px) {
@@ -397,6 +467,17 @@ header {
 @media screen and (max-width: 800px) {
   .bearsplus {
     top: 370px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .bearsplus {
+    top: 410px;
+    left: 15%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .bearsplus {
+    left: 10%;
   }
 }
 .bearsplus-title {
@@ -447,6 +528,11 @@ header {
 @media screen and (max-width: 800px) {
   .all-bears {
     width: 38%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .all-bears {
+    width: 70%;
   }
 }
 
@@ -536,9 +622,15 @@ header {
     font-size: 1.5rem;
   }
 }
-@media screen and (max-width: 1024px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .promotions-title {
     font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .promotions-title {
+    text-align: center;
+    width: 55%;
   }
 }
 .promotions-btn {
@@ -555,6 +647,12 @@ header {
   transform: scale(1.1);
   filter: brightness(90%);
 }
+@media screen and (max-width: 500px) {
+  .promotions-btn {
+    width: 30%;
+    font-size: 1.1rem;
+  }
+}
 
 /*----------ASIDE-promos-----------*/
 /*-------SECTION-boutiques---------*/
@@ -570,6 +668,12 @@ header {
   width: 100%;
   height: 40px;
   font-size: 1.7rem;
+}
+@media screen and (max-width: 500px) {
+  .other-shop {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }
 }
 .other-shop-container {
   display: flex;
@@ -591,6 +695,11 @@ header {
   .other-shop-container {
     width: 42%;
     margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .other-shop-container {
+    width: 70%;
   }
 }
 .other-shop-title {
@@ -623,6 +732,12 @@ header {
     font-size: 1rem;
   }
 }
+@media screen and (max-width: 500px) {
+  .other-shop-btn {
+    width: 55%;
+    font-size: 1.1rem;
+  }
+}
 
 /*-------SECTION-boutiques---------*/
 /*-------------INDEX----------------*/
@@ -648,6 +763,12 @@ header {
     width: 28%;
   }
 }
+@media screen and (max-width: 500px) {
+  .product-bear-image {
+    height: 170px;
+    width: 40%;
+  }
+}
 .product-description-content {
   width: 65%;
   padding-top: 10%;
@@ -656,6 +777,12 @@ header {
 @media screen and (max-width: 800px) {
   .product-description-content {
     font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .product-description-content {
+    font-size: 0.9rem;
+    padding-top: 15%;
   }
 }
 .product-description-title {
@@ -834,6 +961,12 @@ header {
     order: 2;
     width: 50%;
     margin-top: 25px;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .product-sub-bearplus {
+    width: 70%;
   }
 }
 .product-sub-bearplus:hover {
@@ -858,12 +991,28 @@ header {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 500px) {
+  .product-icon-container {
+    margin: 0 10px;
+  }
+}
 .product-icon-icon {
   font-size: 1.2rem;
+}
+@media screen and (max-width: 500px) {
+  .product-icon-icon {
+    font-size: 1rem;
+  }
 }
 .product-icon-text {
   margin-top: 5px;
   font-size: 0.9rem;
+}
+@media screen and (max-width: 500px) {
+  .product-icon-text {
+    font-size: 0.7rem;
+    text-align: center;
+  }
 }
 
 /*-------------ASIDE----------------*/
@@ -921,10 +1070,23 @@ header {
   font-size: 1.2rem;
   margin-left: 20px;
 }
+@media screen and (max-width: 500px) {
+  .panier-title-title {
+    font-size: 1rem;
+    margin-right: 20px;
+    text-align: center;
+  }
+}
 .panier-title-suppr-all {
   margin-right: 20px;
   cursor: pointer;
   transition: 0.2s;
+}
+@media screen and (max-width: 500px) {
+  .panier-title-suppr-all {
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }
 .panier-title-suppr-all i {
   margin-left: 5px;
@@ -947,10 +1109,22 @@ header {
   object-fit: cover;
   margin-left: 20px;
 }
+@media screen and (max-width: 500px) {
+  .panier-content-image {
+    height: 60%;
+    width: 30%;
+    margin-left: 10px;
+  }
+}
 .panier-content-product {
   display: flex;
   flex-direction: column;
   width: 50%;
+}
+@media screen and (max-width: 500px) {
+  .panier-content-product {
+    margin-left: 10px;
+  }
 }
 .panier-content-product-title {
   margin: 0;
@@ -961,6 +1135,11 @@ header {
   margin-bottom: 0;
   margin-right: 40px;
   align-self: flex-end;
+}
+@media screen and (max-width: 500px) {
+  .panier-content-product-price {
+    font-size: 1.2rem;
+  }
 }
 .panier-content-suppr {
   align-self: flex-start;
@@ -1009,6 +1188,11 @@ header {
 @media screen and (max-width: 800px) {
   .validation-promos-title {
     font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .validation-promos-title {
+    font-size: 1rem;
   }
 }
 .validation-promos-promo {
@@ -1105,6 +1289,11 @@ header {
     margin-bottom: 20px;
   }
 }
+@media screen and (max-width: 500px) {
+  .validation-infos {
+    flex-direction: column;
+  }
+}
 .validation-infos i {
   margin: 10px;
   font-size: 1.1rem;
@@ -1130,10 +1319,20 @@ header {
     margin: 0 auto;
   }
 }
+@media screen and (max-width: 500px) {
+  .panier-bearsplus {
+    width: 75%;
+  }
+}
 .panier-bearsplus-text {
   margin: 0;
   padding: 15px 10px;
   font-size: 1.05rem;
+}
+@media screen and (max-width: 500px) {
+  .panier-bearsplus-text {
+    font-size: 0.85rem;
+  }
 }
 .panier-bearsplus-btn {
   width: 45%;
@@ -1145,6 +1344,12 @@ header {
   border: none;
   box-shadow: gray 2px 2px 4px;
   transition: 0.3s;
+}
+@media screen and (max-width: 500px) {
+  .panier-bearsplus-btn {
+    font-size: 1.1rem;
+    width: 55%;
+  }
 }
 .panier-bearsplus-btn:hover {
   transform: scale(1.1);
@@ -1178,7 +1383,6 @@ header {
 /*-------------MAIN----------------*/
 /*-------------SECTION-livraison----------------*/
 .livraison {
-  height: 300px;
   margin-top: 40px;
 }
 .livraison-title {
@@ -1195,11 +1399,20 @@ header {
   justify-content: space-around;
   align-items: center;
   padding: 30px 0;
-  /*---modifs relais margin btn---*/
   border: black solid 1.5px;
+}
+@media screen and (max-width: 500px) {
+  .livraison-container-standart {
+    flex-direction: column;
+  }
 }
 .livraison-container-standart-text {
   font-size: 1rem;
+}
+@media screen and (max-width: 500px) {
+  .livraison-container-standart-text {
+    margin: 0 5px;
+  }
 }
 .livraison-container-standart-address {
   width: 35%;
@@ -1223,6 +1436,12 @@ header {
     font-size: 0.9rem;
   }
 }
+@media screen and (max-width: 500px) {
+  .livraison-container-standart-address {
+    margin: 20px 0;
+    width: 50%;
+  }
+}
 .livraison-container-standart-price {
   font-size: 1rem;
 }
@@ -1236,12 +1455,21 @@ header {
   justify-content: space-around;
   align-items: center;
   padding: 30px 0;
-  /*---modifs relais margin btn---*/
   border-left: black solid 1.5px;
   border-right: black solid 1.5px;
 }
+@media screen and (max-width: 500px) {
+  .livraison-container-express {
+    flex-direction: column;
+  }
+}
 .livraison-container-express-text {
   font-size: 1rem;
+}
+@media screen and (max-width: 500px) {
+  .livraison-container-express-text {
+    margin: 0 5px;
+  }
 }
 .livraison-container-express-address {
   width: 35%;
@@ -1265,6 +1493,12 @@ header {
     font-size: 0.9rem;
   }
 }
+@media screen and (max-width: 500px) {
+  .livraison-container-express-address {
+    margin: 20px 0;
+    width: 50%;
+  }
+}
 .livraison-container-express-price {
   font-size: 1rem;
 }
@@ -1278,11 +1512,20 @@ header {
   justify-content: space-around;
   align-items: center;
   padding: 30px 0;
-  /*---modifs relais margin btn---*/
   border: black solid 1.5px;
+}
+@media screen and (max-width: 500px) {
+  .livraison-container-relais {
+    flex-direction: column;
+  }
 }
 .livraison-container-relais-text {
   font-size: 1rem;
+}
+@media screen and (max-width: 500px) {
+  .livraison-container-relais-text {
+    margin: 0 5px;
+  }
 }
 .livraison-container-relais-address {
   width: 35%;
@@ -1306,6 +1549,12 @@ header {
     font-size: 0.9rem;
   }
 }
+@media screen and (max-width: 500px) {
+  .livraison-container-relais-address {
+    margin: 20px 0;
+    width: 50%;
+  }
+}
 .livraison-container-relais-price {
   font-size: 1rem;
 }
@@ -1319,11 +1568,6 @@ header {
 /*-------------SECTION-paiement----------------*/
 .paiement {
   margin-top: 40px;
-}
-@media screen and (max-width: 1024px) {
-  .paiement {
-    margin-top: 70px;
-  }
 }
 .paiement-title {
   font-size: 1.3rem;
@@ -1347,6 +1591,13 @@ header {
   text-align: center;
   padding: 10px;
 }
+@media screen and (max-width: 500px) {
+  .paiement-facturation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .paiement-facturation-text {
   font-size: 0.9rem;
 }
@@ -1368,6 +1619,12 @@ header {
 @media screen and (max-width: 1024px) {
   .paiement-facturation-btn {
     width: 55%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .paiement-facturation-btn {
+    width: 65%;
+    height: 45px;
   }
 }
 .paiement-infos {
@@ -1445,6 +1702,12 @@ header {
 .paiement-infos-card-date::placeholder {
   color: white;
 }
+@media screen and (max-width: 500px) {
+  .paiement-infos-card-date {
+    width: 85%;
+    margin: 15px 0;
+  }
+}
 .paiement-infos-card-crypto {
   width: 43%;
   margin: 15px 10px;
@@ -1461,6 +1724,12 @@ header {
 }
 .paiement-infos-card-crypto::placeholder {
   color: white;
+}
+@media screen and (max-width: 500px) {
+  .paiement-infos-card-crypto {
+    width: 85%;
+    margin: 0 0 15px;
+  }
 }
 .paiement-infos-card-nom {
   width: 85%;
@@ -1504,6 +1773,12 @@ header {
     width: 55%;
   }
 }
+@media screen and (max-width: 500px) {
+  .paiement-infos-btn {
+    font-size: 1.1rem;
+    height: 45px;
+  }
+}
 .paiement-paypal {
   border: black solid 1.5px;
   background: #ab8bf8;
@@ -1527,6 +1802,7 @@ header {
 @media screen and (max-width: 800px) {
   .header-confirmation-title {
     width: 100%;
+    text-align: center;
   }
 }
 
@@ -1535,6 +1811,12 @@ header {
 .thank-container {
   text-align: center;
   margin-top: 50px;
+}
+@media screen and (max-width: 500px) {
+  .thank-container {
+    width: 90%;
+    margin: 50px auto auto;
+  }
 }
 .thank-title {
   font-size: 1.5rem;
@@ -1569,6 +1851,11 @@ header {
     padding-left: 30px;
   }
 }
+@media screen and (max-width: 500px) {
+  .details-product {
+    margin-bottom: 10px;
+  }
+}
 .details-product-image {
   object-fit: cover;
   width: 15%;
@@ -1583,10 +1870,21 @@ header {
     width: 30%;
   }
 }
+@media screen and (max-width: 500px) {
+  .details-product-image {
+    height: 80%;
+    width: 37%;
+  }
+}
 .details-product-product {
   margin-left: 40px;
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 500px) {
+  .details-product-product {
+    margin-left: 20px;
+  }
 }
 .details-product-product-title {
   margin: 10px 0;
@@ -1599,10 +1897,20 @@ header {
 .details-product-product-price {
   margin-top: 50%;
 }
+@media screen and (max-width: 500px) {
+  .details-product-product-price {
+    margin-top: 20%;
+  }
+}
 
 .recap-container {
   display: flex;
   background: #ab8bf8;
+}
+@media screen and (max-width: 500px) {
+  .recap-container {
+    flex-direction: column;
+  }
 }
 .recap-livraison {
   display: flex;
@@ -1610,6 +1918,11 @@ header {
   width: 50%;
   border-top: black solid 1.5px;
   border-bottom: black solid 1.5px;
+}
+@media screen and (max-width: 500px) {
+  .recap-livraison {
+    width: 100%;
+  }
 }
 .recap-livraison-mode {
   display: flex;
@@ -1651,6 +1964,13 @@ header {
   width: 50%;
   border: black solid 1.5px;
   border-right: none;
+}
+@media screen and (max-width: 500px) {
+  .recap-livraison-price {
+    width: 100%;
+    border-top: none;
+    border-left: none;
+  }
 }
 .recap-livraison-price-text {
   width: 40%;
