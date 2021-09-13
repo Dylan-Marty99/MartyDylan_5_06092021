@@ -20,8 +20,12 @@ header {
     justify-content: center;
     align-items: center;
     margin-left: 30px;
+    width: 35%;
+    @include tablet {
+        margin-left: 10px;
+    }
     &-input {
-        width: 400px;
+        width: 100%;
         height: 30px;
         font-size: 1.1rem;
     }
@@ -49,6 +53,10 @@ header {
         margin: 13px;
         font-size: 1.1rem;
         transition: .2s;
+        @include tablet {
+            font-size: .95rem;
+            margin: 10px;
+        }
         &:hover {
             filter: brightness(85%);      
             cursor: pointer;
@@ -80,6 +88,49 @@ header {
     }
 }
 
+/*-------------HEADER-panier----------------*/
+
+.header-panier {
+    &-container {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        @include tablet {
+            width: 60%;
+        }
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+        & .fa-shopping-cart {
+            color: lightgray;
+        }
+    }
+    &-text {
+        color:lightgray;
+        font-size: 1.1rem;
+    }
+    &-separator {
+        margin: 0 7px;
+        font-size: 1.5rem;
+        color: white;
+    }
+}
+
+.header-livraison-text {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.fa-truck {
+    color: white;
+    padding-bottom: 5px;
+}
+
+/*-------------HEADER-panier----------------*/
 /*-----------FOOTER-------------*/
 
 .faq {
@@ -98,6 +149,10 @@ header {
     &-text {
         font-size: 1.1rem;
         margin-left: -40px;
+        @include tablet {
+            font-size: 1rem;
+            margin-left: -20px;
+        }
     }
     &-btn {
         width: 100px;
@@ -119,6 +174,9 @@ header {
     &-media {
         width: 35%;
         margin-left: 50px;
+        @include tablet {
+            margin-left: 10px;
+        }
         &-title {
             font-size: 1.5rem;
         }
@@ -147,6 +205,9 @@ header {
     align-items: center;
     width: 45%;
     border-left: $border;
+    @include tablet {
+        width: 55%;
+    }
     &-title {
         font-size: 1.5rem;
         margin-bottom: 0;

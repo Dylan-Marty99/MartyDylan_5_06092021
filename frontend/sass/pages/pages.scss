@@ -4,7 +4,7 @@
 /*----------ASIDE-bears+------------*/
 
 .bearsplus-container {
-    background: url("../backend/JWDP5-master/images/teddy_bg.png");
+    background: url("../../backend/JWDP5-master/images/teddy_bg.png");
     object-fit: cover;        
     height: 300px;
 }
@@ -43,15 +43,26 @@
 /*----------ASIDE-bears+------------*/
 /*---------SECTION-produits---------*/
 
-.products {
+.all-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.all-products-title {
     text-align: center;
     font-size: 1.7rem;
+    width: 100%;
 }
 
 .all-bears {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    width: 25%;
+    @include tablet {
+        width: 28%;
+    }
 }
 
 .bear {
@@ -59,7 +70,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25%;
+    width: 100%;
     height: 300px;
     border-radius: 20px;
     box-shadow: rgb(99, 98, 98) 4px 3px 10px;
@@ -82,10 +93,13 @@
         margin: 0 0 10px 0;
     }
     &-panier-btn {
-        width: 45%;
+        width: 55%;
         height: 30px;
         font-size: 1rem;
         @include all-btn;
+        @include tablet {
+            font-size: .9rem;
+        }
     }
 }
 
@@ -112,7 +126,10 @@
     box-shadow: grey 2px 2px 7px;
     &-title {
         font-size: 1.7rem;
-        color: rgb(245, 241, 241);
+        color: white;
+        @include tablet {
+            font-size: 1.5rem;
+        }
     }
     &-btn {
         margin-left: -70px;
@@ -120,6 +137,9 @@
         height: 35px;
         font-size: 1.3rem;
         @include all-btn;
+        @include tablet {
+            margin-left: -20px;
+        }
     }
 }
 
@@ -132,24 +152,26 @@
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
-    height: 400px;
+
 }
 
 .other-shop {
     width: 100%;
     height: 40px;
     font-size: 1.7rem;
-    margin-bottom: 0;
     &-container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        width: 300px;
+        width: 25%;
         height: 270px;
         background: $bg-secondary;
         border-radius: 20px;
         box-shadow: rgb(99, 98, 98) 4px 3px 10px;
+        @include tablet {
+            width: 29%;
+        }
     }
     &-title {
         font-size: 2rem;
@@ -191,6 +213,9 @@
             width: 25%;
             height: 400px;
             object-fit: cover;
+            @include tablet {
+                height: 300px;
+            }
         }
     }
     &-description {
@@ -209,6 +234,9 @@
         padding: 10px;
         margin-top: 70px;
         height: 150px;
+        @include tablet {
+            margin-top: 30px;
+        }
         &-container {
             width: 65%;
             display: flex;
@@ -235,14 +263,22 @@
             width: 40%;
             font-size: 1.2rem;
             @include all-btn;
+            @include tablet {
+                width: 47%;
+                font-size: 1.1rem;
+            }
         }
         &-livraison {
             border-left: $border;
-            padding-left: 50px;
+            padding-left: 30px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
+            @include tablet {
+                padding-left: 10px;
+                font-size: .85rem;
+            }
         }
     }
 }
@@ -251,16 +287,19 @@
     &-number {
         height: 80%;
         width: 20%;
-        padding-left: 5px;
+        padding-left: 2px;
         font-size: 1.1rem;
         border-radius: 10px;
         border: none;
         cursor: pointer;
+        @include tablet {
+            font-size: 1rem;
+        }
     }
     &-color {
         width: 80%;
         height: 100%;
-        padding-left: 10px;
+        padding-left: 5px;
         font-size: 1.1rem;
         border-radius: 10px;
         border: none;
@@ -277,7 +316,7 @@
         }
         &-bearplus {
             width: 25%;
-            height: 40px;
+            height: 55px;
             margin: 10px 0 0 15px;
             font-size: 1.2rem;
             border: rgb(134, 134, 134) solid 1px;
@@ -297,6 +336,10 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+            margin-top: -40px;
+            @include tablet {
+                margin-top: 15px;
+            }
         }
     }
     &-icon {
@@ -307,10 +350,11 @@
             align-items: center;
         }
         &-icon {
-            font-size: 1.5rem;
+            font-size: 1.1rem;
         }
         &-text {
             margin-top: 5px;
+            font-size: .7rem;
         }
     }
 }
@@ -336,46 +380,6 @@
 /*-------------PRODUCT-PAGE----------------*/
 
 /*-------------PANIER-PAGE----------------*/
-/*-------------HEADER----------------*/
-
-.header-panier {
-    &-container {
-        display: flex;
-        align-items: center;
-        width: 50%;
-    }
-    &-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 10px;
-        & .fa-shopping-cart {
-            color: lightgray;
-        }
-    }
-    &-text {
-        color:lightgray;
-        font-size: 1.1rem;
-    }
-    &-separator {
-        margin: 0 7px;
-        font-size: 1.5rem;
-        color: white;
-    }
-}
-
-.header-livraison-text {
-    color: white;
-    font-size: 1.1rem;
-}
-
-.fa-truck {
-    color: white;
-    padding-bottom: 5px;
-}
-
-/*-------------HEADER----------------*/
 /*-------------SECTION-panier----------------*/
 
 .panier {
@@ -495,11 +499,24 @@
         }
     }
     &-recap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
         border-left: $border;
         border-right: $border;
         &-text {
+            width: 63%;
             margin: 0;
-            padding: 50px 0;
+            padding: 50px 5px;
+            font-size: 1.05rem;
+            @include tablet {
+
+            }
+        }
+        &-price {
+            width: 20%;
+            margin: 0;
+            padding: 50px 5px;
             font-size: 1.2rem;
         }
     }
@@ -507,19 +524,25 @@
         border: $border;
         padding: 20px 0;
         &-btn {
-            width: 55%;
+            width: 65%;
             height: 40px;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             @include all-btn;
+            @include tablet {
+                height: 55px;
+            }
         }
     }
     &-infos {
         display: flex;
         justify-content: center;
         align-items: center;
+        @include tablet {
+            flex-direction: column;
+        }
         & i {
             margin: 10px;
-            font-size: 1.5rem;
+            font-size: 1.1rem;
         }
         &-text {
             margin: 0 0 0 10px;
@@ -532,7 +555,7 @@
 
 .panier-bearsplus {
     width: 45%;
-    height: 120px;
+    height: 140px;
     margin-left: 8%;
     text-align: center;
     background: $bg-btn;
@@ -592,7 +615,7 @@
 /*-------------SECTION-livraison----------------*/
 
 .livraison {
-    width: 50%;
+    width: 55%;
     height: 300px;
     margin-top: 20px;
     &-title {
@@ -602,6 +625,7 @@
     }
     &-container {
         background: $bg-secondary;
+        text-align: center;
         &-standart {
             @include livraison;
             border: $border;
@@ -619,24 +643,7 @@
 }
 
 /*-------------SECTION-livraison----------------*/
-/*-------------SECTION-recap----------------*/
 
-.validation-recap {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    &-text {
-        width: 50%;
-    }
-    &-price {
-        width: 20%;
-        margin: 0;
-        padding: 50px 0;
-        font-size: 1.2rem;
-    }
-}
-
-/*-------------SECTION-recap----------------*/
 /*-------------SECTION-paiement----------------*/
 
 .paiement {
@@ -644,6 +651,11 @@
     top: 500px;
     left: 60px;
     width: 50%;
+    @include tablet {
+        top: 530px;
+        left: 30px;
+        width: 55%;
+    }
     &-title {
         font-size: 1.3rem;
         margin-bottom: 10px;
@@ -663,16 +675,20 @@
         border-bottom: dotted black 2px;
         border-top: none;
         background: $bg-secondary;
+        text-align: center;
         padding: 10px;
         &-text {
             font-size: .9rem;
         }
         &-btn {
-            margin-left: 20px;
-            width: 36%;
+            margin: 15px 0 5px;
+            width: 50%;
             height: 30px;
             font-size: 1.1rem;
             @include all-btn;
+            @include tablet {
+                width: 55%;
+            }
         }
     }
     &-infos {
@@ -701,6 +717,9 @@
             margin-bottom: 10px;
             border-radius: 20px;
             box-shadow: gray 3px 3px 8px;
+            @include tablet {
+                width: 65%;
+            }
             &-title {
                 width: 100%;
                 font-size: 1.2rem;
@@ -710,12 +729,12 @@
                 @include card-infos;
             }
             &-date {
-                width: 32%;
+                width: 33%;
                 margin: 15px 10px;
                 @include card-infos;
             }
             &-crypto {
-                width: 40%;
+                width: 43%;
                 margin: 15px 10px;
                 @include card-infos;
             }
@@ -731,11 +750,14 @@
         }
         &-btn {
             margin-bottom: 20px;
-            width: 40%;
+            width: 50%;
             height: 40px;
             font-size: 1.3rem;
             box-shadow: gray 1px 1px 4px;
-            @include all-btn
+            @include all-btn;
+            @include tablet {
+                width: 55%;
+            }
         }
     }
     &-paypal {
@@ -804,7 +826,7 @@
         border-top: $border;
         &-image {
             object-fit: cover;
-            width: 10%;
+            width: 15%;
         }
         &-product {
             margin-left: 40px;

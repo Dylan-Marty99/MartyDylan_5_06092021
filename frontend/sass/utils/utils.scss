@@ -4,6 +4,12 @@ $bg-gradient : linear-gradient(to left, rgb(152, 45, 252), rgb(238, 142, 17));
 $bg-secondary : rgb(171, 139, 248);
 $bg-btn : rgb(229, 191, 255);
 $border : black solid 1.5px;
+$breakpoints: (
+    little-smartphone: 350px,
+    smartphone: 500px,
+    large-smartphone: 800px,
+    tablet: 1024px,
+);
 
 /*----------Mixins----------------*/
 
@@ -23,19 +29,27 @@ $border : black solid 1.5px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 30px 0;
+    padding: 30px 0;                    /*---modifs relais margin btn---*/
     &-text {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     &-address {
-        width: 30%;
+        width: 35%;
         height: 30px;
         font-size: 1rem;
         box-shadow: gray 1px 1px 4px;
-        @include all-btn
+        @include all-btn;
+        @include tablet {
+            height: 40px;
+            margin: 0 20px;
+            font-size: .9rem;
+        }
     }
     &-price {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        @include tablet {
+            margin-right: 5px;
+        }
     }
 }
 
@@ -44,7 +58,7 @@ $border : black solid 1.5px;
     border: none;
     border-bottom: $border;
     color: white;
-    font-size: 1rem;
+    font-size: .8rem;
     &::placeholder {
         color: white;
     }
@@ -58,5 +72,24 @@ $border : black solid 1.5px;
     &-title {
         font-size: 1.1rem;
         margin-bottom: 10px;
+    }
+}
+
+/*---------Mixins media queries-------------*/
+
+@mixin smartphone {
+    @media screen and (max-width: map-get($breakpoints, smartphone )) {
+        @content;
+    }
+}
+@mixin large-smartphone {
+    @media screen and (max-width: map-get($breakpoints, large-smartphone )) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: map-get($breakpoints, tablet )) {
+        @content;
     }
 }
