@@ -59,6 +59,9 @@ $breakpoints: (
     border-bottom: $border;
     color: white;
     font-size: .8rem;
+    @include large-smartphone {
+        font-size: .7rem;
+    }
     &::placeholder {
         color: white;
     }
@@ -72,6 +75,10 @@ $breakpoints: (
     &-title {
         font-size: 1.1rem;
         margin-bottom: 10px;
+        @include large-smartphone {
+            text-align: center;
+            margin-right: 10px;
+        }
     }
 }
 

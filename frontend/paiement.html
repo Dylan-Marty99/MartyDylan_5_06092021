@@ -44,94 +44,96 @@
 <!--==========SECTION-livraison===============-->
 
     <main class="paiement-page">
-        <section class="livraison">
-            <h2 class="livraison-title">Mode de livraison || <a href="./confirmation.html">Page suivante</a></h2>
-            <div class="livraison-container">
-                <div class="livraison-container-standart">
-                    <label for="standart" class="livraison-container-standart-text"><input type="radio" name="livraison" id="standart" class="livraison-container-standart-standart"> Livraison à votre domicile standart</label>
-                    <button class="livraison-container-standart-address">Renseigner votre adresse</button>
-                    <span class="livraison-container-standart-price">2,99€</span>
+        <section class="livraison-paiement-container">
+            <section class="livraison">
+                <h2 class="livraison-title">Mode de livraison || <a href="./confirmation.html">Page suivante</a></h2>
+                <div class="livraison-container">
+                    <div class="livraison-container-standart">
+                        <label for="standart" class="livraison-container-standart-text"><input type="radio" name="livraison" id="standart" class="livraison-container-standart-standart"> Livraison à votre domicile standart</label>
+                        <button class="livraison-container-standart-address">Renseigner votre adresse</button>
+                        <span class="livraison-container-standart-price">2,99€</span>
+                    </div>
+                    <div class="livraison-container-express">
+                        <label for="express" class="livraison-container-express-text"><input type="radio" name="livraison" id="express" class="livraison-container-express-express"> Livraison à votre domicile express</label>
+                        <button class="livraison-container-express-address">Renseigner votre adresse</button>
+                        <span class="livraison-container-express-price">7,99€</span>
+                    </div>
+                    <div class="livraison-container-relais">
+                        <label for="relais" class="livraison-container-relais-text"><input type="radio" name="livraison" id="relais" class="livraison-container-relais-relais"> Livraison en point relais</label>
+                        <button class="livraison-container-relais-address">Trouver un point relais</button>
+                        <span class="livraison-container-relais-price">1,99€</span>
+                    </div>
                 </div>
-                <div class="livraison-container-express">
-                    <label for="express" class="livraison-container-express-text"><input type="radio" name="livraison" id="express" class="livraison-container-express-express"> Livraison à votre domicile express</label>
-                    <button class="livraison-container-express-address">Renseigner votre adresse</button>
-                    <span class="livraison-container-express-price">7,99€</span>
-                </div>
-                <div class="livraison-container-relais">
-                    <label for="relais" class="livraison-container-relais-text"><input type="radio" name="livraison" id="relais" class="livraison-container-relais-relais"> Livraison en point relais</label>
-                    <button class="livraison-container-relais-address">Trouver un point relais</button>
-                    <span class="livraison-container-relais-price">1,99€</span>
-                </div>
-            </div>
-        </section>
+            </section>
 
 <!--==========SECTION-livraison===============-->
-<!--==========SECTION-recap===============-->
-
-        <section class="recap">
-            <div class="validation">
-                <h2 class="validation-title">Récapitulatif</h2>
-                <div class="validation-container">
-                    <div class="validation-promos">
-                        <h4 class="validation-promos-title">Je possède un Code Promo</h4>
-                        <div class="validation-promos-promo">
-                            <input type="text" name="promo" id="promo" class="validation-promos-promo-input" placeholder="Code promo">
-                            <button class="validation-promos-promo-btn">OK</button>
-                        </div>
-                    </div>
-                    <div class="validation-recap">
-                        <p class="validation-recap-text">Panier :</p>
-                        <p class="validation-recap-price">Prix</p>
-                        <p class="validation-recap-text">Livraison :</p>
-                        <p class="validation-recap-price">Prix</p>
-                        <p class="validation-recap-text">Total :</p>
-                        <p class="validation-recap-price">Prix</p>
-                    </div>
-                    <div class="validation-validation">
-                        <button class="validation-validation-btn">Valider ma commande</button>
-                    </div>
-                </div>
-                <div class="validation-infos">
-                    <span class="validation-infos-icons"><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-visa"></i><i class="fab fa-cc-apple-pay"></i></span>
-                    <p class="validation-infos-text">Paiements 100% sécurisés</p>
-                </div>
-            </div>
-        </section>
-
-<!--==========SECTION-recap===============-->
 <!--==========SECTION-paiement===============-->
    
-        <section class="paiement">
-            <h2 class="paiement-title">Mode de paiement</h2>
-            <div class="paiement-container">
-                <div class="paiement-card">
-                    <label for="card" class="paiement-card-text"><input type="radio" name="paiement" id="card" class="paiement-card-card" checked> Carte bancaire</label>
-                </div>
-                <div class="paiement-facturation">
-                    <label for="facturation" class="paiement-facturation-text"><input type="checkbox" name="facturation" id="facturation" class="paiement-facturation-input" checked> Choisir l'adresse de livraison comme celle de facturation</label>
-                    <button class="paiement-facturation-btn">Choisir une autre adresse</button>
-                </div>
-                <div class="paiement-infos">
-                    <h4 class="paiement-infos-title">Veuillez renseigner votre carte</h4>
-                    <span class="paiement-infos-dots">. . . . . . . . . . . . . . . . . . . . </span>
-                    <div class="paiement-infos-card">
-                        <p class="paiement-infos-card-title">Votre carte</p>
-                        <input type="text" name="numero" id="numero" class="paiement-infos-card-numero" placeholder="Numéro de carte">
-                        <input type="text" name="date" id="date" class="paiement-infos-card-date" placeholder="Date d'expiration">
-                        <input type="text" name="crypto" id="crypto" class="paiement-infos-card-crypto" placeholder="Cryptogramme visuel">
-                        <input type="text" name="nom" id="nom" class="paiement-infos-card-nom" placeholder="Nom du titulaire de la carte">
+            <section class="paiement">
+                <h2 class="paiement-title">Mode de paiement</h2>
+                <div class="paiement-container">
+                    <div class="paiement-card">
+                        <label for="card" class="paiement-card-text"><input type="radio" name="paiement" id="card" class="paiement-card-card" checked> Carte bancaire</label>
                     </div>
-                    <label for="futur-card" class="paiement-infos-futur-card"><input type="checkbox" name="futur-card" id="futur-card" class="paiement-infos-futur-input"> Enregistrer votre carte pour de futurs achats</label>
-                    <button class="paiement-infos-btn">Valider ma commande</button>
+                    <div class="paiement-facturation">
+                        <label for="facturation" class="paiement-facturation-text"><input type="checkbox" name="facturation" id="facturation" class="paiement-facturation-input" checked> Choisir l'adresse de livraison comme celle de facturation</label>
+                        <button class="paiement-facturation-btn">Choisir une autre adresse</button>
+                    </div>
+                    <div class="paiement-infos">
+                        <h4 class="paiement-infos-title">Veuillez renseigner votre carte</h4>
+                        <span class="paiement-infos-dots">. . . . . . . . . . . . . . . . . . . . </span>
+                        <div class="paiement-infos-card">
+                            <p class="paiement-infos-card-title">Votre carte</p>
+                            <input type="text" name="numero" id="numero" class="paiement-infos-card-numero" placeholder="Numéro de carte">
+                            <input type="text" name="date" id="date" class="paiement-infos-card-date" placeholder="Date d'expiration">
+                            <input type="text" name="crypto" id="crypto" class="paiement-infos-card-crypto" placeholder="Cryptogramme visuel">
+                            <input type="text" name="nom" id="nom" class="paiement-infos-card-nom" placeholder="Nom du titulaire de la carte">
+                        </div>
+                        <label for="futur-card" class="paiement-infos-futur-card"><input type="checkbox" name="futur-card" id="futur-card" class="paiement-infos-futur-input"> Enregistrer votre carte pour de futurs achats</label>
+                        <button class="paiement-infos-btn">Valider ma commande</button>
+                    </div>
+                    <div class="paiement-paypal">
+                        <label for="paypal" class="paiement-paypal-text"><input type="radio" name="paiement" id="paypal" class="paiement-paypal-paypal"> Paypal (prochainement)</label>
+                    </div>
                 </div>
-                <div class="paiement-paypal">
-                    <label for="paypal" class="paiement-paypal-text"><input type="radio" name="paiement" id="paypal" class="paiement-paypal-paypal"> Paypal (prochainement)</label>
-                </div>
-            </div>
+            </section>
         </section>
-    </main>
 
 <!--==========SECTION-paiement===============-->
+<!--==========SECTION-recap===============-->
+
+    <section class="recap">
+        <div class="validation">
+            <h2 class="validation-title">Récapitulatif</h2>
+            <div class="validation-container">
+                <div class="validation-promos">
+                    <h4 class="validation-promos-title">Je possède un Code Promo</h4>
+                    <div class="validation-promos-promo">
+                        <input type="text" name="promo" id="promo" class="validation-promos-promo-input" placeholder="Code promo">
+                        <button class="validation-promos-promo-btn">OK</button>
+                    </div>
+                </div>
+                <div class="validation-recap">
+                    <p class="validation-recap-text">Panier :</p>
+                    <p class="validation-recap-price">Prix</p>
+                    <p class="validation-recap-text">Livraison :</p>
+                    <p class="validation-recap-price">Prix</p>
+                    <p class="validation-recap-text">Total :</p>
+                    <p class="validation-recap-price">Prix</p>
+                </div>
+                <div class="validation-validation">
+                    <button class="validation-validation-btn">Valider ma commande</button>
+                </div>
+            </div>
+            <div class="validation-infos">
+                <span class="validation-infos-icons"><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-visa"></i><i class="fab fa-cc-apple-pay"></i></span>
+                <p class="validation-infos-text">Paiements 100% sécurisés</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--==========SECTION-recap===============-->
 
 <!--==========MAIN===============-->
 <!--===========FOOTER==============-->
