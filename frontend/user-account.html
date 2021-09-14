@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <title>Création de compte</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" class="create-account">
+            <h2 class="create-account-title">- Créer votre compte -</h2>
+            <div class="name-container">
+                <label for="name">Nom</label>
+                <input type="text" autocomplete="off" id="name" class="create-account-input">
+                <span class="create-account-subtext"></span>
+            </div>
+            <div class="email-container">
+                <label for="email">Email</label>
+                <input type="text" autocomplete="off" id="email" class="create-account-input">
+                <span class="create-account-subtext"></span>
+            </div>
+            <div class="password-container">
+                <label for="password">Mot de passe</label>
+                <input type="password" autocomplete="off" id="password" class="create-account-input">
+                <h5 id="password-progress-bar"></h5>
+                <span id="password-text" class="create-account-subtext"></span>
+            </div>
+            <div class="confirm-password-container">
+                <label for="confirm-password">Confirmer mot de passe</label>
+                <input type="password" autocomplete="off" id="confirm-password" class="create-account-input">
+                <span class="create-account-subtext"></span>
+            </div>
+
+            <input type="submit" value="Valider">
+        </form>
+    </div>
+
+    <script src="./JS/user-account.js"></script>
+</body>
+</html>

@@ -1164,3 +1164,120 @@
 
 /*-------------SECTION-similaires?----------------*/
 /*-------------CONFIRMATION-PAGE----------------*/
+
+/*-------------COMPTE-PAGE----------------*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.create-account {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 70%;
+    width: 45%;
+    min-width: 330px;
+    background-color: white;
+    border: rgb(49, 49, 49) solid 1px;
+    box-shadow: $bg-secondary 2px 2px 10px;
+    border-radius: 30px;
+    @include litle-smartphone {
+        min-width: 250px;
+    }
+    &-title {
+        font-size: 1.7rem;
+        margin: 20px 0;
+        @include litle-smartphone {
+            font-size: 1.2rem;
+        }
+    }
+    &-input {
+        background: rgb(221, 230, 233);
+        border: none;
+        width: 100%;
+        height: 30px;
+        border-radius: 10px;
+        margin-top: 8px;
+        &:focus {
+            border: lime solid 1.5px;
+        }
+    }
+    &-subtext {
+        visibility: hidden;
+        font-size: 0.75rem;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        color: red;
+        opacity: 0;
+        transition: 0.2s;
+        text-align: center;
+    }
+}
+
+.name-container, .email-container, .password-container, .confirm-password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+    text-align: center;
+}
+
+input[type="submit"] {
+    font-size: 1.3rem;
+    width: 40%;
+    height: 40px;
+    align-self: center;
+    margin: 20px 0;
+    box-shadow: lightgrey 2px 2px 3px;
+    @include all-btn;
+}
+
+h5 {
+    visibility: hidden;
+    height: 4px;
+    background: red;
+    margin: 3px 68% 0 0;
+    transition: 0.4s;
+}
+
+.error {
+    & input {
+        color: red;
+        border: rgb(207, 37, 37) solid 1px;
+        &:focus {
+            border: red solid 2px;
+        }
+    }
+    & span {
+        visibility: visible;
+        color: red;
+        opacity: 1;
+    }
+}
+
+.progressRed {
+    visibility: visible;
+    background: red;
+    width: 33%;
+}
+
+.progressBlue {
+    visibility: visible;
+    background: #17b5b8;
+    margin-right: 33%;
+    width: 66%;
+}
+
+.progressGreen {
+    visibility: visible;
+    background: rgb(24, 187, 24);
+    margin-right: 0;
+    width: 100%;
+}
+
+/*-------------COMPTE-PAGE----------------*/
