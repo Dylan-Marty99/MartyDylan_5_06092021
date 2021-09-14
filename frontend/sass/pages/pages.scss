@@ -239,11 +239,6 @@
     }
 }
 
-// .oribook {          ---- BG ne fonctionne pas ----
-//     background-image: url("../../../backend/JWDP5-master/images/bg_oribook.jpg");
-//     object-fit: cover;
-// }
-
 /*-------SECTION-boutiques---------*/
 /*-------------INDEX----------------*/
 
@@ -277,7 +272,7 @@
         &-content {
             width: 65%;
             padding-top: 10%;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             @include large-smartphone {
                 font-size: 1.2rem;
             }
@@ -288,6 +283,12 @@
         }
         &-title {
             margin-top: 0;
+        }
+        &-star {
+            font-size: 1rem;
+            @include large-smartphone {
+                font-size: .8rem;
+            }
         }
     }
     &-price {
@@ -836,6 +837,15 @@
         &-relais {
             @include livraison;
             border: $border;
+            &-address {
+                margin-left: 10%;
+                @include tablet {
+                    margin-left: 15%;
+                }
+                @include smartphone {
+                    margin-left: 0;
+                }
+            }
         }
     }
 }
@@ -993,11 +1003,11 @@
     &-title {
         display: flex;
         align-items: center;
-        justify-content: center;
         width: 50%;
         font-size: 1.8rem;
         @include large-smartphone {
             width: 100%;
+            justify-content: center;
             text-align: center;
         }
     }
@@ -1017,6 +1027,11 @@
     &-title {
         font-size: 1.5rem;
         margin-bottom: 10px;
+    }
+    &-text {
+        width: 90%;
+        margin: 15px auto 0;
+        text-align: center;
     }
 }
 

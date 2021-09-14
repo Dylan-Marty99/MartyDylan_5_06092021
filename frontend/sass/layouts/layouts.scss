@@ -129,12 +129,12 @@ header {
     &-container {
         display: flex;
         align-items: center;
-        justify-content: center;
         width: 50%;
         @include tablet {
             width: 60%;
         }
         @include large-smartphone {
+            justify-content: center;
             width: 100%;
             margin: 20px 0;
         }
@@ -272,7 +272,7 @@ header {
     }
 }
 
-.fa-facebook, .fa-twiter, .fa-youtube, .fa-instagram {
+.fa-facebook, .fa-twitter, .fa-youtube, .fa-instagram {
     transition: .3s;
     &:hover {
         color: white;
@@ -343,12 +343,11 @@ header {
     @include large-smartphone {
         flex-wrap: wrap;
         font-size: .9rem;
-    }
-    @include large-smartphone {
         height: 55px;
     }
     @include smartphone {
         font-size: .75rem;
+        padding-bottom: 10px;
     }
     & li {
         @include large-smartphone {

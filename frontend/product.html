@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produit</title>
+    <meta name="description" content="">                <!--modif en js ?-->
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <title>Produit</title>           <!--modif en js ?-->
 </head>
 <body>
 
@@ -39,7 +41,7 @@
         <nav class="header-products">
             <ul class="header-products-list">
                 <li><a href="#">Promotions</a></li>
-                <li><a href="#products">Tout nos produits</a></li>
+                <li><a href="#">Tout nos produits</a></li>
                 <li><a href="#">Avantages Bears +</a></li>
                 <li><a href="#newletter">Notre Newletter</a></li>
             </ul>
@@ -85,7 +87,7 @@
                     <label for="product-color" class="product-price-color">
                         <select name="product-color" id="product-color">
                             <option value="Couleur">Couleur</option>
-                            <option value="Couleur">Couleur</option>
+                            <option value="Couleur">Couleur</option>        <!--modif en js-->
                             <option value="Couleur">Couleur</option>
                         </select>
                     </label>
@@ -172,21 +174,21 @@
             <div class="newletter" id="newletter">
                 <h3 class="newletter-title">Newletter</h3>
                 <p class="newletter-text">Inscrivez vous à notre newletter 100% gratuite pour pouvoir choisir en avant première les couleurs de nos prochains teddys. En plus de ça vous recevrez chaque semaines des conseils de nettoyage pour vos teddys.</p>
-                <div class="newletter-email-container">
-                    <input type="text" name="newletter-email" class="newletter-email" placeholder="email">
+                <label for="newletter-email" class="newletter-email-container">
+                    <input type="email" name="newletter-email" class="newletter-email" placeholder="email" required>
                     <button class="newletter-btn">OK</button>
-                </div>
+                </label>
                 <label for="accept-email"><input type="checkbox" name="accept-email" id="accept-email">J'accepte de recevoir des emails de la part de Oribears</label>
                 <label for="confidential"><input type="checkbox" name="confidential" id="confidential">J'accepte les règles d'utilisations et de confidentialitées </label>
             </div>
         </div>
         <div class="footer-footer">
             <ul class="footer-footer-list">
-                <li><a href="">Mentions légales</a></li>
-                <li><a href="">Conditions générales de ventes</a></li>
-                <li><a href="">Paiement sécurisé</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Conditions générales de ventes</a></li>
+                <li><a href="#">Paiement sécurisé</a></li>
                 <li><a href="mailto:oribears@contact.com">Contact</a></li>
-                <li><a href="">Cookies</a></li>
+                <li><a href="#">Cookies</a></li>
             </ul>
         </div>
     </footer>

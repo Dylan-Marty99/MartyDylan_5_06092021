@@ -164,7 +164,6 @@ header {
 .header-panier-container {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 50%;
 }
 @media screen and (max-width: 1024px) {
@@ -174,6 +173,7 @@ header {
 }
 @media screen and (max-width: 800px) {
   .header-panier-container {
+    justify-content: center;
     width: 100%;
     margin: 20px 0;
   }
@@ -343,10 +343,10 @@ header {
   padding: 0;
 }
 
-.fa-facebook, .fa-twiter, .fa-youtube, .fa-instagram {
+.fa-facebook, .fa-twitter, .fa-youtube, .fa-instagram {
   transition: 0.3s;
 }
-.fa-facebook:hover, .fa-twiter:hover, .fa-youtube:hover, .fa-instagram:hover {
+.fa-facebook:hover, .fa-twitter:hover, .fa-youtube:hover, .fa-instagram:hover {
   color: white;
 }
 
@@ -424,16 +424,13 @@ header {
   .footer-footer-list {
     flex-wrap: wrap;
     font-size: 0.9rem;
-  }
-}
-@media screen and (max-width: 800px) {
-  .footer-footer-list {
     height: 55px;
   }
 }
 @media screen and (max-width: 500px) {
   .footer-footer-list {
     font-size: 0.75rem;
+    padding-bottom: 10px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -772,7 +769,7 @@ header {
 .product-description-content {
   width: 65%;
   padding-top: 10%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 @media screen and (max-width: 800px) {
   .product-description-content {
@@ -787,6 +784,14 @@ header {
 }
 .product-description-title {
   margin-top: 0;
+}
+.product-description-star {
+  font-size: 1rem;
+}
+@media screen and (max-width: 800px) {
+  .product-description-star {
+    font-size: 0.8rem;
+  }
 }
 .product-price {
   display: flex;
@@ -1563,6 +1568,19 @@ header {
     margin-right: 5px;
   }
 }
+.livraison-container-relais-address {
+  margin-left: 10%;
+}
+@media screen and (max-width: 1024px) {
+  .livraison-container-relais-address {
+    margin-left: 15%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .livraison-container-relais-address {
+    margin-left: 0;
+  }
+}
 
 /*-------------SECTION-livraison----------------*/
 /*-------------SECTION-paiement----------------*/
@@ -1795,13 +1813,13 @@ header {
 .header-confirmation-title {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 50%;
   font-size: 1.8rem;
 }
 @media screen and (max-width: 800px) {
   .header-confirmation-title {
     width: 100%;
+    justify-content: center;
     text-align: center;
   }
 }
@@ -1821,6 +1839,11 @@ header {
 .thank-title {
   font-size: 1.5rem;
   margin-bottom: 10px;
+}
+.thank-text {
+  width: 90%;
+  margin: 15px auto 0;
+  text-align: center;
 }
 
 /*-------------ASIDE----------------*/

@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OriBears</title>
+    <meta name="description" content="OriBears est une branche de Orinoco, spécialisée dans la création artisanale d'ours en peluche. Vous pouvez même créer le Teddy de vos rêves en choisissant sa couleur.">
     <link rel="stylesheet" href="./frontend/CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <title>OriBears - Fabrication artisanale d'ours en peluche</title>
 </head>
 <body>
 
@@ -38,7 +40,7 @@
         </div>
         <nav class="header-products">
             <ul class="header-products-list">
-                <li><a href="#">Promotions</a></li>
+                <li><a href="#promos">Promotions</a></li>
                 <li><a href="#products">Tout nos produits</a></li>
                 <li><a href="#">Avantages Bears +</a></li>
                 <li><a href="#newletter">Notre Newletter</a></li>
@@ -53,7 +55,7 @@
 
     <main>
         <aside class="bearsplus-container">
-            <div class="bearsplus">     <!--Bulle ours qui parle-->
+            <div class="bearsplus">     
                 <h3 class="bearsplus-title">Retrouvez tout les avantages de notre abonnement Bears +</h3>
                 <button class="bearsplus-btn">N'attendez plus !!</button>
             </div>
@@ -115,7 +117,7 @@
 <!--==========SECTION-produits===============-->
 <!--==========ASIDE-promos===============-->
 
-        <aside class="promotions">
+        <aside class="promotions" id="promos">
             <h3 class="promotions-title">Nos promotions du moment</h3>
             <button class="promotions-btn">Foncez !</button>
         </aside>
@@ -125,17 +127,17 @@
 
         <section class="shop">
             <h2 class="other-shop">Découvrez nos autres boutiques</h2>
-            <div class="other-shop-container oribook">
+            <div class="other-shop-container">
                 <h4 class="other-shop-title">OriBook</h4>
                 <p class="other-shop-description">Vous cherchez un livre en particulier ? Un livre de cuisine que vous a conseillé votre famille ? Une BD ? Un manga ? Alors ne perdez plus votre temps ailleurs et découvrez OriBook </p>
                 <button class="other-shop-btn">Découvir</button>
             </div>
-            <div class="other-shop-container oritextil">
+            <div class="other-shop-container">
                 <h4 class="other-shop-title">OriTextil</h4>
                 <p class="other-shop-description">Envie de faire de bonnes affaires tout en remplissant votre garde-robe ? Visitez OriTextil et ses milliers de vétêments, accessoires ou chaussures à des prix vraiment attractifs</p>
                 <button class="other-shop-btn">Découvir</button>
             </div>
-            <div class="other-shop-container oritv">
+            <div class="other-shop-container">
                 <h4 class="other-shop-title">OriTV</h4>
                 <p class="other-shop-description">Que diriez-vous d'une télévision plus grande, de meilleure qualité et moins chère que la votre ? Et bien avec OriTV c'est possible, alors qu'est ce que vous attendez ? Aller y, foncé !</p>
                 <button class="other-shop-btn">Découvir</button>
@@ -157,7 +159,7 @@
         <div class="social-newletter">
             <div class="social-media">
                 <h3 class="social-media-title">Réseaux sociaux</h3>
-                <p class="social-media-text">Visitez nos réseaux sociaux ci dessous pour voir et connaître en avance les prochains teddys qui arriveront sur notre site. Ça ne vous prendra que quelques secondes !</p>
+                <p class="social-media-text">Visitez nos réseaux sociaux ci dessous pour voir certains moments de la création artisanale de nos Teddys. Ça ne vous prendra que quelques secondes !</p>
                 <ul class="social-media-list">
                     <li><a href="facebook-oribears.com"><i class="fab fa-facebook"></i></a></li>
                     <li><a href="twitter-oribears.com"><i class="fab fa-twitter"></i></a></li>
@@ -167,22 +169,22 @@
             </div>
             <div class="newletter" id="newletter">
                 <h3 class="newletter-title">Newletter</h3>
-                <p class="newletter-text">Inscrivez vous à notre newletter 100% gratuite pour pouvoir choisir en avant première les couleurs de nos prochains teddys. En plus de ça vous recevrez chaque semaines des conseils de nettoyage pour vos teddys.</p>
-                <div class="newletter-email-container">
-                    <input type="text" name="newletter-email" class="newletter-email" placeholder="email">
+                <p class="newletter-text">Inscrivez vous à notre newletter 100% gratuite pour pouvoir choisir en avant première les couleurs de nos prochains Teddys. En plus de ça vous recevrez chaque semaines des conseils de nettoyage pour vos Teddys.</p>
+                <label for="newletter-email" class="newletter-email-container">
+                    <input type="email" name="newletter-email" class="newletter-email" placeholder="email" required>
                     <button class="newletter-btn">OK</button>
-                </div>
+                </label>
                 <label for="accept-email"><input type="checkbox" name="accept-email" id="accept-email">J'accepte de recevoir des emails de la part de Oribears</label>
-                <label for="confidential"><input type="checkbox" name="confidential" id="confidential">J'accepte les règles d'utilisations et de confidentialitées </label>
+                <label for="confidential"><input type="checkbox" name="confidential" id="confidential" required>J'accepte les règles d'utilisations et de confidentialitées </label>
             </div>
         </div>
         <div class="footer-footer">
             <ul class="footer-footer-list">
-                <li><a href="">Mentions légales</a></li>
-                <li><a href="">Conditions générales de ventes</a></li>
-                <li><a href="">Paiement sécurisé</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Conditions générales de ventes</a></li>
+                <li><a href="#">Paiement sécurisé</a></li>
                 <li><a href="mailto:oribears@contact.com">Contact</a></li>
-                <li><a href="">Cookies</a></li>
+                <li><a href="#">Cookies</a></li>
             </ul>
         </div>
     </footer>
