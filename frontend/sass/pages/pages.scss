@@ -4,7 +4,7 @@
 /*----------ASIDE-bears+------------*/
 
 .bearsplus-container {
-    background: url("../../backend/JWDP5-master/images/teddy_bg.png");
+    background: url("../../backend/images/teddy_bg.png");
     object-fit: cover;        
     height: 300px;
 }
@@ -108,9 +108,9 @@
     &-description {
         margin: 0 0 10px 0;
     }
-    &-panier-btn {
+    &-wish-btn {
         width: 55%;
-        height: 30px;
+        height: 40px;
         font-size: 1rem;
         @include all-btn;
         @include tablet {
@@ -124,7 +124,7 @@
 
 .fa-star {
     color: yellow;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
     &:nth-child(5) {
         color: rgb(177, 175, 175);
     }

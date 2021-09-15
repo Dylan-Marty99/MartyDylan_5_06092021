@@ -445,7 +445,7 @@ header {
 /*-------------INDEX----------------*/
 /*----------ASIDE-bears+------------*/
 .bearsplus-container {
-  background: url("../../backend/JWDP5-master/images/teddy_bg.png");
+  background: url("../../backend/images/teddy_bg.png");
   object-fit: cover;
   height: 300px;
 }
@@ -559,9 +559,9 @@ header {
 .bear-description {
   margin: 0 0 10px 0;
 }
-.bear-panier-btn {
+.bear-wish-btn {
   width: 55%;
-  height: 30px;
+  height: 40px;
   font-size: 1rem;
   cursor: pointer;
   background: #e5bfff;
@@ -569,24 +569,24 @@ header {
   border-radius: 10px;
   transition: 0.4s;
 }
-.bear-panier-btn:hover {
+.bear-wish-btn:hover {
   transform: scale(1.1);
   filter: brightness(90%);
 }
 @media screen and (max-width: 1024px) {
-  .bear-panier-btn {
+  .bear-wish-btn {
     font-size: 0.9rem;
   }
 }
 @media screen and (max-width: 800px) {
-  .bear-panier-btn {
+  .bear-wish-btn {
     width: 65%;
   }
 }
 
 .fa-star {
   color: yellow;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 .fa-star:nth-child(5) {
   color: #b1afaf;
