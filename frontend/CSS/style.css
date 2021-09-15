@@ -515,22 +515,6 @@ header {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  width: 25%;
-}
-@media screen and (max-width: 1024px) {
-  .all-bears {
-    width: 28%;
-  }
-}
-@media screen and (max-width: 800px) {
-  .all-bears {
-    width: 38%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .all-bears {
-    width: 70%;
-  }
 }
 
 .bear {
@@ -538,26 +522,58 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 300px;
+  width: 28%;
+  height: 350px;
   border-radius: 20px;
   box-shadow: #636262 4px 3px 10px;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 1024px) {
+  .bear {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .bear {
+    width: 38%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .bear {
+    width: 70%;
+  }
+}
 .bear-image-container {
-  width: 50%;
-  height: 40%;
-  margin-top: 10px;
+  width: 55%;
+  height: 130px;
+  margin-top: 20px;
 }
 .bear-image-image {
-  border-radius: 10px;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   margin-top: 5px;
+}
+@media screen and (max-width: 800px) {
+  .bear-title {
+    margin-top: 10px;
+  }
 }
 .bear-description {
   margin: 0 0 10px 0;
+  padding: 0 5px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 1024px) {
+  .bear-description {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .bear-star {
+    font-size: 2rem;
+  }
 }
 .bear-wish-btn {
   width: 55%;
@@ -590,6 +606,11 @@ header {
 }
 .fa-star:nth-child(5) {
   color: #b1afaf;
+}
+@media screen and (max-width: 1024px) {
+  .fa-star {
+    font-size: 0.8rem;
+  }
 }
 
 /*---------SECTION-produits---------*/

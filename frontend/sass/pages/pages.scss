@@ -69,16 +69,6 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 25%;
-    @include tablet {
-        width: 28%;
-    }
-    @include large-smartphone {
-        width: 38%;
-    }
-    @include smartphone {
-        width: 70%;
-    }
 }
 
 .bear {
@@ -86,27 +76,51 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 300px;
+    width: 28%;
+    height: 350px;
     border-radius: 20px;
     box-shadow: rgb(99, 98, 98) 4px 3px 10px;
     margin-bottom: 40px;
+    @include tablet {
+        width: 30%;
+    }
+    @include large-smartphone {
+        width: 38%;
+    }
+    @include smartphone {
+        width: 70%;
+    }
     &-image {
         &-container {
-            width: 50%;
-            height: 40%;
-            margin-top: 10px;
+            width: 55%;
+            height: 130px;
+            margin-top: 20px;
         }
         &-image {
-            border-radius: 10px;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             margin-top: 5px;
+        }
+    }
+    &-title {
+        @include large-smartphone {
+            margin-top: 10px;
         }
     }
     &-description {
         margin: 0 0 10px 0;
+        padding: 0 5px;
+        text-align: center;
+        font-size: .9rem;
+        @include tablet {
+            font-size: .7rem;
+        }
+    }
+    &-star {
+        @include tablet {
+            font-size: 2rem;
+        }
     }
     &-wish-btn {
         width: 55%;
@@ -127,6 +141,9 @@
     margin-bottom: 18px;
     &:nth-child(5) {
         color: rgb(177, 175, 175);
+    }
+    @include tablet {
+        font-size: .8rem;
     }
 }
 
