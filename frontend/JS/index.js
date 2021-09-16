@@ -2,17 +2,23 @@
 const allProducts = document.querySelector(".all-bears");
 let teddies;
 
-
 // Fonction de récupération de l'API
 const fetchTeddies = async () => {
-  teddies = await fetch("http://localhost:3000/api/teddies").then((res) =>
-    res.json()
-  );
+  teddies = await fetch("http://localhost:3000/api/teddies")
+    .then((res) => {
+      return res.json()
+    })
+    .then((article) => {
+      return article
+    })
+    .catch((error) => {
+      alert(error);
+    });
 };
 
 
 // Fonction de création des différents Teddys
-const showTeddies = async () => {
+const displayTeddies = async () => {
   await fetchTeddies();
 
   allProducts.innerHTML = teddies
@@ -40,4 +46,4 @@ const showTeddies = async () => {
     .join("");
 };
 
-showTeddies();
+displayTeddies();
