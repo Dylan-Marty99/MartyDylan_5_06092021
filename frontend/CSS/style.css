@@ -1414,6 +1414,86 @@ header {
 }
 
 /*-------------MAIN----------------*/
+/*-------------SECTION-formulaire----------------*/
+.formulaire {
+  width: 95%;
+  height: 580px;
+  margin: 30px 0;
+}
+@media screen and (max-width: 350px) {
+  .formulaire {
+    height: 700px;
+  }
+}
+.formulaire-title {
+  text-align: center;
+  font-size: 1.7rem;
+}
+.formulaire-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: #ab8bf8;
+  border: black solid 1.5px;
+  height: 85%;
+  width: 90%;
+  margin: auto;
+}
+.formulaire-container-title {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+.formulaire-container-input {
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  padding-left: 5px;
+  font-size: 1rem;
+}
+.formulaire-container-input:focus {
+  border: lime solid 1.5px;
+}
+@media screen and (max-width: 500px) {
+  .formulaire-container-input {
+    font-size: 0.7rem;
+  }
+}
+.formulaire-container-subtext {
+  visibility: hidden;
+  background: #e5bfff;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  width: 40%;
+  margin: 5px auto 0;
+  padding: 2px 0;
+  color: red;
+  opacity: 0;
+  transition: 0.2s;
+  text-align: center;
+}
+
+.first-name-container, .last-name-container {
+  width: 45%;
+}
+@media screen and (max-width: 350px) {
+  .first-name-container, .last-name-container {
+    width: 60%;
+  }
+}
+
+.address-container, .city-container, .mail-container {
+  width: 60%;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-height: 12%;
+  margin: 10px 5px;
+}
+
+/*-------------SECTION-formulaire----------------*/
 /*-------------SECTION-livraison----------------*/
 .livraison {
   margin-top: 40px;
@@ -1484,6 +1564,7 @@ header {
   }
 }
 .livraison-container-express {
+  /*-----enlever boutons---*/
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -2113,7 +2194,7 @@ input[type=submit] {
   height: 40px;
   align-self: center;
   margin: 20px 0;
-  box-shadow: lightgrey 2px 2px 3px;
+  box-shadow: grey 1px 1px 5px;
   cursor: pointer;
   background: #e5bfff;
   border: none;

@@ -1,3 +1,4 @@
+// Variables
 const form = document.querySelector("form");
 const inputs = document.querySelectorAll(
   `input[type="text"], input[type="password"]`
@@ -5,6 +6,7 @@ const inputs = document.querySelectorAll(
 const progressBar = document.getElementById("password-progress-bar");
 let name, email, password, confirmPassword;
 
+// Fonction des messages d'erreur
 const errorDisplay = (tag, message, valid) => {
   const container = document.querySelector("." + tag + "-container");
   const span = document.querySelector("." + tag + "-container > span");
@@ -18,7 +20,10 @@ const errorDisplay = (tag, message, valid) => {
   }
 };
 
+// Fonction validité nom
 const nameChecker = (value) => {
+  container.classList = "";
+
   if (value.length > 0 && (value.length < 3 || value.length > 20)) {
     errorDisplay("name", "Votre nom doit faire entre 3 et 20 caractères");
     name = null;
@@ -34,6 +39,7 @@ const nameChecker = (value) => {
   }
 };
 
+// Fonction validité email
 const emailChecker = (value) => {
   if (!value.match(/^[\w_-]+@[\w-]+\.[a-z]{2,4}$/i)) {
     errorDisplay("email", "Cet email n'est pas valide");
@@ -44,6 +50,7 @@ const emailChecker = (value) => {
   }
 };
 
+// Fonction validité mot de passe
 const passwordChecker = (value) => {
   progressBar.classList = "";
 
@@ -70,6 +77,7 @@ const passwordChecker = (value) => {
   if (confirmPassword) confirmPasswordChecker(confirmPassword);
 };
 
+// Fonction validité confirmation mot de passe
 const confirmPasswordChecker = (value) => {
   if (value !== password) {
     errorDisplay("confirm-password", "Les mots de passe ne correspondent pas");
@@ -80,6 +88,7 @@ const confirmPasswordChecker = (value) => {
   }
 };
 
+// ForEach conserver la valeur des inputs
 inputs.forEach((input) => {
   input.addEventListener("input", (e) => {
     switch (e.target.id) {
@@ -101,6 +110,7 @@ inputs.forEach((input) => {
   });
 });
 
+// Fonction validité formulaire
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
