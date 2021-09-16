@@ -35,16 +35,55 @@ const firstNameChecker = (value) => {
 
 // Fonction validité nom
 const lastNameChecker = (value) => {
-    if (value.length > 0 && (value.length < 2 || value.length > 30)) {
-        errorDisplay("last-name", "Nom invalide");
-        lastName = null;
-      } else if (!value.match(/^[a-zA-Z,.'-]+$/)) {
-        errorDisplay("last-name", "Nom invalide");
-        lastName = null;
-      } else {
-        errorDisplay("last-name", "", true);
-        lastName = value;
-      }
+  if (value.length > 0 && (value.length < 2 || value.length > 30)) {
+    errorDisplay("last-name", "Nom invalide");
+    lastName = null;
+  } else if (!value.match(/^[a-zA-Z,.'-]+$/)) {
+    errorDisplay("last-name", "Nom invalide");
+    lastName = null;
+  } else {
+    errorDisplay("last-name", "", true);
+    lastName = value;
+  }
+};
+
+// Fonction validité adresse
+const addressChecker = (value) => {
+  if (value.length > 0 && value.length < 3) {
+    errorDisplay("address", "Adresse invalide");
+    address = null;
+  } else if (!value.match(/^[a-zA-Z0-9 _-]*$/)) {
+    errorDisplay("address", "Adresse invalide");
+    address = null;
+  } else {
+    errorDisplay("address", "", true);
+    address = value;
+  }
+};
+
+// Fonction validité ville
+const cityChecker = (value) => {
+  if (value.length > 0 && value.length < 3) {
+    errorDisplay("city", "Ville invalide");
+    city = null;
+  } else if (!value.match(/^[a-zA-Z0-9 _-]*$/)) {
+    errorDisplay("city", "Ville invalide");
+    city = null;
+  } else {
+    errorDisplay("city", "", true);
+    city = value;
+  }
+};
+
+// Fonction validité mail
+const mailChecker = (value) => {
+  if (!value.match(/^[\w_-]+@[\w-]+\.[a-z]{2,4}$/i)) {
+    errorDisplay("mail", "Email invalide");
+    mail = null;
+  } else {
+    errorDisplay("mail", "", true);
+    mail = value;
+  }
 };
 
 // ForEach conserver la valeur des inputs
@@ -70,4 +109,23 @@ inputs.forEach((input) => {
         null;
     }
   });
+});
+
+// Fonction validité formulaire
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (firstName && lastName && address && city && mail) {
+    const data = {
+      firstName,
+      lastName,
+      address,
+      city,
+      mail,
+    };
+    console.log(data);
+    alert("Coordonnées validées");
+  } else {
+    alert("Veuillez remplir correctement tout les champs");
+  }
 });

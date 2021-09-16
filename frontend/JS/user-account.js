@@ -4,7 +4,7 @@ const inputs = document.querySelectorAll(
   `input[type="text"], input[type="password"]`
 );
 const progressBar = document.getElementById("password-progress-bar");
-let name, email, password, confirmPassword;
+let lastFirstName, email, password, confirmPassword;
 
 // Fonction des messages d'erreur
 const errorDisplay = (tag, message, valid) => {
@@ -21,21 +21,19 @@ const errorDisplay = (tag, message, valid) => {
 };
 
 // Fonction validité nom
-const nameChecker = (value) => {
-  container.classList = "";
-
+const lastFirstNameChecker = (value) => {
   if (value.length > 0 && (value.length < 3 || value.length > 20)) {
-    errorDisplay("name", "Votre nom doit faire entre 3 et 20 caractères");
-    name = null;
-  } else if (!value.match(/^[a-zA-Z0-9_.-]*$/)) {
+    errorDisplay("last-first-name", "Votre nom doit faire entre 3 et 20 caractères");
+    lastFirstName = null;
+  } else if (!value.match(/^[a-zA-Z0-9 _-]*$/)) {
     errorDisplay(
-      "name",
-      "Votre nom ne peut pas contenir de caractères spéciaux"
+      "last-first-name",
+      "Votre nom est invalide"
     );
-    name = null;
+    lastFirstName = null;
   } else {
-    errorDisplay("name", "", true);
-    name = value;
+    errorDisplay("last-first-name", "", true);
+    lastFirstName = value;
   }
 };
 
@@ -92,8 +90,8 @@ const confirmPasswordChecker = (value) => {
 inputs.forEach((input) => {
   input.addEventListener("input", (e) => {
     switch (e.target.id) {
-      case "name":
-        nameChecker(e.target.value);
+      case "last-first-name":
+        lastFirstNameChecker(e.target.value);
         break;
       case "email":
         emailChecker(e.target.value);
@@ -114,9 +112,9 @@ inputs.forEach((input) => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  if (name && email && password && confirmPassword) {
+  if (lastFirstName && email && password && confirmPassword) {
     const data = {
-      name,
+      lastFirstName,
       email,
       password,
     };
@@ -126,7 +124,7 @@ form.addEventListener("submit", (e) => {
     progressBar.classList = "";
     errorDisplay("password", "", true);
 
-    name = null;
+    lastFirstName = null;
     email = null;
     password = null;
     confirmPassword = null;
