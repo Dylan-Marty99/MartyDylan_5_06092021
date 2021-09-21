@@ -765,11 +765,16 @@ header {
   display: flex;
   justify-content: space-around;
 }
+@media screen and (max-width: 500px) {
+  .product-bear-container {
+    flex-direction: column;
+  }
+}
 .product-bear-image {
   margin: 30px 20px 20px;
-  width: 25%;
-  height: 400px;
-  object-fit: cover;
+  width: 35%;
+  height: 300px;
+  object-fit: contain;
 }
 @media screen and (max-width: 1024px) {
   .product-bear-image {
@@ -779,13 +784,13 @@ header {
 @media screen and (max-width: 800px) {
   .product-bear-image {
     height: 200px;
-    width: 28%;
+    width: 40%;
   }
 }
 @media screen and (max-width: 500px) {
   .product-bear-image {
     height: 170px;
-    width: 40%;
+    width: 90%;
   }
 }
 .product-description-content {
@@ -801,11 +806,23 @@ header {
 @media screen and (max-width: 500px) {
   .product-description-content {
     font-size: 0.9rem;
-    padding-top: 15%;
+    text-align: center;
+    width: 100%;
+    padding-top: 2%;
   }
 }
 .product-description-title {
   margin-top: 0;
+}
+.product-description-description {
+  width: 95%;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 500px) {
+  .product-description-description {
+    font-size: 1rem;
+    margin: 20px auto;
+  }
 }
 .product-description-star {
   font-size: 1rem;
@@ -875,7 +892,7 @@ header {
   width: 100%;
   margin: 0;
   padding-left: 25px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .product-price-btn {
   margin: 0 auto;
@@ -1061,11 +1078,24 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  height: 25px;
-  font-size: 1.2rem;
+  width: 70%;
+  height: 70px;
+  font-size: 1.1rem;
   background: #e5bfff;
   margin: 20px auto;
+  padding: 10px;
+}
+@media screen and (max-width: 800px) {
+  .product-caracteristic-text {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .product-caracteristic-text {
+    width: 90%;
+    font-size: 0.9rem;
+    height: 60px;
+  }
 }
 
 /*-------------ASIDE----------------*/

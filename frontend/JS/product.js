@@ -1,9 +1,8 @@
 // Extraction de l'ID
 const queryStringUrlId = window.location.search;
-
 const urlSearchParams = new URLSearchParams(queryStringUrlId);
-
 const getId = urlSearchParams.get("_id");
+
 
 // Fonction de récupération de l'API
 const fetchTeddies = () => {
@@ -23,14 +22,88 @@ const fetchTeddies = () => {
 const selectedProduct = async () => {
   const getTeddies = await fetchTeddies();
   const selectedTeddy = getTeddies.find((element) => element._id === getId);
-  console.log(selectedTeddy);
 
+
+  // Ajout de l'image
   document
     .getElementById("product-bear-image")
     .setAttribute("src", `${selectedTeddy.imageUrl}`);
 
+
+  // Ajout du nom
   document.getElementById("product-name").textContent = `${selectedTeddy.name}`;
-  document.getElementById("product-descriptiob").textContent = `${selectedTeddy.description}`
+
+
+  // Ajout de la description
+  document.getElementById(
+    "product-descriptiob"
+  ).textContent = `${selectedTeddy.description}`;
+
+
+  // Ajout des options de couleurs
+  const optionColor = selectedTeddy.colors;
+  let structureOptions = [];
+
+  for (i = 0; i < optionColor.length; i++) {
+    structureOptions =
+      structureOptions +
+      `
+      <option value="${optionColor[i]}">${optionColor[i]}</option>
+    `;
+  }
+
+  const options = document.getElementById("product-color");
+  options.innerHTML = structureOptions;
+
+
+  // Ajout du prix
+  document.getElementById("product-price").textContent = `${
+    selectedTeddy.price / 100
+  } €`;
+
+
+  // Ajout des éléments de description détaillé
+  document.getElementById("product-infos").innerHTML = ` 
+      <h2 class="product-caracteristic-title">Caractéristiques techniques</h2>
+      <p class="product-caracteristic-text">Dimensions : ${selectedTeddy.description}</p>
+      <p class="product-caracteristic-text">Poids : ${selectedTeddy.description}</p>       
+      <p class="product-caracteristic-text">Composition : ${selectedTeddy.description}</p>
+      <p class="product-caracteristic-text">Entretien : ${selectedTeddy.description}</p>
+      `;
 };
 
 selectedProduct();
+
+//---------- Récupération des données pour le panier ----------------
+
+const dataBasket = async () => {
+
+  // Récupération de l'API
+  const getTeddies = await fetchTeddies();
+  const selectedTeddy = getTeddies.find((element) => element._id === getId);
+
+
+  const idOptions = document.getElementById("product-color");
+  const btnAddToBasket = document.getElementById("product-btn");
+
+
+  // Evénement click pour l'envoie du produit au panier
+  btnAddToBasket.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const colorsChoice = idOptions.value;
+    const quantityChoice = document.getElementById("product-number").value;
+
+    let productOptions = {
+      name: selectedTeddy.name,
+      id: selectedTeddy._id,
+      colors: colorsChoice,
+      quantity: quantityChoice,
+      price: selectedTeddy.price / 100,
+    };
+
+    console.log(productOptions);
+  });
+};
+
+dataBasket();
