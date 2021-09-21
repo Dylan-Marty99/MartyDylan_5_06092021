@@ -103,6 +103,25 @@ const dataBasket = async () => {
     };
 
     console.log(productOptions);
+
+  //--------Stocker les données choisis dans le local storage---------------
+  let productInLocalStorage = JSON.parse(localStorage.getItem("product"));
+
+  //Ajouter un pop-up pour confirmer que les articles sont bien dans le panier 
+
+  // Si un produit est présent dans le local storage
+  if(productInLocalStorage) {
+    productInLocalStorage.push(productOptions);
+    localStorage.setItem("product", JSON.stringify(productInLocalStorage));
+    console.log(productInLocalStorage);
+
+  // Si aucun produit n'est présent dans le local storage
+  } else {
+    productInLocalStorage = [];
+    productInLocalStorage.push(productOptions);
+    localStorage.setItem("product", JSON.stringify(productInLocalStorage));
+    console.log(productInLocalStorage);
+  }
   });
 };
 
