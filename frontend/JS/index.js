@@ -27,8 +27,8 @@ const displayTeddies = async () => {
         `
         
             <div class="bear">
-                <a href="./frontend/product.html?${teddy._id}" class="bear-image-container"><img src="${teddy.imageUrl}" alt="Photo du Teddy ${teddy.name}" class="bear-image-image"></a>
-                <a href="./frontend/product.html?${teddy._id}"><h3 class="bear-title">${teddy.name}</h3></a>
+                <a href="./frontend/product.html?_id=${teddy._id}" class="bear-image-container"><img src="${teddy.imageUrl}" alt="Photo du Teddy ${teddy.name}" class="bear-image-image"></a>
+                <a href="./frontend/product.html?_id=${teddy._id}"><h3 class="bear-title">${teddy.name}</h3></a>
                 <p class="bear-description">${teddy.description}</p>
                 <div class="baer-star">
                     <i class="fas fa-star"></i>

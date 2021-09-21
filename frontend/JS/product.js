@@ -1,7 +1,9 @@
 // Extraction de l'ID
-const getId = () => {
-  return location.search.slice(1);
-};
+const queryStringUrlId = window.location.search;
+
+const urlSearchParams = new URLSearchParams(queryStringUrlId);
+
+const getId = urlSearchParams.get("_id");
 
 // Fonction de récupération de l'API
 const fetchTeddies = () => {
@@ -17,16 +19,18 @@ const fetchTeddies = () => {
     });
 };
 
-const hydrateProduct = (getTeddies) => {};
-
-// Fonction auto invoquée
-(async function () {
+// Fonction de récupération et d'injection des données de chaque produits
+const selectedProduct = async () => {
   const getTeddies = await fetchTeddies();
-  console.log(getTeddies);
-  hydrateProduct(getTeddies);
-})();
+  const selectedTeddy = getTeddies.find((element) => element._id === getId);
+  console.log(selectedTeddy);
 
-// Tentative de récupération des données du bon produit sélectionné avec l'id
-const selectionedProductId = getTeddies.find(
-  (element) => element._id === getId()
-);
+  document
+    .getElementById("product-bear-image")
+    .setAttribute("src", `${selectedTeddy.imageUrl}`);
+
+  document.getElementById("product-name").textContent = `${selectedTeddy.name}`;
+  document.getElementById("product-descriptiob").textContent = `${selectedTeddy.description}`
+};
+
+selectedProduct();
