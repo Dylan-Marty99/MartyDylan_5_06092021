@@ -1,3 +1,5 @@
+//--------------------- Affichage des produits dans le panier -----------------------
+
 let productInLocalStorage = JSON.parse(localStorage.getItem("product"));
 console.log(productInLocalStorage);
 
@@ -39,4 +41,27 @@ if (productInLocalStorage === null) {
 
     basketContent.innerHTML = structureBasket;
   }
+}
+
+//--------------------- Suppression des produits ---------------------------
+
+// Récupération des boutons supprimer
+const supprBtn = document.querySelectorAll(".panier-content-suppr");
+const supprBtnSmartphone = document.querySelectorAll(
+  ".panier-content-suppr-smartphone"
+);
+
+// Fonction de suppression d'un article (bug) 
+const supprProduct = () => {
+    let supprIdSelected = productInLocalStorage[i].id
+    console.log(supprIdSelected);
+};
+
+// Boucles événement pour supprimer un article (bug)
+for (i = 0; i < supprBtn.length; i++) {
+  supprBtn[i].addEventListener("click", supprProduct);
+}
+
+for (i = 0; i < supprBtnSmartphone.length; i++) {
+    supprBtnSmartphone[i].addEventListener("click", supprProduct);
 }

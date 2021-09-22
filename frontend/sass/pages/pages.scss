@@ -690,6 +690,7 @@
         &-suppr {
             cursor: pointer;
             margin-left: 30px;
+            height: 15px;
             @include smartphone {
                 display: none;
             }
