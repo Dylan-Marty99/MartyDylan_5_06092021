@@ -550,6 +550,33 @@
 /*-------------PANIER-PAGE----------------*/
 /*-------------SECTION-panier----------------*/
 
+.empty-basket {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $bg-secondary;
+    border: $border;
+    &-title {
+        font-size: 1.6rem;
+        & i {
+            margin: 0 10px;
+        }
+    }
+    &-text {
+        padding: 20px;
+        font-size: 1.2rem;
+    }
+    &-btn {
+        @include all-btn;
+        font-size: 1.5rem;
+        height: 45px;
+        padding: 5px 15px
+    }
+}
+
 .panier {
     display: flex;
     justify-content: space-around;
@@ -601,36 +628,59 @@
     &-content {
         border: $border;
         border-bottom: none;
+        border-top: none;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 200px;
+        flex-direction: column;
+        &-content {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            border-top: $border;
+            @include smartphone {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
         &-image {
             width: 25%;
-            height: 80%;
-            object-fit: cover;
+            object-fit: contain;
             margin-left: 20px;
             @include smartphone {
-                height: 60%;
-                width: 30%;
+                width: 50%;
                 margin-left: 10px;
+            }
+            @include litle-smartphone {
+                height: 110px;
+                padding-top: 10px;
             }
         }
         &-product {
             display: flex;
             flex-direction: column;
             width: 50%;
+            margin-top: 20px;
             @include smartphone {
                 margin-left: 10px;
+                width: 90%;
             }
             &-title {
                 margin: 0;
                 font-size: 1.2rem;
             }
+            &-color {
+                margin: 10px 0 0;
+                font-size: 1.1rem;
+            }
+            &-description {
+                font-size: .85rem;
+            }
+            &-quantity {
+                margin: 0;
+                font-size: 1.1rem;
+            }
             &-price {
                 font-size: 1.5rem;
-                margin-bottom: 0;
-                margin-right: 40px;
+                margin: 5px 40px 0 0;
                 align-self: flex-end;
                 @include smartphone {
                     font-size: 1.2rem;
@@ -638,9 +688,20 @@
             }
         }
         &-suppr {
-            align-self: flex-start;
-            margin: 10px 15px 0 0;
             cursor: pointer;
+            margin-left: 30px;
+            @include smartphone {
+                display: none;
+            }
+            &-smartphone {
+                display: none;
+                @include smartphone {
+                    display: initial;
+                    align-self: flex-end;
+                    margin-right: 20px;
+                    cursor: pointer;
+                }
+            }
         }
     }
     &-total {

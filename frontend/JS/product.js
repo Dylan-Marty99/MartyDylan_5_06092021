@@ -82,7 +82,7 @@ const dataBasket = async () => {
   const getTeddies = await fetchTeddies();
   const selectedTeddy = getTeddies.find((element) => element._id === getId);
 
-
+  //Récupération de l'input couleur et du boutton 
   const idOptions = document.getElementById("product-color");
   const btnAddToBasket = document.getElementById("product-btn");
 
@@ -95,14 +95,15 @@ const dataBasket = async () => {
     const quantityChoice = document.getElementById("product-number").value;
 
     let productOptions = {
+      image: selectedTeddy.imageUrl,
       name: selectedTeddy.name,
       id: selectedTeddy._id,
-      colors: colorsChoice,
+      description: selectedTeddy.description,
+      color: colorsChoice,
       quantity: quantityChoice,
       price: selectedTeddy.price / 100,
     };
 
-    console.log(productOptions);
 
   //--------Stocker les données choisis dans le local storage---------------
   let productInLocalStorage = JSON.parse(localStorage.getItem("product"));
