@@ -152,7 +152,9 @@ const dataLocalStorageObject = JSON.parse(dataLocalStorage);
 
 // Fonction de remplissage du formulaire avec le local storage
 function fillFormInputs(input) {
-  document.getElementById(`${input}`).value = dataLocalStorageObject[input];
+  if (dataLocalStorageObject) {
+    document.getElementById(`${input}`).value = dataLocalStorageObject[input];
+  }
 }
 
 // Appel de la fonction pour chaque input

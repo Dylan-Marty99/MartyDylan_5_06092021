@@ -46,7 +46,7 @@ if (productInLocalStorage === null) {
                 <p class="panier-content-product-description">${productInLocalStorage[i].description}</p>
                 <p class="panier-content-product-color">Couleur : ${productInLocalStorage[i].color}</p>
                 <p class="panier-content-product-quantity">Quantité : ${productInLocalStorage[i].quantity}</p>
-                <p class="panier-content-product-price">${productInLocalStorage[i].price} €</p>
+                <p class="panier-content-product-price">Prix unitaire : ${productInLocalStorage[i].price} €</p>
             </div>
             <span class="panier-content-suppr"><i class="fas fa-times"></i></span>
         </div>

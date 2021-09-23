@@ -1331,13 +1331,13 @@ header {
   font-size: 1.1rem;
 }
 .panier-content-product-price {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 5px 40px 0 0;
   align-self: flex-end;
 }
 @media screen and (max-width: 500px) {
   .panier-content-product-price {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 .panier-content-suppr {

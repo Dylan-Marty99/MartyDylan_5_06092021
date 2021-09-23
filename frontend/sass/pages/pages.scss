@@ -729,11 +729,11 @@
                 font-size: 1.1rem;
             }
             &-price {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
                 margin: 5px 40px 0 0;
                 align-self: flex-end;
                 @include smartphone {
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
                 }
             }
         }
