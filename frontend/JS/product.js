@@ -104,25 +104,26 @@ const dataBasket = async () => {
       price: selectedTeddy.price / 100,
     };
 
+     // Ajout d'un pop-up pour confirmer que l'article est bien dans le panier
+    document.getElementById("popup-product").style.top = "0px";
 
-  //--------Stocker les données choisis dans le local storage---------------
-  let productInLocalStorage = JSON.parse(localStorage.getItem("product"));
+    //--------Stocker les données choisis dans le local storage---------------
+    let productInLocalStorage = JSON.parse(localStorage.getItem("product"));
 
-  //Ajouter un pop-up pour confirmer que les articles sont bien dans le panier 
 
-  // Si un produit est présent dans le local storage
-  if(productInLocalStorage) {
-    productInLocalStorage.push(productOptions);
-    localStorage.setItem("product", JSON.stringify(productInLocalStorage));
-    console.log(productInLocalStorage);
+    // Si un produit est présent dans le local storage
+    if(productInLocalStorage) {
+      productInLocalStorage.push(productOptions);
+      localStorage.setItem("product", JSON.stringify(productInLocalStorage));
+      console.log(productInLocalStorage);
 
-  // Si aucun produit n'est présent dans le local storage
-  } else {
-    productInLocalStorage = [];
-    productInLocalStorage.push(productOptions);
-    localStorage.setItem("product", JSON.stringify(productInLocalStorage));
-    console.log(productInLocalStorage);
-  }
+    // Si aucun produit n'est présent dans le local storage
+    } else {
+      productInLocalStorage = [];
+      productInLocalStorage.push(productOptions);
+      localStorage.setItem("product", JSON.stringify(productInLocalStorage));
+      console.log(productInLocalStorage);
+    }
   });
 };
 

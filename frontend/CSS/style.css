@@ -761,6 +761,71 @@ header {
 /*-------SECTION-boutiques---------*/
 /*-------------INDEX----------------*/
 /*-------------PRODUCT-PAGE----------------*/
+/*-------------Pop-up-ajout au panier----------------*/
+#popup-product {
+  position: fixed;
+  top: -10000px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(220, 220, 220, 0.8);
+}
+
+.popup-content {
+  width: 55%;
+  background: #ab8bf8;
+  padding: 15px 10px;
+  border-radius: 20px;
+  box-shadow: gray 2px 2px 8px;
+}
+@media screen and (max-width: 500px) {
+  .popup-content {
+    width: 70%;
+  }
+}
+.popup-content-title {
+  padding: 0 5px;
+}
+@media screen and (max-width: 800px) {
+  .popup-content-title {
+    font-size: 1.2rem;
+  }
+}
+.popup-content-title i {
+  margin: 0 10px;
+}
+.popup-content-text {
+  padding: 0 5px;
+}
+@media screen and (max-width: 800px) {
+  .popup-content-text {
+    font-size: 0.9rem;
+  }
+}
+.popup-content-btn {
+  cursor: pointer;
+  background: #e5bfff;
+  border: none;
+  border-radius: 10px;
+  transition: 0.4s;
+  margin: 10px;
+  padding: 5px 12px;
+  font-size: 1.1rem;
+}
+.popup-content-btn:hover {
+  transform: scale(1.1);
+  filter: brightness(90%);
+}
+@media screen and (max-width: 500px) {
+  .popup-content-btn {
+    font-size: 0.9rem;
+  }
+}
+
+/*-------------Pop-up-ajout au panier----------------*/
 .product-bear-container {
   display: flex;
   justify-content: space-around;
@@ -1101,6 +1166,20 @@ header {
 /*-------------ASIDE----------------*/
 /*-------------PRODUCT-PAGE----------------*/
 /*-------------PANIER-PAGE----------------*/
+/*-------------Pop-up-suppression du panier----------------*/
+#popup-panier {
+  position: fixed;
+  top: -10000px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(220, 220, 220, 0.8);
+}
+
+/*-------------Pop-up-suppression du panier----------------*/
 /*-------------SECTION-panier----------------*/
 .empty-basket {
   height: 100%;

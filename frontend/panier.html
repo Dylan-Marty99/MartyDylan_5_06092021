@@ -12,7 +12,18 @@
     <title>Panier</title>
 </head>
 <body>
-    
+
+<!--==========Pop-up-suppression du panier===============-->
+
+<div id="popup-panier">
+    <div class="popup-content">
+        <h2 class="popup-content-title">Votre panier a bien été vidé</h2>
+        <p class="popup-content-text">Retournez à l'accueil et retrouvez tout nos différents, mais très attachants, Teddies. Ils sauront comment vous convaincre de les adopter grâce à leur beauté naturelle !</p>
+        <button class="popup-content-btn"><a href="../index.html">Retourner à l'accueil</a></button>
+    </div>
+</div>
+
+<!--==========Pop-up-suppression du panier===============-->
 <!--==========HEADER===============-->
 
     <header>
@@ -46,17 +57,9 @@
         <div class="panier-container" id="basket">
             <div class="panier-title">
                 <h2 class="panier-title-title">Mon panier (1)</h2>
-                <span class="panier-title-suppr-all">Supprimer tout les articles<i class="fas fa-trash-alt"></i></span>
+                <span class="panier-title-suppr-all" id="panier-suppr-all">Supprimer tout les articles<i class="fas fa-trash-alt"></i></span>
             </div>
             <div class="panier-content" id="basket-content">
-                <!-- <img src="../backend/images/teddy_1.jpg" alt="" class="panier-content-image">
-                <div class="panier-content-product">
-                    <h4 class="panier-content-product-title">Nom</h4>
-                    <p class="panier-content-product-description">janjcnjd</p>
-                    <p class="panier-content-product-quantity">Quantité :</p>
-                    <p class="panier-content-product-price">Prix</p>
-                </div>
-                <span class="panier-content-suppr"><i class="fas fa-times"></i></span> -->
             </div>
             <div class="panier-total">
                 <p>Total : Prix</p>

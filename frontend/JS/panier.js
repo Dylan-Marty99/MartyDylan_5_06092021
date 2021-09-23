@@ -51,10 +51,10 @@ const supprBtnSmartphone = document.querySelectorAll(
   ".panier-content-suppr-smartphone"
 );
 
-// Fonction de suppression d'un article (bug) 
+// Fonction de suppression d'un article (bug)
 const supprProduct = () => {
-    let supprIdSelected = productInLocalStorage[i].id
-    console.log(supprIdSelected);
+  let supprIdSelected = productInLocalStorage[i].id;
+  console.log(supprIdSelected);
 };
 
 // Boucles événement pour supprimer un article (bug)
@@ -63,5 +63,19 @@ for (i = 0; i < supprBtn.length; i++) {
 }
 
 for (i = 0; i < supprBtnSmartphone.length; i++) {
-    supprBtnSmartphone[i].addEventListener("click", supprProduct);
+  supprBtnSmartphone[i].addEventListener("click", supprProduct);
+}
+
+
+// Récupération du bouton pour supprimer tous les articles
+const supprAllBasket = document.getElementById("panier-suppr-all");
+
+// Evénement click pour vider le local storage (et donc le panier)
+if (supprAllBasket) {
+  supprAllBasket.addEventListener("click", () => {
+    localStorage.removeItem("product");
+
+    //Ajout d'un pop-up pour confirmer que le panier a été vidé
+    document.getElementById("popup-panier").style.top = "0px";
+  });
 }
