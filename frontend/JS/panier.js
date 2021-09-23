@@ -1,3 +1,16 @@
+// Evénement load pour différencier les icones et textes du header en fonction de la page
+const cartIcon = document.querySelector(".fa-shopping-cart");
+const truckIcon = document.querySelector(".fa-truck");
+const cartIconText = document.querySelector(".header-panier-text");
+const truckIconText = document.querySelector(".header-livraison-text");
+
+window.addEventListener("load", () => {
+  cartIcon.style.color = "white";
+  cartIconText.style.color = "white";
+  truckIcon.style.color = "lightgrey";
+  truckIconText.style.color = "lightgrey";
+});
+
 //--------------------- Affichage des produits dans le panier -----------------------
 
 let productInLocalStorage = JSON.parse(localStorage.getItem("product"));
@@ -66,7 +79,6 @@ for (i = 0; i < supprBtnSmartphone.length; i++) {
   supprBtnSmartphone[i].addEventListener("click", supprProduct);
 }
 
-
 // Récupération du bouton pour supprimer tous les articles
 const supprAllBasket = document.getElementById("panier-suppr-all");
 
@@ -79,3 +91,28 @@ if (supprAllBasket) {
     document.getElementById("popup-panier").style.top = "0px";
   });
 }
+
+//--------------- Calcul du prix total des articles dans le panier ------------------------
+let calculationTotalPrice = [];
+
+for (i = 0; i < productInLocalStorage.length; i++) {
+  // Ajout des prix dans un tableau
+  calculationTotalPrice.push(
+    productInLocalStorage[i].price * productInLocalStorage[i].quantity
+  );
+
+  // Fonction reducer et calcul du total des prix
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  const totalPrice = calculationTotalPrice.reduce(reducer, 0);
+
+  // Récupération des deux paragraphes où le prix total va être ajouter
+  const totalpriceText = document.getElementById("total-price");
+  const totalpriceText2 = document.querySelector(".validation-recap-price");
+
+  // Ajout du prix total
+  totalpriceText.textContent = `Total : ${totalPrice} €`;
+  totalpriceText2.textContent = `${totalPrice} €`;
+}
+
+
+//------------- Gérer les quantités --------------------------

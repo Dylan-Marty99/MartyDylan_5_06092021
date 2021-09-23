@@ -29,36 +29,23 @@ $breakpoints: (
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 30px 0;                    
+    padding: 30px 0;     
     @include smartphone {
         flex-direction: column;
     }
     &-text {
-        font-size: 1rem;
+        font-size: 1.1rem;
         @include smartphone {
             margin: 0 5px;
         }
     }
-    &-address {
-        width: 35%;
-        height: 30px;
-        font-size: 1rem;
-        box-shadow: gray 1px 1px 4px;
-        @include all-btn;
-        @include tablet {
-            height: 40px;
-            margin: 0 20px;
-            font-size: .9rem;
-        }
-        @include smartphone {
-            margin: 20px 0;
-            width: 50%;
-        }
-    }
     &-price {
-        font-size: 1rem;
+        font-size: 1.1rem;
         @include tablet {
             margin-right: 5px;
+        }
+        @include smartphone {
+            margin-top: 20px;
         }
     }
 }

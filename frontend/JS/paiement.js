@@ -1,3 +1,16 @@
+// Evénement load pour différencier les icones et textes du header en fonction de la page
+const cartIcon = document.querySelector(".fa-shopping-cart");
+const truckIcon = document.querySelector(".fa-truck");
+const cartIconText = document.querySelector(".header-panier-text");
+const truckIconText = document.querySelector(".header-livraison-text");
+
+window.addEventListener("load", () => {
+  cartIcon.style.color = "lightgrey";
+  cartIconText.style.color = "lightgrey";
+  truckIcon.style.color = "white";
+  truckIconText.style.color = "white";
+});
+
 // ---------- Formulaire -----------------------
 
 // Variables
@@ -22,13 +35,13 @@ const errorDisplay = (tag, message, valid) => {
 // Fonction validité prenom
 const firstNameChecker = (value) => {
   if (value.length > 0 && (value.length < 2 || value.length > 30)) {
-    errorDisplay("first-name", "Prénom invalide");
+    errorDisplay("firstName", "Prénom invalide");
     firstName = null;
   } else if (!value.match(/^[a-zA-Z,.'-]+$/)) {
-    errorDisplay("first-name", "Prénom invalide");
+    errorDisplay("firstName", "Prénom invalide");
     firstName = null;
   } else {
-    errorDisplay("first-name", "", true);
+    errorDisplay("firstName", "", true);
     firstName = value;
   }
 };
@@ -36,13 +49,13 @@ const firstNameChecker = (value) => {
 // Fonction validité nom
 const lastNameChecker = (value) => {
   if (value.length > 0 && (value.length < 2 || value.length > 30)) {
-    errorDisplay("last-name", "Nom invalide");
+    errorDisplay("lastName", "Nom invalide");
     lastName = null;
   } else if (!value.match(/^[a-zA-Z,.'-]+$/)) {
-    errorDisplay("last-name", "Nom invalide");
+    errorDisplay("lastName", "Nom invalide");
     lastName = null;
   } else {
-    errorDisplay("last-name", "", true);
+    errorDisplay("lastName", "", true);
     lastName = value;
   }
 };
@@ -90,10 +103,10 @@ const mailChecker = (value) => {
 inputs.forEach((input) => {
   input.addEventListener("input", (e) => {
     switch (e.target.id) {
-      case "first-name":
+      case "firstName":
         firstNameChecker(e.target.value);
         break;
-      case "last-name":
+      case "lastName":
         lastNameChecker(e.target.value);
         break;
       case "address":
@@ -123,9 +136,28 @@ form.addEventListener("submit", (e) => {
       city,
       mail,
     };
-    console.log(data);
+
+    // Stocker les coordonnées du client dans le local storage
+    localStorage.setItem("coordonnées", JSON.stringify(data));
+
     alert("Coordonnées validées");
-  } else {
-    alert("Veuillez remplir correctement tout les champs");
   }
 });
+
+//--------- Remplir le formulaire avec les coordonnées présente dans le local storage -----------
+
+// Récupérer les coordonnées dans le local storage et les convertir en objet
+const dataLocalStorage = localStorage.getItem("coordonnées");
+const dataLocalStorageObject = JSON.parse(dataLocalStorage);
+
+// Fonction de remplissage du formulaire avec le local storage
+function fillFormInputs(input) {
+  document.getElementById(`${input}`).value = dataLocalStorageObject[input];
+}
+
+// Appel de la fonction pour chaque input
+fillFormInputs("firstName");
+fillFormInputs("lastName");
+fillFormInputs("address");
+fillFormInputs("city");
+fillFormInputs("mail");

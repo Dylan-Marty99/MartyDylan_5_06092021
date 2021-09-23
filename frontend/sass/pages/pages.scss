@@ -759,7 +759,7 @@
         display: flex;
         justify-content: flex-end;
         padding-right: 30px;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         border: $border;
         background: $bg-secondary;
     }
@@ -941,17 +941,6 @@
 /*-------------PANIER-PAGE----------------*/
 
 /*-------------PAIEMENT-PAGE----------------*/
-/*-------------HEADER----------------*/
-
-// .fa-shopping-cart, .header-panier-text {
-//     color: white;
-// }                                               --- color onload ---
-
-// .fa-truck, .header-livraison-text {
-//     color: lightgray;
-// }
-
-/*-------------HEADER----------------*/
 /*-------------MAIN----------------*/
 
 .paiement-page {
@@ -1031,7 +1020,7 @@
     }
 }
 
-.first-name-container, .last-name-container {
+.firstName-container, .lastName-container {
     width: 45%;
     @include litle-smartphone {
         width: 60%;
@@ -1067,23 +1056,10 @@
             @include livraison;
             border: $border;
         }
-        &-express {                             /*-----enlever boutons---*/
-            @include livraison;
-            border-left: $border;
-            border-right: $border;
-        }
-        &-relais {
+        &-express {                             
             @include livraison;
             border: $border;
-            &-address {
-                margin-left: 10%;
-                @include tablet {
-                    margin-left: 15%;
-                }
-                @include smartphone {
-                    margin-left: 0;
-                }
-            }
+            border-top: none;
         }
     }
 }

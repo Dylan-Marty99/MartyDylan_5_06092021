@@ -190,11 +190,7 @@ header {
     font-size: 0.9rem;
   }
 }
-.header-panier-content .fa-shopping-cart {
-  color: lightgray;
-}
 .header-panier-text {
-  color: lightgray;
   font-size: 1.1rem;
 }
 @media screen and (max-width: 500px) {
@@ -214,7 +210,6 @@ header {
 }
 
 .header-livraison-text {
-  color: white;
   font-size: 1.1rem;
 }
 @media screen and (max-width: 500px) {
@@ -225,7 +220,6 @@ header {
 }
 
 .fa-truck {
-  color: white;
   padding-bottom: 5px;
 }
 
@@ -1371,7 +1365,7 @@ header {
   display: flex;
   justify-content: flex-end;
   padding-right: 30px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border: black solid 1.5px;
   background: #ab8bf8;
 }
@@ -1582,8 +1576,6 @@ header {
 /*----------SECTION-article-similaires ?-------------*/
 /*-------------PANIER-PAGE----------------*/
 /*-------------PAIEMENT-PAGE----------------*/
-/*-------------HEADER----------------*/
-/*-------------HEADER----------------*/
 /*-------------MAIN----------------*/
 .paiement-page {
   display: flex;
@@ -1671,11 +1663,11 @@ header {
   }
 }
 
-.first-name-container, .last-name-container {
+.firstName-container, .lastName-container {
   width: 45%;
 }
 @media screen and (max-width: 350px) {
-  .first-name-container, .last-name-container {
+  .firstName-container, .lastName-container {
     width: 60%;
   }
 }
@@ -1719,57 +1711,33 @@ header {
   }
 }
 .livraison-container-standart-text {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 @media screen and (max-width: 500px) {
   .livraison-container-standart-text {
     margin: 0 5px;
   }
 }
-.livraison-container-standart-address {
-  width: 35%;
-  height: 30px;
-  font-size: 1rem;
-  box-shadow: gray 1px 1px 4px;
-  cursor: pointer;
-  background: #e5bfff;
-  border: none;
-  border-radius: 10px;
-  transition: 0.4s;
-}
-.livraison-container-standart-address:hover {
-  transform: scale(1.1);
-  filter: brightness(90%);
-}
-@media screen and (max-width: 1024px) {
-  .livraison-container-standart-address {
-    height: 40px;
-    margin: 0 20px;
-    font-size: 0.9rem;
-  }
-}
-@media screen and (max-width: 500px) {
-  .livraison-container-standart-address {
-    margin: 20px 0;
-    width: 50%;
-  }
-}
 .livraison-container-standart-price {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 @media screen and (max-width: 1024px) {
   .livraison-container-standart-price {
     margin-right: 5px;
   }
 }
+@media screen and (max-width: 500px) {
+  .livraison-container-standart-price {
+    margin-top: 20px;
+  }
+}
 .livraison-container-express {
-  /*-----enlever boutons---*/
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 30px 0;
-  border-left: black solid 1.5px;
-  border-right: black solid 1.5px;
+  border: black solid 1.5px;
+  border-top: none;
 }
 @media screen and (max-width: 500px) {
   .livraison-container-express {
@@ -1777,116 +1745,24 @@ header {
   }
 }
 .livraison-container-express-text {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 @media screen and (max-width: 500px) {
   .livraison-container-express-text {
     margin: 0 5px;
   }
 }
-.livraison-container-express-address {
-  width: 35%;
-  height: 30px;
-  font-size: 1rem;
-  box-shadow: gray 1px 1px 4px;
-  cursor: pointer;
-  background: #e5bfff;
-  border: none;
-  border-radius: 10px;
-  transition: 0.4s;
-}
-.livraison-container-express-address:hover {
-  transform: scale(1.1);
-  filter: brightness(90%);
-}
-@media screen and (max-width: 1024px) {
-  .livraison-container-express-address {
-    height: 40px;
-    margin: 0 20px;
-    font-size: 0.9rem;
-  }
-}
-@media screen and (max-width: 500px) {
-  .livraison-container-express-address {
-    margin: 20px 0;
-    width: 50%;
-  }
-}
 .livraison-container-express-price {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 @media screen and (max-width: 1024px) {
   .livraison-container-express-price {
     margin-right: 5px;
   }
 }
-.livraison-container-relais {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 30px 0;
-  border: black solid 1.5px;
-}
 @media screen and (max-width: 500px) {
-  .livraison-container-relais {
-    flex-direction: column;
-  }
-}
-.livraison-container-relais-text {
-  font-size: 1rem;
-}
-@media screen and (max-width: 500px) {
-  .livraison-container-relais-text {
-    margin: 0 5px;
-  }
-}
-.livraison-container-relais-address {
-  width: 35%;
-  height: 30px;
-  font-size: 1rem;
-  box-shadow: gray 1px 1px 4px;
-  cursor: pointer;
-  background: #e5bfff;
-  border: none;
-  border-radius: 10px;
-  transition: 0.4s;
-}
-.livraison-container-relais-address:hover {
-  transform: scale(1.1);
-  filter: brightness(90%);
-}
-@media screen and (max-width: 1024px) {
-  .livraison-container-relais-address {
-    height: 40px;
-    margin: 0 20px;
-    font-size: 0.9rem;
-  }
-}
-@media screen and (max-width: 500px) {
-  .livraison-container-relais-address {
-    margin: 20px 0;
-    width: 50%;
-  }
-}
-.livraison-container-relais-price {
-  font-size: 1rem;
-}
-@media screen and (max-width: 1024px) {
-  .livraison-container-relais-price {
-    margin-right: 5px;
-  }
-}
-.livraison-container-relais-address {
-  margin-left: 10%;
-}
-@media screen and (max-width: 1024px) {
-  .livraison-container-relais-address {
-    margin-left: 15%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .livraison-container-relais-address {
-    margin-left: 0;
+  .livraison-container-express-price {
+    margin-top: 20px;
   }
 }
 

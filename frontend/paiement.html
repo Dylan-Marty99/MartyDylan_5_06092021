@@ -47,29 +47,29 @@
         <section class="formulaire">
             <h2 class="formulaire-title">Renseignez vos coordonnées</h2>
             <form action="#" class="formulaire-container">
-                <div class="first-name-container form-inputs">
-                    <label for="first-name" class="formulaire-container-title">Prénom</label>
-                    <input type="text" autocomplete="off" placeholder="Ex: Martin" id="first-name" class="formulaire-container-input">
+                <div class="firstName-container form-inputs">
+                    <label for="firstName" class="formulaire-container-title">Prénom</label>
+                    <input type="text" autocomplete="off" placeholder="Ex: Martin" id="firstName" class="formulaire-container-input" required>
                     <span class="formulaire-container-subtext"></span>
                 </div>
-                <div class="last-name-container form-inputs">
-                    <label for="last-name" class="formulaire-container-title">Nom</label>
-                    <input type="text" autocomplete="off" placeholder="Ex: Bren" id="last-name" class="formulaire-container-input">
+                <div class="lastName-container form-inputs">
+                    <label for="lastName" class="formulaire-container-title">Nom</label>
+                    <input type="text" autocomplete="off" placeholder="Ex: Bren" id="lastName" class="formulaire-container-input" required>
                     <span class="formulaire-container-subtext"></span>
                 </div>
                 <div class="address-container form-inputs">
                     <label for="address" class="formulaire-container-title">Adresse</label>
-                    <input type="text" autocomplete="off" placeholder="Ex: 11 rue des Bears" id="address" class="formulaire-container-input">
+                    <input type="text" autocomplete="off" placeholder="Ex: 11 rue des Bears" id="address" class="formulaire-container-input" required>
                     <span class="formulaire-container-subtext"></span>
                 </div>
                 <div class="city-container form-inputs">
                     <label for="city" class="formulaire-container-title">Ville</label>
-                    <input type="text" autocomplete="off" placeholder="Ex: 75000 Paris" id="city" class="formulaire-container-input">
+                    <input type="text" autocomplete="off" placeholder="Ex: 75000 Paris" id="city" class="formulaire-container-input" required>
                     <span class="formulaire-container-subtext"></span>
                 </div>
                 <div class="mail-container form-inputs">
                     <label for="mail" class="formulaire-container-title">Email</label>
-                    <input type="text" autocomplete="off" placeholder="Ex: martinbren@exemple.com" id="mail" class="formulaire-container-input">
+                    <input type="text" autocomplete="off" placeholder="Ex: martinbren@exemple.com" id="mail" class="formulaire-container-input" required>
                     <span class="formulaire-container-subtext"></span>
                 </div>
                 <input type="submit" value="Valider">
@@ -84,19 +84,12 @@
                 <h2 class="livraison-title">Mode de livraison || <a href="./confirmation.html">Page suivante</a></h2>
                 <div class="livraison-container">
                     <div class="livraison-container-standart">
-                        <label for="standart" class="livraison-container-standart-text"><input type="radio" name="livraison" id="standart" class="livraison-container-standart-standart"> Livraison à votre domicile standart</label>
-                        <button class="livraison-container-standart-address">Renseigner votre adresse</button>
+                        <label for="standart" class="livraison-container-standart-text"><input type="radio" name="livraison" id="standart" class="livraison-container-standart-standart" checked> Livraison à votre domicile standart</label>
                         <span class="livraison-container-standart-price">2,99€</span>
                     </div>
                     <div class="livraison-container-express">
                         <label for="express" class="livraison-container-express-text"><input type="radio" name="livraison" id="express" class="livraison-container-express-express"> Livraison à votre domicile express</label>
-                        <button class="livraison-container-express-address">Renseigner votre adresse</button>
                         <span class="livraison-container-express-price">7,99€</span>
-                    </div>
-                    <div class="livraison-container-relais">
-                        <label for="relais" class="livraison-container-relais-text"><input type="radio" name="livraison" id="relais" class="livraison-container-relais-relais"> Livraison en point relais</label>
-                        <button class="livraison-container-relais-address">Trouver un point relais</button>
-                        <span class="livraison-container-relais-price">1,99€</span>
                     </div>
                 </div>
             </section>

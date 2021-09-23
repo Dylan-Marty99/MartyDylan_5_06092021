@@ -148,12 +148,12 @@ header {
         @include smartphone {
             font-size: .9rem;
         }
-        & .fa-shopping-cart {
-            color: lightgray;
-        }
+        // & .fa-shopping-cart {
+        //     color: lightgray;
+        // }
     }
     &-text {
-        color:lightgray;
+        // color:lightgray;
         font-size: 1.1rem;
         @include smartphone {
             font-size: .9rem;
@@ -170,7 +170,7 @@ header {
 }
 
 .header-livraison-text {
-    color: white;
+    // color: white;
     font-size: 1.1rem;
     @include smartphone {
         font-size: .9rem;
@@ -179,7 +179,7 @@ header {
 }
 
 .fa-truck {
-    color: white;
+    // color: white;
     padding-bottom: 5px;
 }
 
