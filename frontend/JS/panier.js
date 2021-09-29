@@ -21,7 +21,7 @@ const basketContainer = document.getElementById("basket");
 const basketContent = document.getElementById("basket-content");
 
 // Cas où le panier est vide
-if (productInLocalStorage === null) {
+if (productInLocalStorage === null || productInLocalStorage == 0) {
   basketContainer.innerHTML = `
     <div class="empty-basket">
         <h2 class="empty-basket-title"><i class="fas fa-exclamation-triangle"></i> Oups, votre panier est vide <i class="fas fa-exclamation-triangle"></i></h2>
@@ -64,20 +64,40 @@ const supprBtnSmartphone = document.querySelectorAll(
   ".panier-content-suppr-smartphone"
 );
 
-// Fonction de suppression d'un article (bug)
-const supprProduct = () => {
-  let supprIdSelected = productInLocalStorage[i].id;
-  console.log(supprIdSelected);
-};
+//---------------------------Bug supprimer un article----------------------------------------
+
+function deleteTeddy(id) {
+  productInLocalStorage.splice(id, 1);
+  localStorage.setItem("product", JSON.stringify(productInLocalStorage));
+  window.location.reload();
+}
+
+supprBtn.forEach((delBtn) => {
+  delBtn.addEventListener("click", () => deleteTeddy(delBtn.dataset.id));
+});
+
+// supprimerSelection = Array.from(supprBtn);
+
+// for (i = 0; i < supprimerSelection.length; i++) {
+//   supprimerSelection[i].addEventListener("click", () => {
+//     // supprimerSelection[i].parentElement.style.display = "none";
+
+//     productInLocalStorage.splice([i], 1);
+
+//     productInLocalStorage = localStorage.setItem('product', JSON.stringify(productInLocalStorage));
+
+//   });
+// }
 
 // Boucles événement pour supprimer un article (bug)
-for (i = 0; i < supprBtn.length; i++) {
-  supprBtn[i].addEventListener("click", supprProduct);
-}
+// for (i = 0; i < supprBtn.length; i++) {
+//   supprBtn[i].addEventListener("click", () => {
+//     let supprIdSelected = productInLocalStorage[i].id;
+//     console.log(supprIdSelected);
+//   });
+// }
 
-for (i = 0; i < supprBtnSmartphone.length; i++) {
-  supprBtnSmartphone[i].addEventListener("click", supprProduct);
-}
+//---------------------------Bug supprimer un article----------------------------------------
 
 // Récupération du bouton pour supprimer tous les articles
 const supprAllBasket = document.getElementById("panier-suppr-all");
@@ -95,24 +115,35 @@ if (supprAllBasket) {
 //--------------- Calcul du prix total des articles dans le panier ------------------------
 let calculationTotalPrice = [];
 
-for (i = 0; i < productInLocalStorage.length; i++) {
-  // Ajout des prix dans un tableau
-  calculationTotalPrice.push(
-    productInLocalStorage[i].price * productInLocalStorage[i].quantity
-  );
+if (productInLocalStorage) {
+  for (i = 0; i < productInLocalStorage.length; i++) {
+    // Ajout des prix dans un tableau
+    calculationTotalPrice.push(
+      productInLocalStorage[i].price * productInLocalStorage[i].quantity
+    );
 
-  // Fonction reducer et calcul du total des prix
-  const reducer = (accumulator, currentValue) => accumulator + currentValue;
-  const totalPrice = calculationTotalPrice.reduce(reducer, 0);
+    // Fonction reducer et calcul du total des prix
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    const totalPrice = calculationTotalPrice.reduce(reducer, 0);
 
-  // Récupération des deux paragraphes où le prix total va être ajouter
-  const totalpriceText = document.getElementById("total-price");
-  const totalpriceText2 = document.querySelector(".validation-recap-price");
+    // Récupération des deux paragraphes où le prix total va être ajouter
+    const totalpriceText = document.getElementById("total-price");
+    const totalpriceText2 = document.querySelector(".validation-recap-price");
 
-  // Ajout du prix total
-  totalpriceText.textContent = `Total : ${totalPrice} €`;
-  totalpriceText2.textContent = `${totalPrice} €`;
+    // Ajout du prix total
+    totalpriceText.textContent = `Total : ${totalPrice} €`;
+    totalpriceText2.textContent = `${totalPrice} €`;
+  }
 }
 
-
 //------------- Gérer les quantités --------------------------
+
+// console.log(
+//   Object.is(productInLocalStorage[1].id, productInLocalStorage[3].id)
+// );
+
+// for (i = 0; i < productInLocalStorage.length; i++) {
+//   console.log(
+//     Object.is(productInLocalStorage[i].id, productInLocalStorage[i].id)
+//   );
+// }

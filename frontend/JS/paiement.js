@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
 // Variables
 const form = document.querySelector(".formulaire-container");
 const inputs = document.querySelectorAll(".formulaire-container-input");
-let firstName, lastName, address, city, mail;
+let firstName, lastName, address, city, email;
 
 // Fonction des messages d'erreur
 const errorDisplay = (tag, message, valid) => {
@@ -91,11 +91,11 @@ const cityChecker = (value) => {
 // Fonction validité mail
 const mailChecker = (value) => {
   if (!value.match(/^[\w_-]+@[\w-]+\.[a-z]{2,4}$/i)) {
-    errorDisplay("mail", "Email invalide");
-    mail = null;
+    errorDisplay("email", "Email invalide");
+    email = null;
   } else {
-    errorDisplay("mail", "", true);
-    mail = value;
+    errorDisplay("email", "", true);
+    email = value;
   }
 };
 
@@ -115,7 +115,7 @@ inputs.forEach((input) => {
       case "city":
         cityChecker(e.target.value);
         break;
-      case "mail":
+      case "email":
         mailChecker(e.target.value);
         break;
       default:
@@ -128,17 +128,17 @@ inputs.forEach((input) => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  if (firstName && lastName && address && city && mail) {
+  if (firstName && lastName && address && city && email) {
     const data = {
       firstName,
       lastName,
       address,
       city,
-      mail,
+      email,
     };
 
     // Stocker les coordonnées du client dans le local storage
-    localStorage.setItem("coordonnées", JSON.stringify(data));
+    localStorage.setItem("contact", JSON.stringify(data));
 
     alert("Coordonnées validées");
   }
@@ -147,7 +147,7 @@ form.addEventListener("submit", (e) => {
 //--------- Remplir le formulaire avec les coordonnées présente dans le local storage -----------
 
 // Récupérer les coordonnées dans le local storage et les convertir en objet
-const dataLocalStorage = localStorage.getItem("coordonnées");
+const dataLocalStorage = localStorage.getItem("contact");
 const dataLocalStorageObject = JSON.parse(dataLocalStorage);
 
 // Fonction de remplissage du formulaire avec le local storage
@@ -162,4 +162,4 @@ fillFormInputs("firstName");
 fillFormInputs("lastName");
 fillFormInputs("address");
 fillFormInputs("city");
-fillFormInputs("mail");
+fillFormInputs("email");

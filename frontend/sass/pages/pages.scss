@@ -1027,7 +1027,7 @@
     }
 }
 
-.address-container, .city-container, .mail-container {
+.address-container, .city-container, .email-container {
     width: 60%;
 }
 
@@ -1433,7 +1433,7 @@
     }
 }
 
-.last-first-name-container, .email-container, .password-container, .confirm-password-container {
+.last-first-name-container, .mail-container, .password-container, .confirm-password-container {
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -4,7 +4,7 @@ const inputs = document.querySelectorAll(
   `input[type="text"], input[type="password"]`
 );
 const progressBar = document.getElementById("password-progress-bar");
-let lastFirstName, email, password, confirmPassword;
+let lastFirstName, mail, password, confirmPassword;
 
 // Fonction des messages d'erreur
 const errorDisplay = (tag, message, valid) => {
@@ -40,11 +40,11 @@ const lastFirstNameChecker = (value) => {
 // Fonction validité email
 const emailChecker = (value) => {
   if (!value.match(/^[\w_-]+@[\w-]+\.[a-z]{2,4}$/i)) {
-    errorDisplay("email", "Cet email n'est pas valide");
-    email = null;
+    errorDisplay("mail", "Cet email n'est pas valide");
+    mail = null;
   } else {
-    errorDisplay("email", "", true);
-    email = value;
+    errorDisplay("mail", "", true);
+    mail = value;
   }
 };
 
@@ -93,7 +93,7 @@ inputs.forEach((input) => {
       case "last-first-name":
         lastFirstNameChecker(e.target.value);
         break;
-      case "email":
+      case "mail":
         emailChecker(e.target.value);
         break;
       case "password":
@@ -112,10 +112,10 @@ inputs.forEach((input) => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  if (lastFirstName && email && password && confirmPassword) {
+  if (lastFirstName && mail && password && confirmPassword) {
     const data = {
       lastFirstName,
-      email,
+      mail,
       password,
     };
     console.log(data);
@@ -125,7 +125,7 @@ form.addEventListener("submit", (e) => {
     errorDisplay("password", "", true);
 
     lastFirstName = null;
-    email = null;
+    mail = null;
     password = null;
     confirmPassword = null;
     alert("Inscription validée !");
