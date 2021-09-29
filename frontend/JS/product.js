@@ -104,24 +104,36 @@ const dataBasket = async () => {
       price: selectedTeddy.price / 100,
     };
 
+    let products = selectedTeddy._id
+
      // Ajout d'un pop-up pour confirmer que l'article est bien dans le panier
     document.getElementById("popup-product").style.top = "0px";
 
     //--------Stocker les données choisis dans le local storage---------------
     let productInLocalStorage = JSON.parse(localStorage.getItem("product"));
 
+    let productsInLocalStorage = JSON.parse(localStorage.getItem("products"));
+
 
     // Si un produit est présent dans le local storage
     if(productInLocalStorage) {
       productInLocalStorage.push(productOptions);
+      productsInLocalStorage.push(products);
+
       localStorage.setItem("product", JSON.stringify(productInLocalStorage));
+      localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
       console.log(productInLocalStorage);
 
     // Si aucun produit n'est présent dans le local storage
     } else {
       productInLocalStorage = [];
+      productsInLocalStorage = [];
+      
       productInLocalStorage.push(productOptions);
+      productsInLocalStorage.push(products);
+
       localStorage.setItem("product", JSON.stringify(productInLocalStorage));
+      localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
       console.log(productInLocalStorage);
     }
   });

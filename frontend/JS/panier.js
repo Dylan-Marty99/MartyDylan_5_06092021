@@ -14,6 +14,7 @@ window.addEventListener("load", () => {
 //--------------------- Affichage des produits dans le panier -----------------------
 
 let productInLocalStorage = JSON.parse(localStorage.getItem("product"));
+let productsInLocalStorage = JSON.parse(localStorage.getItem("products"));
 console.log(productInLocalStorage);
 
 //Récupération de la div panier et de celle de son contenu
@@ -68,7 +69,9 @@ const supprBtnSmartphone = document.querySelectorAll(
 
 function deleteTeddy(id) {
   productInLocalStorage.splice(id, 1);
+  productsInLocalStorage.splice(id, 1);
   localStorage.setItem("product", JSON.stringify(productInLocalStorage));
+  localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
   window.location.reload();
 }
 
@@ -106,6 +109,7 @@ const supprAllBasket = document.getElementById("panier-suppr-all");
 if (supprAllBasket) {
   supprAllBasket.addEventListener("click", () => {
     localStorage.removeItem("product");
+    localStorage.removeItem("products");
 
     //Ajout d'un pop-up pour confirmer que le panier a été vidé
     document.getElementById("popup-panier").style.top = "0px";
