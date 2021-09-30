@@ -111,7 +111,6 @@ const dataBasket = async () => {
 
     //--------Stocker les données choisis dans le local storage---------------
     let productInLocalStorage = JSON.parse(localStorage.getItem("product"));
-
     let productsInLocalStorage = JSON.parse(localStorage.getItem("products"));
 
 

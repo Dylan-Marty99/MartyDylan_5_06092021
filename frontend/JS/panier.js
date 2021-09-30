@@ -16,6 +16,7 @@ window.addEventListener("load", () => {
 let productInLocalStorage = JSON.parse(localStorage.getItem("product"));
 let productsInLocalStorage = JSON.parse(localStorage.getItem("products"));
 console.log(productInLocalStorage);
+console.log(productsInLocalStorage);
 
 //Récupération de la div panier et de celle de son contenu
 const basketContainer = document.getElementById("basket");
@@ -137,6 +138,13 @@ if (productInLocalStorage) {
     // Ajout du prix total
     totalpriceText.textContent = `Total : ${totalPrice} €`;
     totalpriceText2.textContent = `${totalPrice} €`;
+
+    // Ajout du prix total dns le local storage
+    let totalProductsInLocalStorage = JSON.parse(localStorage.getItem("total"));
+
+    totalProductsInLocalStorage = [];
+    totalProductsInLocalStorage.push(totalPrice);
+    localStorage.setItem("total", JSON.stringify(totalProductsInLocalStorage));
   }
 }
 

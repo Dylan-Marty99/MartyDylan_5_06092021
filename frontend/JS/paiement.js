@@ -163,3 +163,36 @@ fillFormInputs("lastName");
 fillFormInputs("address");
 fillFormInputs("city");
 fillFormInputs("email");
+
+//------------------------ Gestion et envoi des données du formulaire --------------------------------
+let productsInLocalStorage = JSON.parse(localStorage.getItem("products"));
+
+// Objet contenant les données à envoyer au serveur
+const customerData = {
+  contact: dataLocalStorage,
+  products: productsInLocalStorage,
+};
+
+console.log(customerData);
+
+//------------------ Bug fonction d'envoi des données ------------
+const sendCustomerData = () => {
+  fetch("http://localhost:3000/api/teddies/order", {
+    method: "POST",
+    body: JSON.stringify(customerData),
+    headers: {
+      "content-type": "application/json",
+    },
+  }).then(function (response) {
+    return response.json();
+  });
+};
+//------------------ Bug fonction d'envoi des données ------------
+
+// Evénement click pour envoyer les données et passer à la page de confirmation
+const validationBtn = document.getElementById("validation-btn");
+
+validationBtn.addEventListener("click", () => {
+  sendCustomerData();
+  window.location.href = "./confirmation.html";
+});
