@@ -131,7 +131,7 @@ if (productInLocalStorage) {
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     const totalPrice = calculationTotalPrice.reduce(reducer, 0);
 
-    // Récupération des deux paragraphes où le prix total va être ajouter
+    // Récupération des deux paragraphes où le prix total va être ajouté
     const totalpriceText = document.getElementById("total-price");
     const totalpriceText2 = document.querySelector(".validation-recap-price");
 

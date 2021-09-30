@@ -164,6 +164,41 @@ fillFormInputs("address");
 fillFormInputs("city");
 fillFormInputs("email");
 
+//------------ Ajout du prix total du panier depuis le local storge -------------
+let totalProductsInLocalStorage = JSON.parse(localStorage.getItem("total"));
+
+const totalBasketPrice = document.getElementById("total-basket-price");
+totalBasketPrice.textContent = `${totalProductsInLocalStorage} €`;
+
+//----------------- Ajout des prix de livraison sur la page et dans le local storage ----------------
+// Variables inputs et prix de la livraison
+const standardDelivery = document.getElementById("standart");
+const expressDelivery = document.getElementById("express");
+const deliveryPrice = document.getElementById("delivery-price");
+const totalOrder = document.getElementById("total-order-price");
+
+// Ajout du prix du panier tant que la livrasion n'est pas choisit
+totalOrder.textContent = `${totalProductsInLocalStorage} €`;
+
+// Evénements click pour ajout le prix de la livraison
+standardDelivery.addEventListener("click", () => {
+  const standartDeliveryPrice = 2.99;
+  deliveryPrice.textContent = `${standartDeliveryPrice} €`;
+
+  const calculationTotalOrder =
+    Number(totalProductsInLocalStorage) + Number(standartDeliveryPrice);
+  totalOrder.textContent = `${calculationTotalOrder} €`;
+});
+
+expressDelivery.addEventListener("click", () => {
+  const expressDeliveryPrice = 7.99;
+  deliveryPrice.textContent = `${expressDeliveryPrice} €`;
+
+  const calculationTotalOrder =
+  Number(totalProductsInLocalStorage) + Number(expressDeliveryPrice);
+  totalOrder.textContent = `${calculationTotalOrder} €`;
+});
+
 //------------------------ Gestion et envoi des données du formulaire --------------------------------
 let productsInLocalStorage = JSON.parse(localStorage.getItem("products"));
 
@@ -194,5 +229,5 @@ const validationBtn = document.getElementById("validation-btn");
 
 validationBtn.addEventListener("click", () => {
   sendCustomerData();
-  window.location.href = "./confirmation.html";
+  // window.location.href = "./confirmation.html";
 });
