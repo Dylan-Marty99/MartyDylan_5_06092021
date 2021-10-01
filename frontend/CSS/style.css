@@ -2048,7 +2048,7 @@ header {
 .details-product {
   display: flex;
   width: 80%;
-  height: 150px;
+  height: 180px;
   margin: 20px 0 30px 7%;
   padding: 10px 0 0 50px;
   border-top: black solid 1.5px;
@@ -2060,16 +2060,27 @@ header {
 }
 @media screen and (max-width: 500px) {
   .details-product {
+    width: 90%;
+    height: 200px;
     margin-bottom: 10px;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 350px) {
+  .details-product {
+    flex-direction: column;
+    width: 100%;
+    height: 250px;
+    margin-left: 0;
   }
 }
 .details-product-image {
-  object-fit: cover;
-  width: 15%;
+  object-fit: contain;
+  width: 30%;
 }
 @media screen and (max-width: 1024px) {
   .details-product-image {
-    width: 20%;
+    width: 25%;
   }
 }
 @media screen and (max-width: 800px) {
@@ -2083,14 +2094,22 @@ header {
     width: 37%;
   }
 }
+@media screen and (max-width: 350px) {
+  .details-product-image {
+    margin: 0 auto;
+  }
+}
 .details-product-product {
   margin-left: 40px;
-  display: flex;
-  flex-direction: column;
 }
 @media screen and (max-width: 500px) {
   .details-product-product {
     margin-left: 20px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .details-product-product {
+    margin-left: 10px;
   }
 }
 .details-product-product-title {
@@ -2099,10 +2118,35 @@ header {
 }
 .details-product-product-description {
   margin: 5px 0;
-  font-size: 0.9rem;
+}
+@media screen and (max-width: 800px) {
+  .details-product-product-description {
+    font-size: 0.8rem;
+  }
+}
+.details-product-product-color {
+  margin: 5px 0 0;
+}
+@media screen and (max-width: 800px) {
+  .details-product-product-color {
+    font-size: 0.9rem;
+  }
+}
+.details-product-product-quantity {
+  margin: 0 0 15px;
+}
+@media screen and (max-width: 800px) {
+  .details-product-product-quantity {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .details-product-product-quantity {
+    margin-bottom: 5px;
+  }
 }
 .details-product-product-price {
-  margin-top: 50%;
+  margin-top: 10px;
 }
 @media screen and (max-width: 500px) {
   .details-product-product-price {
@@ -2113,6 +2157,7 @@ header {
 .recap-container {
   display: flex;
   background: #ab8bf8;
+  margin-top: 40px;
 }
 @media screen and (max-width: 500px) {
   .recap-container {

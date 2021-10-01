@@ -267,5 +267,11 @@ const validationBtn = document.getElementById("validation-btn");
 
 validationBtn.addEventListener("click", () => {
   sendCustomerData();
-  // window.location.href = "./confirmation.html";
+
+  // Savoir si le mode de livraison est choisit pour passer à la page de confirmation 
+  if(dataDeliveryPrice) {
+    window.location.href = "./confirmation.html";
+  } else {
+    alert("Veuillez choisir un mode de livraison")
+  }
 });

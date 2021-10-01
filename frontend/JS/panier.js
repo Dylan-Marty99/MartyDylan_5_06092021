@@ -159,3 +159,14 @@ if (productInLocalStorage) {
 //     Object.is(productInLocalStorage[i].id, productInLocalStorage[i].id)
 //   );
 // }
+
+//------ Evénement click pour aller à la page paiement si le local storage n'est pas vide --------
+const basketValidation = document.querySelector(".validation-validation-btn");
+
+basketValidation.addEventListener("click", () => {
+  if(productInLocalStorage) {
+    window.location.href = "./paiement.html"
+  } else {
+    alert("Votre panier est vide")
+  }
+})
