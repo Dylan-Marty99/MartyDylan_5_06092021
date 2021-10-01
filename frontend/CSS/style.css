@@ -2237,6 +2237,7 @@ header {
 
 .text-border {
   border-top: dotted black 2px;
+  font-weight: bold;
 }
 
 /*-------------SECTION----------------*/
