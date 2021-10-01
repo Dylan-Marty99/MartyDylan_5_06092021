@@ -77,7 +77,7 @@ function deleteTeddy(id) {
 }
 
 supprBtn.forEach((delBtn) => {
-  delBtn.addEventListener("click", () => deleteTeddy(delBtn.dataset.id));
+  delBtn.addEventListener("click", () => deleteTeddy(delBtn));
 });
 
 // supprimerSelection = Array.from(supprBtn);

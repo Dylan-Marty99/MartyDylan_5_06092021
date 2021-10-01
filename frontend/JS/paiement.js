@@ -90,7 +90,7 @@ const cityChecker = (value) => {
 
 // Fonction validité mail
 const mailChecker = (value) => {
-  if (!value.match(/^[\w_-]+@[\w-]+\.[a-z]{2,4}$/i)) {
+  if (!value.match(/^[\w._-]+@[\w-]+\.[a-z]{2,4}$/i)) {
     errorDisplay("email", "Email invalide");
     email = null;
   } else {
@@ -176,27 +176,65 @@ const standardDelivery = document.getElementById("standart");
 const expressDelivery = document.getElementById("express");
 const deliveryPrice = document.getElementById("delivery-price");
 const totalOrder = document.getElementById("total-order-price");
+let dataDeliveryPrice = JSON.parse(localStorage.getItem("livraison"));
 
 // Ajout du prix du panier tant que la livrasion n'est pas choisit
 totalOrder.textContent = `${totalProductsInLocalStorage} €`;
 
-// Evénements click pour ajout le prix de la livraison
+//--------------- Evénement click pour ajouter le prix de la livraison ------------------------
 standardDelivery.addEventListener("click", () => {
   const standartDeliveryPrice = 2.99;
   deliveryPrice.textContent = `${standartDeliveryPrice} €`;
 
+  // Calcul et affichage du prix total
   const calculationTotalOrder =
     Number(totalProductsInLocalStorage) + Number(standartDeliveryPrice);
   totalOrder.textContent = `${calculationTotalOrder} €`;
+
+  // Données à envoyer dans le local storage
+  const dataStandartDelivery = {
+    mode: "standart",
+    price: standartDeliveryPrice,
+  };
+
+  // Envoi des données
+  if (dataDeliveryPrice) {
+    dataDeliveryPrice.shift();
+    dataDeliveryPrice.push(dataStandartDelivery);
+    localStorage.setItem("livraison", JSON.stringify(dataDeliveryPrice));
+  } else {
+    dataDeliveryPrice = [];
+    dataDeliveryPrice.push(dataStandartDelivery);
+    localStorage.setItem("livraison", JSON.stringify(dataDeliveryPrice));
+  }
 });
 
+//--------------- Evénement click pour ajouter le prix de la livraison ------------------------
 expressDelivery.addEventListener("click", () => {
   const expressDeliveryPrice = 7.99;
   deliveryPrice.textContent = `${expressDeliveryPrice} €`;
 
+  // Calcul et affichage du prix total
   const calculationTotalOrder =
-  Number(totalProductsInLocalStorage) + Number(expressDeliveryPrice);
+    Number(totalProductsInLocalStorage) + Number(expressDeliveryPrice);
   totalOrder.textContent = `${calculationTotalOrder} €`;
+
+  // Données à envoyer dans le local storage
+  const dataExpressDelivery = {
+    mode: "express",
+    price: expressDeliveryPrice,
+  };
+
+  // Envoi des données
+  if (dataDeliveryPrice) {
+    dataDeliveryPrice.shift();
+    dataDeliveryPrice.push(dataExpressDelivery);
+    localStorage.setItem("livraison", JSON.stringify(dataDeliveryPrice));
+  } else {
+    dataDeliveryPrice = [];
+    dataDeliveryPrice.push(dataExpressDelivery);
+    localStorage.setItem("livraison", JSON.stringify(dataDeliveryPrice));
+  }
 });
 
 //------------------------ Gestion et envoi des données du formulaire --------------------------------
