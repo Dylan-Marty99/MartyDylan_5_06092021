@@ -40,7 +40,7 @@ if (productInLocalStorage === null || productInLocalStorage == 0) {
     structureBasket =
       structureBasket +
       `
-        <div class="panier-content-content">
+        <div class="panier-content-content" data-id="${productInLocalStorage[i].id}">
             <span class="panier-content-suppr-smartphone"><i class="fas fa-times"></i></span>
             <img src="${productInLocalStorage[i].image}" alt="Photo de ${productInLocalStorage[i].image}" class="panier-content-image">
             <div class="panier-content-product">
@@ -77,29 +77,35 @@ function deleteTeddy(id) {
 }
 
 supprBtn.forEach((delBtn) => {
-  delBtn.addEventListener("click", () => deleteTeddy(delBtn));
+  delBtn.addEventListener("click", () => deleteTeddy());
 });
 
 // supprimerSelection = Array.from(supprBtn);
+// let tab = [];
 
 // for (i = 0; i < supprimerSelection.length; i++) {
 //   supprimerSelection[i].addEventListener("click", () => {
 //     // supprimerSelection[i].parentElement.style.display = "none";
 
-//     productInLocalStorage.splice([i], 1);
+//     tab = productsInLocalStorage;
+//     tab.splice([i], 1);
 
-//     productInLocalStorage = localStorage.setItem('product', JSON.stringify(productInLocalStorage));
-
+//     productsInLocalStorage = localStorage.setItem(
+//       "products",
+//       JSON.stringify(tab)
+//     );
 //   });
 // }
 
 // Boucles événement pour supprimer un article (bug)
 // for (i = 0; i < supprBtn.length; i++) {
 //   supprBtn[i].addEventListener("click", () => {
-//     let supprIdSelected = productInLocalStorage[i].id;
+//     let supprIdSelected = productsInLocalStorage[i];
 //     console.log(supprIdSelected);
 //   });
 // }
+
+
 
 //---------------------------Bug supprimer un article----------------------------------------
 
@@ -164,9 +170,9 @@ if (productInLocalStorage) {
 const basketValidation = document.querySelector(".validation-validation-btn");
 
 basketValidation.addEventListener("click", () => {
-  if(productInLocalStorage) {
-    window.location.href = "./paiement.html"
+  if (productInLocalStorage) {
+    window.location.href = "./paiement.html";
   } else {
-    alert("Votre panier est vide")
+    alert("Votre panier est vide");
   }
-})
+});

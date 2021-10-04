@@ -1404,6 +1404,35 @@
     font-weight: bold;
 }
 
+.retour-accueil {
+    width: 35%;
+    text-align: center;
+    background: $bg-secondary;
+    border-radius: 20px;
+    margin: 30px auto 20px;
+    padding: 10px;
+    @include smartphone {
+        width: 45%;
+    }
+    @include litle-smartphone {
+        width: 60%;
+    }
+    &-text {
+        @include smartphone {
+            font-size: .9rem
+        }
+    }
+    &-btn {
+        @include all-btn;
+        padding: 5px 10px;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        @include smartphone {
+            font-size: .9rem
+        }
+    }
+}
+
 /*-------------SECTION----------------*/
 /*-------------SECTION-similaires?----------------*/
 

@@ -2,6 +2,12 @@
 let productInLocalStorage = JSON.parse(localStorage.getItem("product"));
 let totalProductsInLocalStorage = JSON.parse(localStorage.getItem("total"));
 let dataDeliveryPrice = JSON.parse(localStorage.getItem("livraison"));
+let orderIdInLocalStorage = localStorage.getItem("orderId");
+
+// Ajout du numéro de commande avce l'orderID
+const purchasedNumber = document.getElementById("order-id");
+
+purchasedNumber.textContent = `Commande n°${orderIdInLocalStorage}`;
 
 // Ajout de la date à laqeulle a été éffectuée la commande
 const purchasedDate = document.getElementById("livraison-today");
@@ -50,19 +56,18 @@ deliveryMode.textContent = `Livraison ${dataDeliveryPrice[0].mode}`;
 const deliveryDate = document.getElementById("livraison-date");
 
 let day = Number(today.getDate()) + 5;
-let month = today.getMonth(); 
+let month = today.getMonth();
 let year = today.getFullYear();
 
-if(day < 10) {
-    day = '0'+ day
-} 
+if (day < 10) {
+  day = "0" + day;
+}
 
-if(month < 10) {
-    month = '0'+ month
-} 
+if (month < 10) {
+  month = "0" + month;
+}
 
-deliveryDate.textContent = `${day}/${month}/${year}`
-
+deliveryDate.textContent = `${day}/${month}/${year}`;
 
 //------------------- Ajout du prix total et de livraison ----------------------------
 const recapBasketPrice = document.getElementById("recap-sous-total");
@@ -74,3 +79,10 @@ recapDeliveryPrice.textContent = `${dataDeliveryPrice[0].price} €`;
 recapTotalPrice.textContent = `${
   Number(totalProductsInLocalStorage) + Number(dataDeliveryPrice[0].price)
 } €`;
+
+const BackToIndexBtn = document.getElementById("btn-retour-accueil");
+
+BackToIndexBtn.addEventListener("click", () => {
+  localStorage.clear();
+  window.location.href = "../index.html";
+});

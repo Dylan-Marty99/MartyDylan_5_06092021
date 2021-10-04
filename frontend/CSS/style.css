@@ -2240,6 +2240,49 @@ header {
   font-weight: bold;
 }
 
+.retour-accueil {
+  width: 35%;
+  text-align: center;
+  background: #ab8bf8;
+  border-radius: 20px;
+  margin: 30px auto 20px;
+  padding: 10px;
+}
+@media screen and (max-width: 500px) {
+  .retour-accueil {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .retour-accueil {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .retour-accueil-text {
+    font-size: 0.9rem;
+  }
+}
+.retour-accueil-btn {
+  cursor: pointer;
+  background: #e5bfff;
+  border: none;
+  border-radius: 10px;
+  transition: 0.4s;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.retour-accueil-btn:hover {
+  transform: scale(1.1);
+  filter: brightness(90%);
+}
+@media screen and (max-width: 500px) {
+  .retour-accueil-btn {
+    font-size: 0.9rem;
+  }
+}
+
 /*-------------SECTION----------------*/
 /*-------------SECTION-similaires?----------------*/
 /*-------------SECTION-similaires?----------------*/

@@ -18,6 +18,8 @@ const form = document.querySelector(".formulaire-container");
 const inputs = document.querySelectorAll(".formulaire-container-input");
 let firstName, lastName, address, city, email;
 
+let productsInLocalStorage = JSON.parse(localStorage.getItem("products"));
+
 // Fonction des messages d'erreur
 const errorDisplay = (tag, message, valid) => {
   const container = document.querySelector("." + tag + "-container");
@@ -141,11 +143,57 @@ form.addEventListener("submit", (e) => {
     localStorage.setItem("contact", JSON.stringify(data));
 
     alert("Coordonnées validées");
+
+    //---------------------------- Gestion et envoi des données du formulaire ------------------------------------
+
+    // Récupérer les coordonnées dans le local storage et les convertir en objet
+    const dataLocalStorage = localStorage.getItem("contact");
+    const dataLocalStorageObject = JSON.parse(dataLocalStorage);
+
+    // Objet contenant les données à envoyer au serveur
+    const customerData = {
+      contact: dataLocalStorageObject,
+      products: productsInLocalStorage,
+    };
+
+    console.log(customerData);
+    //------- Envoi des données et récupération de l'order id -------
+    fetch("http://localhost:3000/api/teddies/order", {
+      method: "POST",
+      body: JSON.stringify(customerData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(async (response) => {
+      //------- Gestion des erreurs ----------
+      try {
+        const custumorDataContent = await response.json();
+        console.log("Contenu de la réponse du serveur");
+        console.log(custumorDataContent);
+
+        if (response.ok) {
+          console.log(`Résultat de response.ok : ${response.ok}`);
+
+          console.log("id réponse");
+          console.log(custumorDataContent.orderId);
+
+          localStorage.setItem("orderId", custumorDataContent.orderId);
+        } else {
+          alert(`Problème avce le serveur : Erreur ${response.status}`);
+        }
+      } catch (e) {
+        console.log("Erreur venant du cathc()");
+        console.log(e);
+        alert(`Erreur venant du catch() ${e}`);
+      }
+    });
+    // window.location.reload();    ------------- Laisser ou non ? -------------
+  } else if (!dataLocalStorageObject) {
+    alert("Veuillez remplir correctement le formulaire");
   }
 });
 
 //--------- Remplir le formulaire avec les coordonnées présente dans le local storage -----------
-
 // Récupérer les coordonnées dans le local storage et les convertir en objet
 const dataLocalStorage = localStorage.getItem("contact");
 const dataLocalStorageObject = JSON.parse(dataLocalStorage);
@@ -181,7 +229,7 @@ let dataDeliveryPrice = JSON.parse(localStorage.getItem("livraison"));
 // Ajout du prix du panier tant que la livrasion n'est pas choisit
 totalOrder.textContent = `${totalProductsInLocalStorage} €`;
 
-//--------------- Evénement click pour ajouter le prix de la livraison ------------------------
+//--------------- Evénement click pour ajouter le prix de la livraison standart ------------------------
 standardDelivery.addEventListener("click", () => {
   const standartDeliveryPrice = 2.99;
   deliveryPrice.textContent = `${standartDeliveryPrice} €`;
@@ -209,7 +257,7 @@ standardDelivery.addEventListener("click", () => {
   }
 });
 
-//--------------- Evénement click pour ajouter le prix de la livraison ------------------------
+//--------------- Evénement click pour ajouter le prix de la livraison express ------------------------
 expressDelivery.addEventListener("click", () => {
   const expressDeliveryPrice = 7.99;
   deliveryPrice.textContent = `${expressDeliveryPrice} €`;
@@ -237,41 +285,13 @@ expressDelivery.addEventListener("click", () => {
   }
 });
 
-//------------------------ Gestion et envoi des données du formulaire --------------------------------
-let productsInLocalStorage = JSON.parse(localStorage.getItem("products"));
-
-// Objet contenant les données à envoyer au serveur
-const customerData = {
-  contact: dataLocalStorage,
-  products: productsInLocalStorage,
-};
-
-console.log(customerData);
-
-//------------------ Bug fonction d'envoi des données ------------
-const sendCustomerData = () => {
-  fetch("http://localhost:3000/api/teddies/order", {
-    method: "POST",
-    body: JSON.stringify(customerData),
-    headers: {
-      "content-type": "application/json",
-    },
-  }).then(function (response) {
-    return response.json();
-  });
-};
-//------------------ Bug fonction d'envoi des données ------------
-
-// Evénement click pour envoyer les données et passer à la page de confirmation
+// Evénement click pour passer à la page de confirmation
 const validationBtn = document.getElementById("validation-btn");
 
 validationBtn.addEventListener("click", () => {
-  sendCustomerData();
-
-  // Savoir si le mode de livraison est choisit pour passer à la page de confirmation 
-  if(dataDeliveryPrice) {
+  if (dataDeliveryPrice) {
     window.location.href = "./confirmation.html";
   } else {
-    alert("Veuillez choisir un mode de livraison")
+    alert("Veuillez choisir un mode de livraison");
   }
 });
