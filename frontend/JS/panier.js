@@ -68,44 +68,27 @@ const supprBtnSmartphone = document.querySelectorAll(
 
 //---------------------------Bug supprimer un article----------------------------------------
 
-function deleteTeddy(id) {
-  productInLocalStorage.splice(id, 1);
-  productsInLocalStorage.splice(id, 1);
-  localStorage.setItem("product", JSON.stringify(productInLocalStorage));
-  localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
-  window.location.reload();
+//------------------- Marche seulement pour le 1er produit ------------------
+// function deleteTeddy(id) {
+//   productInLocalStorage.splice(id, 1);
+//   productsInLocalStorage.splice(id, 1);
+//   localStorage.setItem("product", JSON.stringify(productInLocalStorage));
+//   localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
+//   window.location.reload();
+// }
+
+// supprBtn.forEach((delBtn) => {
+//   delBtn.addEventListener("click", () => deleteTeddy());
+// });
+
+
+//---------- Boucles événement pour supprimer un article (bug) ------------
+for (i = 0; i < supprBtn.length; i++) {
+  supprBtn[i].addEventListener("click", () => {
+    let supprIdSelected = productsInLocalStorage[i];
+    console.log(supprIdSelected);
+  });
 }
-
-supprBtn.forEach((delBtn) => {
-  delBtn.addEventListener("click", () => deleteTeddy());
-});
-
-// supprimerSelection = Array.from(supprBtn);
-// let tab = [];
-
-// for (i = 0; i < supprimerSelection.length; i++) {
-//   supprimerSelection[i].addEventListener("click", () => {
-//     // supprimerSelection[i].parentElement.style.display = "none";
-
-//     tab = productsInLocalStorage;
-//     tab.splice([i], 1);
-
-//     productsInLocalStorage = localStorage.setItem(
-//       "products",
-//       JSON.stringify(tab)
-//     );
-//   });
-// }
-
-// Boucles événement pour supprimer un article (bug)
-// for (i = 0; i < supprBtn.length; i++) {
-//   supprBtn[i].addEventListener("click", () => {
-//     let supprIdSelected = productsInLocalStorage[i];
-//     console.log(supprIdSelected);
-//   });
-// }
-
-
 
 //---------------------------Bug supprimer un article----------------------------------------
 
@@ -156,15 +139,16 @@ if (productInLocalStorage) {
 
 //------------- Gérer les quantités --------------------------
 
-// console.log(
-//   Object.is(productInLocalStorage[1].id, productInLocalStorage[3].id)
-// );
+for (i = 0; i < productInLocalStorage.length - 1; i++) {
+  console.log(
+    Object.is(productInLocalStorage[i].id, productInLocalStorage[i + 1].id)
+  );
+    // if(productInLocalStorage[i].id === productInLocalStorage[i + 1].id && productInLocalStorage[i].color === productInLocalStorage[i].color) {
+    //   console.log(productInLocalStorage[i].id);
+    //   console.log(productInLocalStorage[i].color);
+    // }
+}
 
-// for (i = 0; i < productInLocalStorage.length; i++) {
-//   console.log(
-//     Object.is(productInLocalStorage[i].id, productInLocalStorage[i].id)
-//   );
-// }
 
 //------ Evénement click pour aller à la page paiement si le local storage n'est pas vide --------
 const basketValidation = document.querySelector(".validation-validation-btn");
