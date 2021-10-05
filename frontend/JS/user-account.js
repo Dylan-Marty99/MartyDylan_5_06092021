@@ -128,7 +128,10 @@ form.addEventListener("submit", (e) => {
     mail = null;
     password = null;
     confirmPassword = null;
+
     alert("Inscription validée !");
+
+    window.location.href = "../index.html"
   } else {
     alert("Veuillez remplir correctement tout les champs");
   }
