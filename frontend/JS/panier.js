@@ -15,8 +15,6 @@ window.addEventListener("load", () => {
 
 let productInLocalStorage = JSON.parse(localStorage.getItem("product"));
 let productsInLocalStorage = JSON.parse(localStorage.getItem("products"));
-console.log(productInLocalStorage);
-console.log(productsInLocalStorage);
 
 //Récupération de la div panier et de celle de son contenu
 const basketContainer = document.getElementById("basket");
@@ -27,10 +25,13 @@ if (productInLocalStorage === null || productInLocalStorage == 0) {
   basketContainer.innerHTML = `
     <div class="empty-basket">
         <h2 class="empty-basket-title"><i class="fas fa-exclamation-triangle"></i> Oups, votre panier est vide <i class="fas fa-exclamation-triangle"></i></h2>
-        <p class="empty-basket-text">Pour continuer vos achats, retournez à l'accueil et trouvez le Teddy qui vous correspond</p>
+        <p class="empty-basket-text">Pour continuer vos achats, retournez à l'accueil et trouvez le Teddy qui vous correspond !</p>
         <button class="empty-basket-btn"><a href="../index.html">Retour à l'accueil</a></button>
     </div>
   `;
+
+  console.log("Test n°9: Si le panier est vide, injection du code HTML suivant");
+  console.log(basketContainer);
 
   // Cas où le panier n'est pas vide
 } else {
@@ -55,6 +56,9 @@ if (productInLocalStorage === null || productInLocalStorage == 0) {
     `;
 
     basketContent.innerHTML = structureBasket;
+
+    console.log("Test n°10: Si le panier n'est pas vide, injection du code HTML suivant");
+    console.log(basketContent);
   }
 }
 
@@ -80,7 +84,6 @@ const supprBtnSmartphone = document.querySelectorAll(
 // supprBtn.forEach((delBtn) => {
 //   delBtn.addEventListener("click", () => deleteTeddy());
 // });
-
 
 //---------- Boucles événement pour supprimer un article (bug) ------------
 for (i = 0; i < supprBtn.length; i++) {
@@ -139,16 +142,15 @@ if (productInLocalStorage) {
 
 //------------- Gérer les quantités --------------------------
 
-for (i = 0; i < productInLocalStorage.length - 1; i++) {
-  console.log(
-    Object.is(productInLocalStorage[i].id, productInLocalStorage[i + 1].id)
-  );
-    // if(productInLocalStorage[i].id === productInLocalStorage[i + 1].id && productInLocalStorage[i].color === productInLocalStorage[i].color) {
-    //   console.log(productInLocalStorage[i].id);
-    //   console.log(productInLocalStorage[i].color);
-    // }
-}
-
+// for (i = 0; i < productInLocalStorage.length - 1; i++) {
+//   console.log(
+//     Object.is(productInLocalStorage[i].id, productInLocalStorage[i + 1].id)
+//   );
+//   // if(productInLocalStorage[i].id === productInLocalStorage[i + 1].id && productInLocalStorage[i].color === productInLocalStorage[i].color) {
+//   //   console.log(productInLocalStorage[i].id);
+//   //   console.log(productInLocalStorage[i].color);
+//   // }
+// }
 
 //------ Evénement click pour aller à la page paiement si le local storage n'est pas vide --------
 const basketValidation = document.querySelector(".validation-validation-btn");

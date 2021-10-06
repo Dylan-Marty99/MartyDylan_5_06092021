@@ -3,6 +3,9 @@ const queryStringUrlId = window.location.search;
 const urlSearchParams = new URLSearchParams(queryStringUrlId);
 const getId = urlSearchParams.get("_id");
 
+console.log("Test n°3: Récupération de l'id dans l'URL");
+console.log(getId);
+
 // Fonction de récupération de l'API
 const fetchTeddies = () => {
   return fetch("http://localhost:3000/api/teddies")
@@ -22,18 +25,29 @@ const selectedProduct = async () => {
   const getTeddies = await fetchTeddies();
   const selectedTeddy = getTeddies.find((element) => element._id === getId);
 
+  console.log("Test n°4: Récupération des données du Teddy");
+  console.log(selectedTeddy);
+
   // Ajout de l'image
   document
     .getElementById("product-bear-image")
     .setAttribute("src", `${selectedTeddy.imageUrl}`);
 
   // Ajout du nom
-  document.getElementById("product-name").textContent = `${selectedTeddy.name}`;
+  const teddyName = (document.getElementById(
+    "product-name"
+  ).textContent = `${selectedTeddy.name}`);
 
   // Ajout de la description
-  document.getElementById(
-    "product-descriptiob"
-  ).textContent = `${selectedTeddy.description}`;
+  const teddyDescripton = (document.getElementById(
+    "product-description"
+  ).textContent = `${selectedTeddy.description}`);
+
+  console.log(
+    "Test n°5: Récupération du nom et de la description et injection dans le code HTML"
+  );
+  console.log(teddyName);
+  console.log(teddyDescripton);
 
   // Ajout des options de couleurs
   const optionColor = selectedTeddy.colors;
@@ -49,6 +63,11 @@ const selectedProduct = async () => {
 
   const options = document.getElementById("product-color");
   options.innerHTML = structureOptions;
+
+  console.log(
+    "Test n°6: Récupération des couleurs et injection dans le code HTML"
+  );
+  console.log(structureOptions);
 
   // Ajout du prix
   document.getElementById("product-price").textContent = `${
@@ -75,8 +94,9 @@ const selectedProduct = async () => {
     );
 
   // Ajout du title
-  document.querySelector("title").textContent = `Teddy ${selectedTeddy.name} - OriBears`
-
+  document.querySelector(
+    "title"
+  ).textContent = `Teddy ${selectedTeddy.name} - OriBears`;
 };
 
 selectedProduct();
@@ -89,14 +109,13 @@ const dataBasket = async () => {
   const selectedTeddy = getTeddies.find((element) => element._id === getId);
 
   //Récupération de l'input couleur et du boutton
-  const idOptions = document.getElementById("product-color");
   const btnAddToBasket = document.getElementById("product-btn");
 
   // Evénement click pour l'envoie du produit au panier
   btnAddToBasket.addEventListener("click", (e) => {
     e.preventDefault();
 
-    const colorsChoice = idOptions.value;
+    const colorsChoice = document.getElementById("product-color").value;
     const quantityChoice = document.getElementById("product-number").value;
 
     let productOptions = {
@@ -108,6 +127,9 @@ const dataBasket = async () => {
       quantity: quantityChoice,
       price: selectedTeddy.price / 100,
     };
+
+    console.log("Test n°7: Objet contenant les données sur le Teddy et qui va être envoyé dans le local storage");
+    console.log(productOptions);
 
     let products = selectedTeddy._id;
 
@@ -125,7 +147,10 @@ const dataBasket = async () => {
 
       localStorage.setItem("product", JSON.stringify(productInLocalStorage));
       localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
+
+      console.log("Test n°8: Envoi des données du Teddy dans le local storage");
       console.log(productInLocalStorage);
+      console.log(productsInLocalStorage);
 
       // Si aucun produit n'est présent dans le local storage
     } else {
@@ -137,7 +162,10 @@ const dataBasket = async () => {
 
       localStorage.setItem("product", JSON.stringify(productInLocalStorage));
       localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
+
+      console.log("Test n°8: Envoi des données du Teddy dans le local storage");
       console.log(productInLocalStorage);
+      console.log(productsInLocalStorage);
     }
   });
 };

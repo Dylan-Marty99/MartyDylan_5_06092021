@@ -6,16 +6,18 @@ let teddies;
 const fetchTeddies = async () => {
   teddies = await fetch("http://localhost:3000/api/teddies")
     .then((res) => {
-      return res.json()
+      return res.json();
     })
     .then((article) => {
-      return article
+      return article;
     })
     .catch((error) => {
       alert(error);
     });
-};
 
+    console.log("Test n°1: Aller chercher les données des Teddies");
+    console.log(teddies);
+};
 
 // Fonction de création des différents Teddys
 const displayTeddies = async () => {
@@ -44,6 +46,9 @@ const displayTeddies = async () => {
     `
     )
     .join("");
+
+  console.log("Test n°2: Montrer que le code HTML a bien été créé avec les données sur chaque Teddy");
+  console.log(allProducts);
 };
 
 displayTeddies();
