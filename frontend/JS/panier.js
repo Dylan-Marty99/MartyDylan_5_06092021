@@ -93,6 +93,8 @@ for (i = 0; i < supprBtn.length; i++) {
   });
 }
 
+// console.log("Test n°11: ")
+
 //---------------------------Bug supprimer un article----------------------------------------
 
 // Récupération du bouton pour supprimer tous les articles
@@ -111,6 +113,8 @@ if (supprAllBasket) {
 
 //--------------- Calcul du prix total des articles dans le panier ------------------------
 let calculationTotalPrice = [];
+let totalPrice;
+let totalProductsInLocalStorage = JSON.parse(localStorage.getItem("total"));
 
 if (productInLocalStorage) {
   for (i = 0; i < productInLocalStorage.length; i++) {
@@ -121,24 +125,29 @@ if (productInLocalStorage) {
 
     // Fonction reducer et calcul du total des prix
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    const totalPrice = calculationTotalPrice.reduce(reducer, 0);
+    totalPrice = calculationTotalPrice.reduce(reducer, 0);
 
     // Récupération des deux paragraphes où le prix total va être ajouté
     const totalpriceText = document.getElementById("total-price");
     const totalpriceText2 = document.querySelector(".validation-recap-price");
 
-    // Ajout du prix total
+    // Ajout du prix total en HTML
     totalpriceText.textContent = `Total : ${totalPrice} €`;
     totalpriceText2.textContent = `${totalPrice} €`;
 
     // Ajout du prix total dns le local storage
-    let totalProductsInLocalStorage = JSON.parse(localStorage.getItem("total"));
-
     totalProductsInLocalStorage = [];
     totalProductsInLocalStorage.push(totalPrice);
     localStorage.setItem("total", JSON.stringify(totalProductsInLocalStorage));
   }
 }
+
+console.log("Test n°12: Calcul du prix total des articles dans le panier");
+console.log(totalPrice);
+
+console.log("Test n°13: Injection du prix total des articles dans le code HTML et ajout dans le local storage");
+console.log(totalProductsInLocalStorage);
+
 
 //------------- Gérer les quantités --------------------------
 
@@ -151,6 +160,8 @@ if (productInLocalStorage) {
 //   //   console.log(productInLocalStorage[i].color);
 //   // }
 // }
+
+// console.log("Test n°14:");
 
 //------ Evénement click pour aller à la page paiement si le local storage n'est pas vide --------
 const basketValidation = document.querySelector(".validation-validation-btn");

@@ -32,6 +32,10 @@ const errorDisplay = (tag, message, valid) => {
     container.classList.remove("error");
     span.textContent = message;
   }
+
+  console.log("Test n°15: Sélection du bon input et du bon span lorsque le client saisit ses coordonées");
+  console.log(container);
+  console.log(span);
 };
 
 // Fonction validité prenom
