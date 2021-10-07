@@ -30,7 +30,7 @@ if (productInLocalStorage === null || productInLocalStorage == 0) {
     </div>
   `;
 
-  console.log("Test n°9: Si le panier est vide, injection du code HTML suivant");
+  console.log("Test n°10: Si le panier est vide, injection du code HTML suivant");
   console.log(basketContainer);
 
   // Cas où le panier n'est pas vide
@@ -57,7 +57,7 @@ if (productInLocalStorage === null || productInLocalStorage == 0) {
 
     basketContent.innerHTML = structureBasket;
 
-    console.log("Test n°10: Si le panier n'est pas vide, injection du code HTML suivant");
+    console.log("Test n°11: Si le panier n'est pas vide, injection du code HTML suivant");
     console.log(basketContent);
   }
 }
@@ -86,14 +86,19 @@ const supprBtnSmartphone = document.querySelectorAll(
 // });
 
 //---------- Boucles événement pour supprimer un article (bug) ------------
+
 for (i = 0; i < supprBtn.length; i++) {
   supprBtn[i].addEventListener("click", () => {
-    let supprIdSelected = productsInLocalStorage[i];
-    console.log(supprIdSelected);
+    localStorage.removeItem[i];
+    console.log(localStorage.removeItem(productsInLocalStorage[i]));
+    // productsInLocalStorage.splice(i, 1);
+    console.log(productsInLocalStorage[i]);
+    localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
+    // window.location.reload();
   });
 }
 
-// console.log("Test n°11: ")
+// console.log("Test n°12: ")
 
 //---------------------------Bug supprimer un article----------------------------------------
 
@@ -142,24 +147,15 @@ if (productInLocalStorage) {
   }
 }
 
-console.log("Test n°12: Calcul du prix total des articles dans le panier");
+console.log("Test n°13: Calcul du prix total des articles dans le panier");
 console.log(totalPrice);
 
-console.log("Test n°13: Injection du prix total des articles dans le code HTML et ajout dans le local storage");
+console.log("Test n°14: Injection du prix total des articles dans le code HTML et ajout dans le local storage");
 console.log(totalProductsInLocalStorage);
 
 
-//------------- Gérer les quantités --------------------------
 
-// for (i = 0; i < productInLocalStorage.length - 1; i++) {
-//   console.log(
-//     Object.is(productInLocalStorage[i].id, productInLocalStorage[i + 1].id)
-//   );
-//   // if(productInLocalStorage[i].id === productInLocalStorage[i + 1].id && productInLocalStorage[i].color === productInLocalStorage[i].color) {
-//   //   console.log(productInLocalStorage[i].id);
-//   //   console.log(productInLocalStorage[i].color);
-//   // }
-// }
+
 
 // console.log("Test n°14:");
 

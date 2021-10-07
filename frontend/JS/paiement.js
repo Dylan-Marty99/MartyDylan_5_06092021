@@ -40,58 +40,61 @@ const errorDisplay = (tag, message, valid) => {
 
 // Fonction validité prenom
 const firstNameChecker = (value) => {
-  if (value.length > 0 && (value.length < 2 || value.length > 30)) {
+  if (value.length > 0 && (value.length < 2 || value.length > 30 || !value.match(/^[a-zA-Zéèç.'-]+$/))) {
     errorDisplay("firstName", "Prénom invalide");
     firstName = null;
-  } else if (!value.match(/^[a-zA-Z,.'-]+$/)) {
-    errorDisplay("firstName", "Prénom invalide");
-    firstName = null;
+
   } else {
     errorDisplay("firstName", "", true);
     firstName = value;
   }
+  console.log(("Test n°16: Si le prénom est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
+  console.log(firstName);
 };
 
 // Fonction validité nom
 const lastNameChecker = (value) => {
-  if (value.length > 0 && (value.length < 2 || value.length > 30)) {
+  if (value.length > 0 && (value.length < 2 || value.length > 30 || !value.match(/^[a-zA-Zéèç.'-]+$/))) {
     errorDisplay("lastName", "Nom invalide");
     lastName = null;
-  } else if (!value.match(/^[a-zA-Z,.'-]+$/)) {
-    errorDisplay("lastName", "Nom invalide");
-    lastName = null;
+  
   } else {
     errorDisplay("lastName", "", true);
     lastName = value;
   }
+
+  console.log(("Test n°17: Si le nom est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
+  console.log(lastName);
 };
 
 // Fonction validité adresse
 const addressChecker = (value) => {
-  if (value.length > 0 && value.length < 3) {
+  if (value.length > 0 && (value.length < 3 || !value.match(/^[a-zA-Z0-9é _-]*$/))) {
     errorDisplay("address", "Adresse invalide");
     address = null;
-  } else if (!value.match(/^[a-zA-Z0-9 _-]*$/)) {
-    errorDisplay("address", "Adresse invalide");
-    address = null;
+
   } else {
     errorDisplay("address", "", true);
     address = value;
   }
+
+  console.log(("Test n°18: Si l'adresse est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
+  console.log(address);
 };
 
 // Fonction validité ville
 const cityChecker = (value) => {
-  if (value.length > 0 && value.length < 3) {
+  if (value.length > 0 && (value.length < 3 || !value.match(/^[a-zA-Z0-9 _-]*$/))) {
     errorDisplay("city", "Ville invalide");
     city = null;
-  } else if (!value.match(/^[a-zA-Z0-9 _-]*$/)) {
-    errorDisplay("city", "Ville invalide");
-    city = null;
+
   } else {
     errorDisplay("city", "", true);
     city = value;
   }
+
+  console.log(("Test n°19: Si la ville est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
+  console.log(city);
 };
 
 // Fonction validité mail
@@ -99,10 +102,14 @@ const mailChecker = (value) => {
   if (!value.match(/^[\w._-]+@[\w-]+\.[a-z]{2,4}$/i)) {
     errorDisplay("email", "Email invalide");
     email = null;
+
   } else {
     errorDisplay("email", "", true);
     email = value;
   }
+
+  console.log(("Test n°20: Si l'email est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
+  console.log(email);
 };
 
 // ForEach conserver la valeur des inputs
@@ -146,21 +153,20 @@ form.addEventListener("submit", (e) => {
     // Stocker les coordonnées du client dans le local storage
     localStorage.setItem("contact", JSON.stringify(data));
 
-    alert("Coordonnées validées");
+    console.log("Test n°21: Récupération des valeurs des inputs et stockage dans le local storage");
+    console.log(data);
 
     //---------------------------- Gestion et envoi des données du formulaire ------------------------------------
 
-    // Récupérer les coordonnées dans le local storage et les convertir en objet
-    const dataLocalStorage = localStorage.getItem("contact");
-    const dataLocalStorageObject = JSON.parse(dataLocalStorage);
-
     // Objet contenant les données à envoyer au serveur
     const customerData = {
-      contact: dataLocalStorageObject,
+      contact: data,
       products: productsInLocalStorage,
     };
 
+    console.log("Test n°22: Objet qui va être envoyé au serveur");
     console.log(customerData);
+
     //------- Envoi des données et récupération de l'order id -------
     fetch("http://localhost:3000/api/teddies/order", {
       method: "POST",
@@ -172,16 +178,17 @@ form.addEventListener("submit", (e) => {
       //------- Gestion des erreurs ----------
       try {
         const custumorDataContent = await response.json();
-        console.log("Contenu de la réponse du serveur");
-        console.log(custumorDataContent);
 
         if (response.ok) {
-          console.log(`Résultat de response.ok : ${response.ok}`);
-
-          console.log("id réponse");
-          console.log(custumorDataContent.orderId);
+          console.log("Test n°23: Contenu de la réponse du serveur contenant l'orderId");
+          console.log(custumorDataContent);
 
           localStorage.setItem("orderId", custumorDataContent.orderId);
+
+          alert("Coordonnées validées");
+
+          window.location.reload();  
+
         } else {
           alert(`Problème avce le serveur : Erreur ${response.status}`);
         }
@@ -190,8 +197,7 @@ form.addEventListener("submit", (e) => {
         console.log(e);
         alert(`Erreur venant du catch() ${e}`);
       }
-    });
-    // window.location.reload();    ------------- Laisser ou non ? -------------
+    });  
   } else if (!dataLocalStorageObject) {
     alert("Veuillez remplir correctement le formulaire");
   }
@@ -206,6 +212,9 @@ const dataLocalStorageObject = JSON.parse(dataLocalStorage);
 function fillFormInputs(input) {
   if (dataLocalStorageObject) {
     document.getElementById(`${input}`).value = dataLocalStorageObject[input];
+
+    console.log("Test n°24: Contenu de chaque input, qui va ensuite être écrit automatiquement dans l'input correspondant");
+    console.log(dataLocalStorageObject[input]);
   }
 }
 
@@ -221,6 +230,9 @@ let totalProductsInLocalStorage = JSON.parse(localStorage.getItem("total"));
 
 const totalBasketPrice = document.getElementById("total-basket-price");
 totalBasketPrice.textContent = `${totalProductsInLocalStorage} €`;
+
+console.log("Test n°25: Récupération du total dans le local storage et injection dans le code HTML");
+console.log(totalBasketPrice);
 
 //----------------- Ajout des prix de livraison sur la page et dans le local storage ----------------
 // Variables inputs et prix de la livraison
@@ -243,6 +255,10 @@ standardDelivery.addEventListener("click", () => {
     Number(totalProductsInLocalStorage) + Number(standartDeliveryPrice);
   totalOrder.textContent = `${calculationTotalOrder} €`;
 
+  console.log("Test n°26: Injection du prix de livraison en HTML et ajout au prix du panier pour obtenir le prix total");
+  console.log(standartDeliveryPrice);
+  console.log(calculationTotalOrder);
+
   // Données à envoyer dans le local storage
   const dataStandartDelivery = {
     mode: "standart",
@@ -250,15 +266,20 @@ standardDelivery.addEventListener("click", () => {
   };
 
   // Envoi des données
-  if (dataDeliveryPrice) {
-    dataDeliveryPrice.shift();
-    dataDeliveryPrice.push(dataStandartDelivery);
-    localStorage.setItem("livraison", JSON.stringify(dataDeliveryPrice));
-  } else {
+  if (!dataDeliveryPrice) {
     dataDeliveryPrice = [];
     dataDeliveryPrice.push(dataStandartDelivery);
     localStorage.setItem("livraison", JSON.stringify(dataDeliveryPrice));
+
+  } else {
+    dataDeliveryPrice.shift();
+    dataDeliveryPrice.push(dataStandartDelivery);
+    localStorage.setItem("livraison", JSON.stringify(dataDeliveryPrice));
   }
+
+  console.log("Test n°27: Récupération des données de l'input et envoi dans le local storage");
+  console.log("Si une donnée de livraison est déjà présente, elle est supprimée et remplacée par la nouvelle sélectionnée");
+  console.log(dataDeliveryPrice);
 });
 
 //--------------- Evénement click pour ajouter le prix de la livraison express ------------------------
@@ -293,9 +314,9 @@ expressDelivery.addEventListener("click", () => {
 const validationBtn = document.getElementById("validation-btn");
 
 validationBtn.addEventListener("click", () => {
-  if (dataDeliveryPrice) {
+  if (dataDeliveryPrice && dataLocalStorage) {
     window.location.href = "./confirmation.html";
   } else {
-    alert("Veuillez choisir un mode de livraison");
+    alert("Veuillez choisir un mode de livraison ou remplir correctement le formulaire");
   }
 });

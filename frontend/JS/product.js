@@ -128,7 +128,9 @@ const dataBasket = async () => {
       price: selectedTeddy.price / 100,
     };
 
-    console.log("Test n°7: Objet contenant les données sur le Teddy et qui va être envoyé dans le local storage");
+    console.log(
+      "Test n°7: Objet contenant les données sur le Teddy et qui va être envoyé dans le local storage"
+    );
     console.log(productOptions);
 
     let products = selectedTeddy._id;
@@ -142,13 +144,36 @@ const dataBasket = async () => {
 
     // Si un produit est présent dans le local storage
     if (productInLocalStorage) {
-      productInLocalStorage.push(productOptions);
-      productsInLocalStorage.push(products);
+      var newProduct = 0;
+
+      //------------- Gestion des quantités --------
+      for (x in productInLocalStorage) {
+        let productAlreadyChosen = productInLocalStorage[x];
+
+        let nb1 = parseInt(productOptions.quantity);
+        let nb2 = parseInt(productAlreadyChosen.quantity);
+        let nb3 = parseInt(nb1 + nb2);
+
+        console.log("Test n°8:");
+        console.log(nb1);
+        console.log(nb2);
+        console.log(nb3);
+
+        // Gestion des quantités en focntion de l'id et de la couleur
+        if (productAlreadyChosen.id == selectedTeddy._id && productAlreadyChosen.color == colorsChoice) {
+          productInLocalStorage[x].quantity = nb3;
+          newProduct++;
+        }
+      }
+      if (newProduct == 0) {
+        productInLocalStorage.push(productOptions);
+        productsInLocalStorage.push(products);
+      }
 
       localStorage.setItem("product", JSON.stringify(productInLocalStorage));
       localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
 
-      console.log("Test n°8: Envoi des données du Teddy dans le local storage");
+      console.log("Test n°9-2: Envoi des données du Teddy dans le local storage");
       console.log(productInLocalStorage);
       console.log(productsInLocalStorage);
 
@@ -163,7 +188,7 @@ const dataBasket = async () => {
       localStorage.setItem("product", JSON.stringify(productInLocalStorage));
       localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
 
-      console.log("Test n°8: Envoi des données du Teddy dans le local storage");
+      console.log("Test n°9-1: Envoi des données du Teddy dans le local storage");
       console.log(productInLocalStorage);
       console.log(productsInLocalStorage);
     }
