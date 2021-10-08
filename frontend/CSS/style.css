@@ -1684,6 +1684,32 @@ header {
 .validation-infos-text {
   margin: 0 0 0 10px;
 }
+.validation-return-index {
+  background: #ab8bf8;
+  border-radius: 20px;
+  margin-top: 40px;
+  padding: 10px;
+  box-shadow: gray 2px 2px 6px;
+}
+@media screen and (max-width: 800px) {
+  .validation-return-index {
+    margin-bottom: 30px;
+  }
+}
+.validation-return-index-btn {
+  cursor: pointer;
+  background: #e5bfff;
+  border: none;
+  border-radius: 10px;
+  transition: 0.4s;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+.validation-return-index-btn:hover {
+  transform: scale(1.1);
+  filter: brightness(90%);
+}
 
 /*-------------ASIDE-validation----------------*/
 /*-------------ASIDE-bears+----------------*/
@@ -1720,7 +1746,7 @@ header {
 .panier-bearsplus-btn {
   width: 45%;
   height: 35px;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   background: #ab8bf8;
   border-radius: 10px;
   cursor: pointer;
