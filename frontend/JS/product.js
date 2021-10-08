@@ -3,7 +3,7 @@ const queryStringUrlId = window.location.search;
 const urlSearchParams = new URLSearchParams(queryStringUrlId);
 const getId = urlSearchParams.get("_id");
 
-console.log("Test n°3: Récupération de l'id dans l'URL");
+console.log("Test n°1: Récupération de l'id dans l'URL");
 console.log(getId);
 
 // Fonction de récupération de l'API
@@ -25,7 +25,7 @@ const selectedProduct = async () => {
   const getTeddies = await fetchTeddies();
   const selectedTeddy = getTeddies.find((element) => element._id === getId);
 
-  console.log("Test n°4: Récupération des données du Teddy");
+  console.log("Test n°2: Récupération des données du Teddy");
   console.log(selectedTeddy);
 
   // Ajout de l'image
@@ -44,7 +44,7 @@ const selectedProduct = async () => {
   ).textContent = `${selectedTeddy.description}`);
 
   console.log(
-    "Test n°5: Récupération du nom et de la description et injection dans le code HTML"
+    "Test n°3: Récupération du nom et de la description et injection dans le code HTML"
   );
   console.log(teddyName);
   console.log(teddyDescripton);
@@ -65,7 +65,7 @@ const selectedProduct = async () => {
   options.innerHTML = structureOptions;
 
   console.log(
-    "Test n°6: Récupération des couleurs et injection dans le code HTML"
+    "Test n°4: Récupération des couleurs et injection dans le code HTML"
   );
   console.log(structureOptions);
 
@@ -129,7 +129,7 @@ const dataBasket = async () => {
     };
 
     console.log(
-      "Test n°7: Objet contenant les données sur le Teddy et qui va être envoyé dans le local storage"
+      "Test n°5: Objet contenant les données sur le Teddy et qui va être envoyé dans le local storage"
     );
     console.log(productOptions);
 
@@ -154,7 +154,7 @@ const dataBasket = async () => {
         let nb2 = parseInt(productAlreadyChosen.quantity);
         let nb3 = parseInt(nb1 + nb2);
 
-        console.log("Test n°8:");
+        console.log("Test n°6: Addition de la quantité d'un produit choisit s'il existe déjà dans le panier");
         console.log(nb1);
         console.log(nb2);
         console.log(nb3);
@@ -173,7 +173,7 @@ const dataBasket = async () => {
       localStorage.setItem("product", JSON.stringify(productInLocalStorage));
       localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
 
-      console.log("Test n°9-2: Envoi des données du Teddy dans le local storage");
+      console.log("Test n°7-2: Envoi des données du Teddy dans le local storage");
       console.log(productInLocalStorage);
       console.log(productsInLocalStorage);
 
@@ -188,7 +188,7 @@ const dataBasket = async () => {
       localStorage.setItem("product", JSON.stringify(productInLocalStorage));
       localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
 
-      console.log("Test n°9-1: Envoi des données du Teddy dans le local storage");
+      console.log("Test n°7-1: Envoi des données du Teddy dans le local storage");
       console.log(productInLocalStorage);
       console.log(productsInLocalStorage);
     }

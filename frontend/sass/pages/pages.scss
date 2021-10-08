@@ -574,9 +574,20 @@
         width: 70%;
         height: 70px;
         font-size: 1.1rem;
-        background: $bg-btn;
+        background: $bg-secondary;
         margin: 20px auto;
         padding: 10px;
+        border: $border;
+        color: white;
+        box-shadow: rgb(49, 49, 49) 1px 1px 3px;
+        &:nth-child(2) {
+            color: black;
+            background: $bg-btn;
+        }
+        &:nth-child(4) {
+            color: black;
+            background: $bg-btn;
+        }
         @include large-smartphone {
             font-size: 1rem;
         }
@@ -592,13 +603,16 @@
 
 .customer-reviews {
     &-container {
-        margin: 30px 0;
-        padding: 10px 0;
+        margin: 100px 0 40px;
+        padding: 20px 0 10px;
+        background: $bg-secondary;
     }
     &-title {
         text-align: center;
         padding-top: 15px;
         background: $bg-btn;
+        border-top: $border;
+        border-bottom: $border;
         &-title {
             margin: 0 0 10px;
         }
@@ -607,7 +621,6 @@
         }
     }
     &-content {
-        background: $bg-secondary;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -814,6 +827,7 @@
         border-top: none;
         display: flex;
         flex-direction: column;
+        background: $bg-btn;
         &-content {
             display: flex;
             justify-content: space-around;
@@ -1193,6 +1207,7 @@
             @include livraison;
             border: $border;
             border-top: none;
+            background: $bg-btn;
         }
     }
 }

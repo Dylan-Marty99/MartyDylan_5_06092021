@@ -18,6 +18,10 @@ const errorDisplay = (tag, message, valid) => {
     container.classList.remove("error");
     span.textContent = message;
   }
+
+  console.log("Test n°1: Sélection du bon input et du bon span lorsque le client saisit ses coordonées");
+  console.log(container);
+  console.log(span);
 };
 
 // Fonction validité nom
@@ -35,6 +39,9 @@ const lastFirstNameChecker = (value) => {
     errorDisplay("last-first-name", "", true);
     lastFirstName = value;
   }
+
+  console.log(("Test n°2: Si les nom et prénom sont invalides, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
+  console.log(lastFirstName);
 };
 
 // Fonction validité email
@@ -46,6 +53,9 @@ const emailChecker = (value) => {
     errorDisplay("mail", "", true);
     mail = value;
   }
+
+  console.log(("Test n°3: Si le mail est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
+  console.log(mail);
 };
 
 // Fonction validité mot de passe
@@ -73,6 +83,9 @@ const passwordChecker = (value) => {
     password = value;
   }
   if (confirmPassword) confirmPasswordChecker(confirmPassword);
+
+  console.log(("Test n°4: Si le mot de passe est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
+  console.log(password);
 };
 
 // Fonction validité confirmation mot de passe
@@ -84,6 +97,9 @@ const confirmPasswordChecker = (value) => {
     errorDisplay("confirm-password", "", true);
     confirmPassword = true;
   }
+
+  console.log(("Test n°5: Si la confirmation du mot de passe est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
+  console.log(confirmPassword);
 };
 
 // ForEach conserver la valeur des inputs
@@ -118,6 +134,8 @@ form.addEventListener("submit", (e) => {
       mail,
       password,
     };
+
+    console.log("Test n°6: Récupération des valeurs des inputs");
     console.log(data);
 
     inputs.forEach((input) => (input.value = ""));

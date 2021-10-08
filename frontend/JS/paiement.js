@@ -33,7 +33,7 @@ const errorDisplay = (tag, message, valid) => {
     span.textContent = message;
   }
 
-  console.log("Test n°15: Sélection du bon input et du bon span lorsque le client saisit ses coordonées");
+  console.log("Test n°1: Sélection du bon input et du bon span lorsque le client saisit ses coordonées");
   console.log(container);
   console.log(span);
 };
@@ -48,7 +48,7 @@ const firstNameChecker = (value) => {
     errorDisplay("firstName", "", true);
     firstName = value;
   }
-  console.log(("Test n°16: Si le prénom est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
+  console.log(("Test n°2: Si le prénom est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
   console.log(firstName);
 };
 
@@ -63,7 +63,7 @@ const lastNameChecker = (value) => {
     lastName = value;
   }
 
-  console.log(("Test n°17: Si le nom est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
+  console.log(("Test n°3: Si le nom est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
   console.log(lastName);
 };
 
@@ -78,7 +78,7 @@ const addressChecker = (value) => {
     address = value;
   }
 
-  console.log(("Test n°18: Si l'adresse est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
+  console.log(("Test n°4: Si l'adresse est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
   console.log(address);
 };
 
@@ -93,7 +93,7 @@ const cityChecker = (value) => {
     city = value;
   }
 
-  console.log(("Test n°19: Si la ville est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
+  console.log(("Test n°5: Si la ville est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
   console.log(city);
 };
 
@@ -108,7 +108,7 @@ const mailChecker = (value) => {
     email = value;
   }
 
-  console.log(("Test n°20: Si l'email est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
+  console.log(("Test n°6: Si l'email est invalide, la valeur est nulle sinon elle correspond à ce qu'écrit le client"));
   console.log(email);
 };
 
@@ -153,7 +153,7 @@ form.addEventListener("submit", (e) => {
     // Stocker les coordonnées du client dans le local storage
     localStorage.setItem("contact", JSON.stringify(data));
 
-    console.log("Test n°21: Récupération des valeurs des inputs et stockage dans le local storage");
+    console.log("Test n°7: Récupération des valeurs des inputs et stockage dans le local storage");
     console.log(data);
 
     //---------------------------- Gestion et envoi des données du formulaire ------------------------------------
@@ -164,7 +164,7 @@ form.addEventListener("submit", (e) => {
       products: productsInLocalStorage,
     };
 
-    console.log("Test n°22: Objet qui va être envoyé au serveur");
+    console.log("Test n°8: Objet qui va être envoyé au serveur");
     console.log(customerData);
 
     //------- Envoi des données et récupération de l'order id -------
@@ -180,7 +180,7 @@ form.addEventListener("submit", (e) => {
         const custumorDataContent = await response.json();
 
         if (response.ok) {
-          console.log("Test n°23: Contenu de la réponse du serveur contenant l'orderId");
+          console.log("Test n°9: Contenu de la réponse du serveur contenant l'orderId");
           console.log(custumorDataContent);
 
           localStorage.setItem("orderId", custumorDataContent.orderId);
@@ -213,7 +213,7 @@ function fillFormInputs(input) {
   if (dataLocalStorageObject) {
     document.getElementById(`${input}`).value = dataLocalStorageObject[input];
 
-    console.log("Test n°24: Contenu de chaque input, qui va ensuite être écrit automatiquement dans l'input correspondant");
+    console.log("Test n°10: Contenu de chaque input, qui va ensuite être écrit automatiquement dans l'input correspondant");
     console.log(dataLocalStorageObject[input]);
   }
 }
@@ -231,7 +231,7 @@ let totalProductsInLocalStorage = JSON.parse(localStorage.getItem("total"));
 const totalBasketPrice = document.getElementById("total-basket-price");
 totalBasketPrice.textContent = `${totalProductsInLocalStorage} €`;
 
-console.log("Test n°25: Récupération du total dans le local storage et injection dans le code HTML");
+console.log("Test n°11: Récupération du total dans le local storage et injection dans le code HTML");
 console.log(totalBasketPrice);
 
 //----------------- Ajout des prix de livraison sur la page et dans le local storage ----------------
@@ -255,7 +255,7 @@ standardDelivery.addEventListener("click", () => {
     Number(totalProductsInLocalStorage) + Number(standartDeliveryPrice);
   totalOrder.textContent = `${calculationTotalOrder} €`;
 
-  console.log("Test n°26: Injection du prix de livraison en HTML et ajout au prix du panier pour obtenir le prix total");
+  console.log("Test n°12: Injection du prix de livraison en HTML et ajout au prix du panier pour obtenir le prix total");
   console.log(standartDeliveryPrice);
   console.log(calculationTotalOrder);
 
@@ -277,7 +277,7 @@ standardDelivery.addEventListener("click", () => {
     localStorage.setItem("livraison", JSON.stringify(dataDeliveryPrice));
   }
 
-  console.log("Test n°27: Récupération des données de l'input et envoi dans le local storage");
+  console.log("Test n°13: Récupération des données de l'input et envoi dans le local storage");
   console.log("Si une donnée de livraison est déjà présente, elle est supprimée et remplacée par la nouvelle sélectionnée");
   console.log(dataDeliveryPrice);
 });

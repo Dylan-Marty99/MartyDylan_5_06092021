@@ -1140,9 +1140,20 @@ header {
   width: 70%;
   height: 70px;
   font-size: 1.1rem;
-  background: #e5bfff;
+  background: #ab8bf8;
   margin: 20px auto;
   padding: 10px;
+  border: black solid 1.5px;
+  color: white;
+  box-shadow: #313131 1px 1px 3px;
+}
+.product-caracteristic-text:nth-child(2) {
+  color: black;
+  background: #e5bfff;
+}
+.product-caracteristic-text:nth-child(4) {
+  color: black;
+  background: #e5bfff;
 }
 @media screen and (max-width: 800px) {
   .product-caracteristic-text {
@@ -1160,13 +1171,16 @@ header {
 /*-------------ASIDE----------------*/
 /*-------------SECTION-avis----------------*/
 .customer-reviews-container {
-  margin: 30px 0;
-  padding: 10px 0;
+  margin: 100px 0 40px;
+  padding: 20px 0 10px;
+  background: #ab8bf8;
 }
 .customer-reviews-title {
   text-align: center;
   padding-top: 15px;
   background: #e5bfff;
+  border-top: black solid 1.5px;
+  border-bottom: black solid 1.5px;
 }
 .customer-reviews-title-title {
   margin: 0 0 10px;
@@ -1175,7 +1189,6 @@ header {
   font-size: 1.2rem;
 }
 .customer-reviews-content {
-  background: #ab8bf8;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1427,6 +1440,7 @@ header {
   border-top: none;
   display: flex;
   flex-direction: column;
+  background: #e5bfff;
 }
 .panier-content-content {
   display: flex;
@@ -1892,6 +1906,7 @@ header {
   padding: 30px 0;
   border: black solid 1.5px;
   border-top: none;
+  background: #e5bfff;
 }
 @media screen and (max-width: 500px) {
   .livraison-container-express {

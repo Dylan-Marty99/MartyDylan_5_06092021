@@ -9,7 +9,7 @@ const purchasedNumber = document.getElementById("order-id");
 
 purchasedNumber.textContent = `Commande n°${orderIdInLocalStorage}`;
 
-console.log("Test n°28: Récupération et injection en HTML du numéro de commande");
+console.log("Test n°1: Récupération et injection en HTML du numéro de commande");
 console.log(purchasedNumber);
 
 // Ajout de la date à laqeulle a été éffectuée la commande
@@ -28,7 +28,7 @@ purchasedDate.textContent = `Éffectué le ${today.toLocaleDateString(
   optionsDate
 )}`;
 
-console.log("Test n°29: Injection en HTML de la date d'aujourd'hui");
+console.log("Test n°2: Injection en HTML de la date d'aujourd'hui");
 console.log(purchasedDate);
 
 //--------------- Ajout des produits du panier --------------------------
@@ -53,7 +53,7 @@ for (i = 0; i < productInLocalStorage.length; i++) {
   purchasedProducts.innerHTML = structureConfirmation;
 
 }
-console.log("Test n°30: Injection du code HTML suivant, contenant le ou les produits acheté par le client");
+console.log("Test n°3: Injection du code HTML suivant, contenant le ou les produits acheté par le client");
 console.log(purchasedProducts);
 
 // Ajout du mode de livraison
@@ -78,7 +78,7 @@ if (month < 10) {
 
 deliveryDate.textContent = `${day}/${month}/${year}`;
 
-console.log("Test n°31: Ajout d'un delais de livraison de 5 jours et injection en HTML");
+console.log("Test n°4: Ajout d'un delais de livraison de 5 jours et injection en HTML");
 console.log(deliveryDate);
 
 //------------------- Ajout du prix total et de livraison ----------------------------
@@ -92,7 +92,7 @@ recapTotalPrice.textContent = `${
   Number(totalProductsInLocalStorage) + Number(dataDeliveryPrice[0].price)
 } €`;
 
-console.log("Test n°32: Récupération, calcul et injection des prix du panier, de la livraison et du prix total");
+console.log("Test n°5: Récupération, calcul et injection des prix du panier, de la livraison et du prix total");
 console.log(recapTotalPrice);
 
 const BackToIndexBtn = document.getElementById("btn-retour-accueil");

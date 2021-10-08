@@ -30,7 +30,9 @@ if (productInLocalStorage === null || productInLocalStorage == 0) {
     </div>
   `;
 
-  console.log("Test n°10: Si le panier est vide, injection du code HTML suivant");
+  console.log(
+    "Test n°1: Si le panier est vide, injection du code HTML suivant"
+  );
   console.log(basketContainer);
 
   // Cas où le panier n'est pas vide
@@ -57,7 +59,9 @@ if (productInLocalStorage === null || productInLocalStorage == 0) {
 
     basketContent.innerHTML = structureBasket;
 
-    console.log("Test n°11: Si le panier n'est pas vide, injection du code HTML suivant");
+    console.log(
+      "Test n°2: Si le panier n'est pas vide, injection du code HTML suivant"
+    );
     console.log(basketContent);
   }
 }
@@ -73,9 +77,9 @@ const supprBtnSmartphone = document.querySelectorAll(
 //---------------------------Bug supprimer un article----------------------------------------
 
 //------------------- Marche seulement pour le 1er produit ------------------
-// function deleteTeddy(id) {
-//   productInLocalStorage.splice(id, 1);
-//   productsInLocalStorage.splice(id, 1);
+// function deleteTeddy() {
+//   productInLocalStorage.splice(i, 1);
+//   productsInLocalStorage.splice(i, 1);
 //   localStorage.setItem("product", JSON.stringify(productInLocalStorage));
 //   localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
 //   window.location.reload();
@@ -89,16 +93,16 @@ const supprBtnSmartphone = document.querySelectorAll(
 
 for (i = 0; i < supprBtn.length; i++) {
   supprBtn[i].addEventListener("click", () => {
+    console.log(supprBtn[i]);
     localStorage.removeItem[i];
-    console.log(localStorage.removeItem(productsInLocalStorage[i]));
-    // productsInLocalStorage.splice(i, 1);
-    console.log(productsInLocalStorage[i]);
-    localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
+    productInLocalStorage.splice(i, 1);
+    console.log(productInLocalStorage[i]);
+    localStorage.setItem("product", JSON.stringify(productInLocalStorage));
     // window.location.reload();
   });
 }
 
-// console.log("Test n°12: ")
+// console.log("Test n°3: ")
 
 //---------------------------Bug supprimer un article----------------------------------------
 
@@ -147,15 +151,13 @@ if (productInLocalStorage) {
   }
 }
 
-console.log("Test n°13: Calcul du prix total des articles dans le panier");
+console.log("Test n°4: Calcul du prix total des articles dans le panier");
 console.log(totalPrice);
 
-console.log("Test n°14: Injection du prix total des articles dans le code HTML et ajout dans le local storage");
+console.log(
+  "Test n°5: Injection du prix total des articles dans le code HTML et ajout dans le local storage"
+);
 console.log(totalProductsInLocalStorage);
-
-
-
-
 
 // console.log("Test n°14:");
 
