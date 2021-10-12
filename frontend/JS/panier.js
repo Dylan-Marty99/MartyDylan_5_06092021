@@ -53,7 +53,7 @@ if (productInLocalStorage === null || productInLocalStorage == 0) {
                 <p class="panier-content-product-quantity">Quantité : ${productInLocalStorage[i].quantity}</p>
                 <p class="panier-content-product-price">Prix unitaire : ${productInLocalStorage[i].price} €</p>
             </div>
-            <span class="panier-content-suppr"><i class="fas fa-times"></i></span>
+            <span class="panier-content-suppr" data-index="${i}"><i class="fas fa-times"></i></span>
         </div>
     `;
 
@@ -74,42 +74,29 @@ const supprBtnSmartphone = document.querySelectorAll(
   ".panier-content-suppr-smartphone"
 );
 
-//---------------------------Bug supprimer un article----------------------------------------
-
-//------------------- Marche seulement pour le 1er produit ------------------
-// function deleteTeddy() {
-//   productInLocalStorage.splice(i, 1);
-//   productsInLocalStorage.splice(i, 1);
-//   localStorage.setItem("product", JSON.stringify(productInLocalStorage));
-//   localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
-//   window.location.reload();
-// }
-
-// supprBtn.forEach((delBtn) => {
-//   delBtn.addEventListener("click", () => deleteTeddy());
-// });
-
-//---------- Boucles événement pour supprimer un article (bug) ------------
-
-for (i = 0; i < supprBtn.length; i++) {
-  supprBtn[i].addEventListener("click", () => {
-    console.log(supprBtn[i]);
-    localStorage.removeItem[i];
-    productInLocalStorage.splice(i, 1);
-    console.log(productInLocalStorage[i]);
-    localStorage.setItem("product", JSON.stringify(productInLocalStorage));
-    // window.location.reload();
-  });
+//-------- Fonction de suppression d'un article ------
+function deleteTeddy(index) {
+  productInLocalStorage.splice(index, 1);
+  productsInLocalStorage.splice(index, 1);
+  localStorage.setItem("product", JSON.stringify(productInLocalStorage));
+  localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
+  window.location.reload();
 }
 
-// console.log("Test n°3: ")
+supprBtn.forEach((delBtn) => {
+  delBtn.addEventListener("click", () => deleteTeddy(delBtn.dataset.index));
+});
+supprBtnSmartphone.forEach((delBtn) => {
+  delBtn.addEventListener("click", () => deleteTeddy(delBtn.dataset.index));
+});
 
-//---------------------------Bug supprimer un article----------------------------------------
+console.log("Test n°3: Suppression d'un article ainsi que ses données dans le local storage")
+console.log(productInLocalStorage);
 
 // Récupération du bouton pour supprimer tous les articles
 const supprAllBasket = document.getElementById("panier-suppr-all");
 
-// Evénement click pour vider le local storage (et donc le panier)
+// Evénement click pour vider le local storage et le panier
 if (supprAllBasket) {
   supprAllBasket.addEventListener("click", () => {
     localStorage.removeItem("product");

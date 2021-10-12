@@ -1371,6 +1371,7 @@ header {
   font-size: 1.5rem;
   height: 45px;
   padding: 5px 15px;
+  margin-bottom: 15px;
 }
 .empty-basket-btn:hover {
   transform: scale(1.1);
