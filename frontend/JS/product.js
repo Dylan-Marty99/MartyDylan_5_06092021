@@ -29,9 +29,10 @@ const selectedProduct = async () => {
   console.log(selectedTeddy);
 
   // Ajout de l'image
-  document
-    .getElementById("product-bear-image")
-    .setAttribute("src", `${selectedTeddy.imageUrl}`);
+  teddyImage = document.getElementById("product-bear-image");
+
+  teddyImage.setAttribute("src", `${selectedTeddy.imageUrl}`);
+  teddyImage.setAttribute("alt", `Photo de ${selectedTeddy.name}`)
 
   // Ajout du nom
   const teddyName = (document.getElementById(
@@ -154,13 +155,18 @@ const dataBasket = async () => {
         let nb2 = parseInt(productAlreadyChosen.quantity);
         let nb3 = parseInt(nb1 + nb2);
 
-        console.log("Test n°6: Addition de la quantité d'un produit choisit s'il existe déjà dans le panier");
+        console.log(
+          "Test n°6: Addition de la quantité d'un produit choisit s'il existe déjà dans le panier"
+        );
         console.log(nb1);
         console.log(nb2);
         console.log(nb3);
 
         // Gestion des quantités en focntion de l'id et de la couleur
-        if (productAlreadyChosen.id == selectedTeddy._id && productAlreadyChosen.color == colorsChoice) {
+        if (
+          productAlreadyChosen.id == selectedTeddy._id &&
+          productAlreadyChosen.color == colorsChoice
+        ) {
           productInLocalStorage[x].quantity = nb3;
           newProduct++;
         }
@@ -173,7 +179,9 @@ const dataBasket = async () => {
       localStorage.setItem("product", JSON.stringify(productInLocalStorage));
       localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
 
-      console.log("Test n°7-2: Envoi des données du Teddy dans le local storage");
+      console.log(
+        "Test n°7-2: Envoi des données du Teddy dans le local storage"
+      );
       console.log(productInLocalStorage);
       console.log(productsInLocalStorage);
 
@@ -188,7 +196,9 @@ const dataBasket = async () => {
       localStorage.setItem("product", JSON.stringify(productInLocalStorage));
       localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
 
-      console.log("Test n°7-1: Envoi des données du Teddy dans le local storage");
+      console.log(
+        "Test n°7-1: Envoi des données du Teddy dans le local storage"
+      );
       console.log(productInLocalStorage);
       console.log(productsInLocalStorage);
     }
@@ -196,3 +206,12 @@ const dataBasket = async () => {
 };
 
 dataBasket();
+
+//---- Pop-up lorsqu'un Teddy est acheté -----
+document.getElementById("popup-continuer-achat").addEventListener("click", () => {
+  window.location.href= "../index.html"
+})
+
+document.getElementById("popup-consulter-panier").addEventListener("click", () => {
+  window.location.href= "./panier.html"
+})

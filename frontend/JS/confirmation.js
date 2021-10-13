@@ -40,7 +40,7 @@ for (i = 0; i < productInLocalStorage.length; i++) {
     structureConfirmation +
     `
         <div class="details-product">
-            <img src="${productInLocalStorage[i].image}" alt="Photo de ${productInLocalStorage[i].image}" class="details-product-image">
+            <img src="${productInLocalStorage[i].image}" alt="Photo de ${productInLocalStorage[i].name}" class="details-product-image">
             <div class="details-product-product">
                 <h4 class="details-product-product-title">${productInLocalStorage[i].name}</h4>
                 <p class="details-product-product-description">${productInLocalStorage[i].description}</p>

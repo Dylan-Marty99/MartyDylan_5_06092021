@@ -80,7 +80,7 @@
 <!--==========SECTION-livraison===============-->
 
         <section class="livraison-paiement-container">          
-            <section class="livraison">
+            <div class="livraison">
                 <h2 class="livraison-title">Mode de livraison</h2>
                 <div class="livraison-container">
                     <div class="livraison-container-standart">
@@ -92,7 +92,7 @@
                         <span class="livraison-container-express-price">7.99€</span>
                     </div>
                 </div>
-            </section>
+            </div>
 
 <!--==========SECTION-livraison===============-->
 <!--==========SECTION-paiement===============-->
@@ -108,15 +108,15 @@
                         <button class="paiement-facturation-btn">Choisir une autre adresse</button>
                     </div>
                     <div class="paiement-infos">
-                        <h4 class="paiement-infos-title">Veuillez renseigner votre carte</h4>
+                        <h3 class="paiement-infos-title">Veuillez renseigner votre carte</h3>
                         <span class="paiement-infos-dots">. . . . . . . . . . . . . . . . . . . . </span>
-                        <div class="paiement-infos-card">
+                        <form class="paiement-infos-card">
                             <p class="paiement-infos-card-title">Votre carte</p>
                             <input type="text" name="numero" id="numero" class="paiement-infos-card-numero" placeholder="Numéro de carte">
                             <input type="text" name="date" id="date" class="paiement-infos-card-date" placeholder="Date d'expiration">
                             <input type="text" name="crypto" id="crypto" class="paiement-infos-card-crypto" placeholder="Cryptogramme visuel">
                             <input type="text" name="nom" id="nom" class="paiement-infos-card-nom" placeholder="Nom du titulaire de la carte">
-                        </div>
+                        </form>
                         <label for="futur-card" class="paiement-infos-futur-card"><input type="checkbox" name="futur-card" id="futur-card" class="paiement-infos-futur-input"> Enregistrer votre carte pour de futurs achats</label>
                         <button class="paiement-infos-btn">Valider ma commande</button>
                     </div>
@@ -135,11 +135,13 @@
             <h2 class="validation-title">Récapitulatif</h2>
             <div class="validation-container">
                 <div class="validation-promos">
-                    <h4 class="validation-promos-title">Je possède un Code Promo</h4>
-                    <label for="promo-code" class="validation-promos-promo">
-                        <input type="text" name="promo-code" id="promo-code" class="validation-promos-promo-input" placeholder="Code promo">
+                    <h3 class="validation-promos-title">Je possède un Code Promo</h3>
+                    <form class="validation-promos-promo">
+                        <label for="promo-code">
+                            <input type="text" name="promo-code" id="promo-code" class="validation-promos-promo-input" placeholder="Code promo">
+                        </label>
                         <button class="validation-promos-promo-btn">OK</button>
-                    </label>
+                    </form>
                 </div>
                 <div class="validation-recap">
                     <p class="validation-recap-text">Panier :</p>
@@ -186,10 +188,12 @@
             <div class="newletter" id="newletter">
                 <h3 class="newletter-title">Newletter</h3>
                 <p class="newletter-text">Inscrivez vous à notre newletter 100% gratuite pour pouvoir choisir en avant première les couleurs de nos prochains teddys. En plus de ça vous recevrez chaque semaines des conseils de nettoyage pour vos teddys.</p>
-                <label for="newletter-email" class="newletter-email-container">
-                    <input type="email" name="newletter-email" class="newletter-email" placeholder="email" required>
+                <form class="newletter-email-container">
+                    <label for="newletter-email" class="newletter-email-container-content">
+                        <input type="email" name="newletter-email" id="newletter-email" class="newletter-email" placeholder="email" required>
+                    </label>
                     <button class="newletter-btn">OK</button>
-                </label>
+                </form>
                 <label for="accept-email"><input type="checkbox" name="accept-email" id="accept-email">J'accepte de recevoir des emails de la part de Oribears</label>
                 <label for="confidential"><input type="checkbox" name="confidential" id="confidential">J'accepte les règles d'utilisations et de confidentialitées </label>
             </div>

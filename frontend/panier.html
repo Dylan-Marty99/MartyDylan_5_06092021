@@ -19,7 +19,7 @@
     <div class="popup-content">
         <h2 class="popup-content-title">Votre panier a bien été vidé</h2>
         <p class="popup-content-text">Retournez à l'accueil et retrouvez tout nos différents, mais très attachants, Teddies. Ils sauront comment vous convaincre de les adopter grâce à leur beauté naturelle !</p>
-        <button class="popup-content-btn"><a href="../index.html">Retourner à l'accueil</a></button>
+        <button class="popup-content-btn" id="popup-retour-accueil">Retourner à l'accueil</button>
     </div>
 </div>
 
@@ -74,11 +74,13 @@
                 <h2 class="validation-title">Récapitulatif</h2>
                 <div class="validation-container">
                     <div class="validation-promos">
-                        <h4 class="validation-promos-title">Je possède un Code Promo</h4>
-                        <label for="promo-code" class="validation-promos-promo">
-                            <input type="text" name="promo-code" id="promo-code" class="validation-promos-promo-input" placeholder="Code promo">
+                        <h3 class="validation-promos-title">Je possède un Code Promo</h3>
+                        <form class="validation-promos-promo">
+                            <label for="promo-code">
+                                <input type="text" name="promo-code" id="promo-code" class="validation-promos-promo-input" placeholder="Code promo">
+                            </label>
                             <button class="validation-promos-promo-btn">OK</button>
-                        </label>
+                        </form>
                     </div>
                     <div class="validation-recap">
                         <p class="validation-recap-text">Total (hors livraison) :</p> 
@@ -94,7 +96,7 @@
                 </div>
                 <div class="validation-return-index">
                     <p class="validation-return-index-text">Vous ne trouvez pas que ça manque de Teddies par ici ? Retournez à l'accueil pour en découvrir d'autres !</p>
-                    <button class="validation-return-index-btn"><a href="../index.html">Continuer mes achats</a></button>
+                    <button class="validation-return-index-btn">Continuer mes achats</button>
                 </div>
             </div>
         </aside>
@@ -133,10 +135,12 @@
             <div class="newletter" id="newletter">
                 <h3 class="newletter-title">Newletter</h3>
                 <p class="newletter-text">Inscrivez vous à notre newletter 100% gratuite pour pouvoir choisir en avant première les couleurs de nos prochains teddys. En plus de ça vous recevrez chaque semaines des conseils de nettoyage pour vos teddys.</p>
-                <label for="newletter-email" class="newletter-email-container">
-                    <input type="email" name="newletter-email" class="newletter-email" placeholder="email" required>
+                <form class="newletter-email-container">
+                    <label for="newletter-email" class="newletter-email-container-content">
+                        <input type="email" name="newletter-email" id="newletter-email" class="newletter-email" placeholder="email" required>
+                    </label>
                     <button class="newletter-btn">OK</button>
-                </label>
+                </form>
                 <label for="accept-email"><input type="checkbox" name="accept-email" id="accept-email">J'accepte de recevoir des emails de la part de Oribears</label>
                 <label for="confidential"><input type="checkbox" name="confidential" id="confidential">J'accepte les règles d'utilisations et de confidentialitées </label>
             </div>

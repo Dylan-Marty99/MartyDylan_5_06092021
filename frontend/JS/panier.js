@@ -45,9 +45,9 @@ if (productInLocalStorage === null || productInLocalStorage == 0) {
       `
         <div class="panier-content-content" data-id="${productInLocalStorage[i].id}">
             <span class="panier-content-suppr-smartphone"><i class="fas fa-times"></i></span>
-            <img src="${productInLocalStorage[i].image}" alt="Photo de ${productInLocalStorage[i].image}" class="panier-content-image">
+            <img src="${productInLocalStorage[i].image}" alt="Photo de ${productInLocalStorage[i].name}" class="panier-content-image">
             <div class="panier-content-product">
-                <h4 class="panier-content-product-title">${productInLocalStorage[i].name}</h4>
+                <h3 class="panier-content-product-title">${productInLocalStorage[i].name}</h3>
                 <p class="panier-content-product-description">${productInLocalStorage[i].description}</p>
                 <p class="panier-content-product-color">Couleur : ${productInLocalStorage[i].color}</p>
                 <p class="panier-content-product-quantity">Quantité : ${productInLocalStorage[i].quantity}</p>
@@ -65,6 +65,10 @@ if (productInLocalStorage === null || productInLocalStorage == 0) {
     console.log(basketContent);
   }
 }
+
+document.querySelector(".popup-content-btn").addEventListener("click", () => {
+  window.location.href = "../index.html"
+})
 
 //--------------------- Suppression des produits ---------------------------
 
@@ -158,3 +162,7 @@ basketValidation.addEventListener("click", () => {
     alert("Votre panier est vide");
   }
 });
+
+document.querySelector(".validation-return-index-btn").addEventListener("click", () => {
+  window.location.href = "../index.html"
+})

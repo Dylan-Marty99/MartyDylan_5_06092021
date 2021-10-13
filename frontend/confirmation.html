@@ -92,10 +92,12 @@
             <div class="newletter" id="newletter">
                 <h3 class="newletter-title">Newletter</h3>
                 <p class="newletter-text">Inscrivez vous à notre newletter 100% gratuite pour pouvoir choisir en avant première les couleurs de nos prochains teddys. En plus de ça vous recevrez chaque semaines des conseils de nettoyage pour vos teddys.</p>
-                <label for="newletter-email" class="newletter-email-container">
-                    <input type="email" name="newletter-email" class="newletter-email" placeholder="email" required>
+                <form class="newletter-email-container">
+                    <label for="newletter-email" class="newletter-email-container-content">
+                        <input type="email" name="newletter-email" id="newletter-email" class="newletter-email" placeholder="email" required>
+                    </label>
                     <button class="newletter-btn">OK</button>
-                </label>
+                </form>
                 <label for="accept-email"><input type="checkbox" name="accept-email" id="accept-email">J'accepte de recevoir des emails de la part de Oribears</label>
                 <label for="confidential"><input type="checkbox" name="confidential" id="confidential">J'accepte les règles d'utilisations et de confidentialitées </label>
             </div>

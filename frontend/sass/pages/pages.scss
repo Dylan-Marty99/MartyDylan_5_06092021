@@ -939,6 +939,7 @@
         border: $border;
         &-title {
             margin: 15px 0 20px;
+            font-size: 1.1rem;
             @include large-smartphone {
                 font-size: 1.3rem;
             }
@@ -952,7 +953,6 @@
             align-items: center;
             padding-bottom: 30px;
             &-input {
-                width: 60%;
                 height: 25px;
                 font-size: 1.1rem;
             }

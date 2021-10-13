@@ -382,10 +382,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+}
+.newletter-email-container-content {
+  margin-top: 0;
 }
 .newletter-email {
-  width: 40%;
   height: 22px;
   font-size: 1.2rem;
   padding-left: 5px;
@@ -399,9 +401,6 @@ header {
   height: 28px;
   margin-left: -5px;
   cursor: pointer;
-}
-.newletter label {
-  margin-top: 10px;
 }
 
 .footer-footer-list {
@@ -1568,6 +1567,7 @@ header {
 }
 .validation-promos-title {
   margin: 15px 0 20px;
+  font-size: 1.1rem;
 }
 @media screen and (max-width: 800px) {
   .validation-promos-title {
@@ -1586,7 +1586,6 @@ header {
   padding-bottom: 30px;
 }
 .validation-promos-promo-input {
-  width: 60%;
   height: 25px;
   font-size: 1.1rem;
 }
